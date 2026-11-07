@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>SEIKO 精工太陽能計時錶 (V172 / V174 / V175) 使用指南 | Prism Manuals</title>
-  <meta name="description" content="經典太陽能三眼計時碼錶機芯。收錄 1/5 秒計時操作、單次鬧鈴設定、碼錶指針基準歸零校準與照光充電時間表。">
+  <title>SEIKO 精工太陽能計時碼錶 (V172/V174/V175) 完整指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 38 頁說明書完整數位還原。收錄 1/5 秒計時操作（單次、分段計時 Split Time）、單次鬧鈴預約設定、大秒針與計時分針基準位置偏差手動修正步驟、低電量 2 秒跳針警示與照光充電表。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">SEIKO 精工太陽能計時錶 (V172 / V174 / V175)</span>
+        <span class="breadcrumb-current">SEIKO 計時碼錶</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#stopwatch-alarm" class="pill-link">碼錶計時與單次鬧鈴設定</a><a href="#hand-reset" class="pill-link">碼錶指針手動基準歸零校正</a>
+      <a href="#stopwatch-guide" class="pill-link">碼錶與分段計時</a><a href="#alarm-setting" class="pill-link">鬧鈴設定</a><a href="#hand-reset" class="pill-link">碼針手動歸零</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,34 +221,51 @@
       <div class="hero-tags">
         <span class="badge-tag">SEIKO 精工</span>
         <span class="badge-tag">個人穿戴</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">SEIKO 太陽能計時碼錶 (機芯 V172/V174/V175) 指南</h1>
-      <p class="hero-summary">經典太陽能三眼計時碼錶機芯。收錄 1/5 秒計時操作、單次鬧鈴設定、碼錶指針基準歸零校準與照光充電時間表。</p>
+      <h1 class="hero-headline">SEIKO 太陽能計時碼錶 (機芯 V172/V174/V175) 深度指南</h1>
+      <p class="hero-summary">原廠 38 頁說明書完整數位還原。收錄 1/5 秒計時操作（單次、分段計時 Split Time）、單次鬧鈴預約設定、大秒針與計時分針基準位置偏差手動修正步驟、低電量 2 秒跳針警示與照光充電表。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">太陽能充電</span><span class="hl-lbl">滿電可運轉約 6 個月</span></div><div class="hl-item"><span class="hl-val">1/5秒碼錶</span><span class="hl-lbl">精準計時可達 60 分鐘</span></div><div class="hl-item"><span class="hl-val">單次鬧鈴</span><span class="hl-lbl">可預約 12 小時內鬧鈴</span></div><div class="hl-item"><span class="hl-val">基準指針歸零</span><span class="hl-lbl">手動校正偏差碼針</span></div>
+        <div class="hl-item"><span class="hl-val">太陽能充電</span><span class="hl-lbl">滿電走時 6 個月</span></div><div class="hl-item"><span class="hl-val">1/5秒碼錶</span><span class="hl-lbl">精準累計 60 分鐘</span></div><div class="hl-item"><span class="hl-val">單次鬧鈴</span><span class="hl-lbl">可設定 12 小時內</span></div><div class="hl-item"><span class="hl-val">指針歸零</span><span class="hl-lbl">手動校正碼針偏差</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="stopwatch-alarm">
+        <section class="doc-section" id="stopwatch-guide">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Stopwatch & Alarm</div>
-            <h2 class="sec-title">碼錶計時與單次鬧鈴設定</h2>
+            <div class="sec-eyebrow">Stopwatch & Split Time</div>
+            <h2 class="sec-title">1/5 秒碼錶計時與分段計時操作</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">碼錶計時操作</span>
-                    <div class="ctrl-name">按鈕 A (啟動/停止) + 按鈕 B (重設)</div>
-                    <div class="ctrl-desc">大秒針以 1/5 秒跳動計時，最高累積計時至 60 分鐘後自動停止。</div>
+                    <span class="ctrl-badge">標準累計計時</span>
+                    <div class="ctrl-name">按鈕 A (啟動/停止) + 按鈕 B (歸零)</div>
+                    <div class="ctrl-desc">大秒針以每秒 5 步 (1/5秒) 平滑跳動，6 點鐘或小錶盤累計分鐘，滿 60 分鐘自動停止。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">鬧鈴設定 (V172 / V174)</span>
+                    <span class="ctrl-badge">分段計時 (Split Time)</span>
+                    <div class="ctrl-name">按鈕 A 啟動 ➔ 按鈕 B 抓分段</div>
+                    <div class="ctrl-desc">計時中按按鈕 B，碼針暫停顯示第一跑者時間，內部計時仍繼續；再按按鈕 B 追趕恢復顯示當前時間。</div>
+                  </div>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="alarm-setting">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Single Alarm</div>
+            <h2 class="sec-title">單次鬧鈴設定流程 (V172 / V174 機芯)</h2>
+          </div>
+          
+                <div class="controls-grid">
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">鬧鈴時間設定步驟</span>
                     <div class="ctrl-name">龍頭拉出第 1 段調整小錶盤</div>
                     <div class="ctrl-desc">
-                      1. 將龍頭拉出至第 1 段。<br>
-                      2. 按住按鈕 B 調整 6 點鐘方向的鬧鈴小指針至目標時間。<br>
-                      3. 將龍頭推回，鬧鈴自動開啟（響鬧時按任意鍵停止）。
+                      1. 將龍頭拉出至 <strong>第 1 段</strong>。<br>
+                      2. 按住右下角 <strong>按鈕 B</strong>，調整 6 點鐘方向的鬧鈴小針至指定時間（長按可快進）。<br>
+                      3. 將龍頭推回原位，鬧鈴功能自動開啟；響鬧時按任意鍵即可停止。
                     </div>
                   </div>
                 </div>
@@ -246,26 +274,49 @@
         
         <section class="doc-section" id="hand-reset">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Hand Alignment</div>
-            <h2 class="sec-title">碼錶指針手動基準歸零校正</h2>
+            <div class="sec-eyebrow">Hand Position Reset</div>
+            <h2 class="sec-title">碼錶大秒針基準位置手動歸零校正</h2>
           </div>
           
                 <div class="tip-box">
-                  📐 <strong>大秒針重設後沒有指在正 12 點時：</strong><br>
+                  📐 <strong>大秒針重設後未指向正 12 點時的校準程序：</strong><br>
                   1. 將手錶龍頭向外拉出至 <strong>第 2 段</strong>。<br>
-                  2. 長按 <strong>按鈕 A 約 2 秒</strong>，計時分針會旋轉一圈代表進入校正模式。<br>
-                  3. 按按鈕 B 逐步點按，直到計時大秒針精準回歸 <strong>正 12 點位置</strong>（長按按鈕 B 可快轉）。<br>
+                  2. 長按右上角 <strong>按鈕 A 約 2 秒</strong>，計時小分針旋轉一圈代表進入校正模式。<br>
+                  3. 按按鈕 B 逐步點按，直到計時大秒針精準回歸 <strong>正 12 點鐘位置</strong>（長按按鈕 B 可連續快轉）。<br>
                   4. 校準完成後將龍頭推回原位即可。
                 </div>
                 
         </section>
         
 
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
+        </section>
+        
+
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · SEIKO 精工太陽能計時錶 (V172 / V174 / V175) Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · SEIKO 計時碼錶 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

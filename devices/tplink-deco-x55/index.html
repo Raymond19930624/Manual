@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6 使用指南 | Prism Manuals</title>
-  <meta name="description" content="AX3000 雙頻無縫漫遊全屋覆蓋 Wi-Fi 6 路由器。收錄機身底部 LED 狀態指示燈顏色含義、新增子節點與一鍵 Reset 復位指引。">
+  <title>TP-Link Deco X55 AX3000 Mesh Wi-Fi 6 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="官方圖紙完整數位還原。收錄底座 LED 狀態燈顏色（黃/藍/綠/紅）含義排錯速查、底座 Reset 復位孔操作步驟與 Deco App 快速擴充子節點指南。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6</span>
+        <span class="breadcrumb-current">TP-Link Deco X55</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#led-guide" class="pill-link">機身底部 LED 狀態指示燈顏色</a><a href="#reset" class="pill-link">硬體復位 (Reset) 與新增節點</a>
+      <a href="#led-status" class="pill-link">LED燈號排錯</a><a href="#reset-mesh" class="pill-link">Reset與新增節點</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,64 +221,77 @@
       <div class="hero-tags">
         <span class="badge-tag">TP-Link 普聯</span>
         <span class="badge-tag">快充電腦</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">TP-Link Deco X55 Mesh Wi-Fi 6 系統使用指南</h1>
-      <p class="hero-summary">AX3000 雙頻無縫漫遊全屋覆蓋 Wi-Fi 6 路由器。收錄機身底部 LED 狀態指示燈顏色含義、新增子節點與一鍵 Reset 復位指引。</p>
+      <h1 class="hero-headline">TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6 深度手冊</h1>
+      <p class="hero-summary">官方圖紙完整數位還原。收錄底座 LED 狀態燈顏色（黃/藍/綠/紅）含義排錯速查、底座 Reset 復位孔操作步驟與 Deco App 快速擴充子節點指南。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">AX3000</span><span class="hl-lbl">極速 Wi-Fi 6 雙頻</span></div><div class="hl-item"><span class="hl-val">無縫漫遊</span><span class="hl-lbl">單一 SSID 走到哪連到哪</span></div><div class="hl-item"><span class="hl-val">3 × 1G 孔</span><span class="hl-lbl">每個節點自帶 3 個有線網孔</span></div><div class="hl-item"><span class="hl-val">AI Mesh</span><span class="hl-lbl">自動演算法優化最佳路徑</span></div>
+        <div class="hl-item"><span class="hl-val">AX3000</span><span class="hl-lbl">Wi-Fi 6 雙頻極速</span></div><div class="hl-item"><span class="hl-val">無縫漫遊</span><span class="hl-lbl">單一全屋 SSID</span></div><div class="hl-item"><span class="hl-val">3 × 1G 孔</span><span class="hl-lbl">全千兆實體網孔</span></div><div class="hl-item"><span class="hl-val">AI Mesh</span><span class="hl-lbl">自動演算法選優路徑</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="led-guide">
+        <section class="doc-section" id="led-status">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">LED Indicator Matrix</div>
-            <h2 class="sec-title">機身底部 LED 狀態指示燈顏色速查</h2>
+            <div class="sec-eyebrow">LED Indicator Guide</div>
+            <h2 class="sec-title">底座 LED 狀態指示燈顏色排錯表</h2>
           </div>
           
                 <div class="table-frame">
                   <table class="spec-table">
-                    <thead><tr><th>LED 燈號狀態</th><th>代表系統意義</th><th>排錯與操作建議</th></tr></thead>
+                    <thead><tr><th>LED 顏色與狀態</th><th>代表系統狀態</th><th>排除與操作指引</th></tr></thead>
                     <tbody>
-                      <tr><td><strong style="color:#ffcc00;">黃燈長亮</strong></td><td>Deco 正在開機啟動中</td><td>請靜待約 1~2 分鐘，等待啟動完成。</td></tr>
-                      <tr><td><strong style="color:#0071e3;">藍燈閃爍</strong></td><td>就緒設定狀態 (Ready for Setup)</td><td>開啟手機「TP-Link Deco」App，即可搜尋並開始設定。</td></tr>
-                      <tr><td><strong style="color:#0071e3;">藍燈長亮</strong></td><td>正在設定或同步中</td><td>正在建立連線，請勿切斷電源。</td></tr>
-                      <tr><td><strong style="color:#34c759;">綠燈長亮</strong></td><td>運作正常且網路連線暢通</td><td>一切正常，可享受高速無縫 Wi-Fi。</td></tr>
-                      <tr><td><strong style="color:#ff3b30;">紅燈長亮</strong></td><td>網路連線中斷 (無法上網)</td><td>檢查中華電信數據機 (Modem) 訊號或實體網路線是否脫落。</td></tr>
-                      <tr><td><strong style="color:#ff3b30;">紅燈閃爍</strong></td><td>與主要 Deco 節點斷線</td><td>將該子節點移近主要節點，減少厚牆或金屬阻隔。</td></tr>
+                      <tr><td><strong style="color:#ffcc00;">黃燈長亮</strong></td><td>Deco 正在開機啟動中</td><td>請靜待約 1~2 分鐘開機程序完成。</td></tr>
+                      <tr><td><strong style="color:#0071e3;">藍燈閃爍</strong></td><td>就緒設定狀態 (Ready for Setup)</td><td>開啟手機「Deco App」，開始初次配對。</td></tr>
+                      <tr><td><strong style="color:#0071e3;">藍燈長亮</strong></td><td>正在設定中 / 同步資料中</td><td>請勿拔除電源線，等待配置寫入。</td></tr>
+                      <tr><td><strong style="color:#34c759;">綠燈長亮</strong></td><td>正常運作且網路連線暢通</td><td>一切正常，享受全屋高速無縫漫遊。</td></tr>
+                      <tr><td><strong style="color:#ff3b30;">紅燈長亮</strong></td><td>主節點無法連上網際網路</td><td>檢查中華電信數據機 (Modem) 訊號線是否鬆脫。</td></tr>
+                      <tr><td><strong style="color:#ff3b30;">紅燈閃爍</strong></td><td>子節點與主節點失去連線</td><td>將子節點移近主機，避開厚重水泥牆或大金屬物。</td></tr>
                     </tbody>
                   </table>
                 </div>
                 
         </section>
         
-        <section class="doc-section" id="reset">
+        <section class="doc-section" id="reset-mesh">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Reset & Expand</div>
-            <h2 class="sec-title">硬體復位 (Reset) 與新增節點</h2>
+            <div class="sec-eyebrow">Reset & Expand Node</div>
+            <h2 class="sec-title">一鍵 Reset 復位與新增子節點</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">底部 Reset 復位孔</span>
-                    <div class="ctrl-name">按住 1 秒恢復出廠設定</div>
-                    <div class="ctrl-desc">拿迴形針或退卡針按壓底部 Reset 鍵 1 秒，LED 轉為黃色即開始重設，隨後轉為藍燈閃爍即可重新配對。</div>
+                    <span class="ctrl-badge">底座 Reset 復位孔</span>
+                    <div class="ctrl-name">按住 1 秒恢復出廠預設值</div>
+                    <div class="ctrl-desc">拿退卡針按壓底座 Reset 孔 1 秒，LED 轉為黃色開始重設，隨後轉為藍燈閃爍即可重新配對。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">新增子節點 (Add Deco)</span>
-                    <div class="ctrl-name">App 點擊右上角「+」</div>
-                    <div class="ctrl-desc">將新節點插上電源，待藍燈閃爍後在 Deco App 點選新增設備，1 分鐘即可自動無縫加入 Mesh 網路。</div>
+                    <span class="ctrl-badge">新增子節點 (Add Node)</span>
+                    <div class="ctrl-name">Deco App 右上角點選「+」</div>
+                    <div class="ctrl-desc">將新節點通電插上電源，等底座藍燈閃爍後在 App 按「+ 新增設備」，自動加入 Mesh 系統。</div>
                   </div>
                 </div>
                 
         </section>
         
 
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照</h2>
+          </div>
+          <div style="text-align:center; padding:16px; background:var(--bg-card-subtle); border-radius:12px; border:1px solid var(--border-subtle);">
+            <img src="original.png" alt="官方手冊原始圖" style="max-width:100%; border-radius:8px;">
+          </div>
+        </section>
+        
+
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · TP-Link Deco X55 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>VIOMI 雲米 WD10FT-B6T 10KG 洗脫烘滾筒洗衣機 使用指南 | Prism Manuals</title>
-  <meta name="description" content="10公斤洗滌 / 7公斤烘乾智慧變頻滾筒洗衣機。具備 90℃ 高溫高溫煮洗、99.9% 蒸氣除菌、筒自潔保養與常見故障排錯代號。">
+  <title>VIOMI 雲米 WD10FT-B6T 10KG 洗脫烘滾筒洗衣機 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 21 頁使用手冊完整數位還原。收錄 4 顆運輸螺栓拆卸安全警示、洗劑盒三分槽投放規則、洗滌行程明細、筒自潔保養、右下排污泵硬幣異物清理步驟與完整 E 系列故障代碼自查表。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫧</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">VIOMI 雲米 WD10FT-B6T 10KG 洗脫烘滾筒洗衣機</span>
+        <span class="breadcrumb-current">雲米 WD10FT 洗衣機</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#programs" class="pill-link">常用洗滌與烘乾行程</a><a href="#errors" class="pill-link">常見故障報警代碼排錯表</a>
+      <a href="#install-bolts" class="pill-link">安裝與螺栓警示</a><a href="#dispenser" class="pill-link">洗劑分配盒</a><a href="#programs" class="pill-link">洗滌行程明細</a><a href="#errors" class="pill-link">完整錯誤代碼表</a><a href="#specs" class="pill-link">規格參數</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,60 +221,115 @@
       <div class="hero-tags">
         <span class="badge-tag">VIOMI 雲米</span>
         <span class="badge-tag">居家生活</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">VIOMI 雲米 WD10FT-B6T 洗脫烘洗衣機使用指南</h1>
-      <p class="hero-summary">10公斤洗滌 / 7公斤烘乾智慧變頻滾筒洗衣機。具備 90℃ 高溫高溫煮洗、99.9% 蒸氣除菌、筒自潔保養與常見故障排錯代號。</p>
+      <h1 class="hero-headline">VIOMI 雲米 WD10FT-B6T 10KG 洗脫烘滾筒洗衣機 深度手冊</h1>
+      <p class="hero-summary">原廠 21 頁使用手冊完整數位還原。收錄 4 顆運輸螺栓拆卸安全警示、洗劑盒三分槽投放規則、洗滌行程明細、筒自潔保養、右下排污泵硬幣異物清理步驟與完整 E 系列故障代碼自查表。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">10kg / 7kg</span><span class="hl-lbl">洗脫烘大容量</span></div><div class="hl-item"><span class="hl-val">90℃ 高溫</span><span class="hl-lbl">高溫煮洗除菌</span></div><div class="hl-item"><span class="hl-val">筒自潔</span><span class="hl-lbl">定期高溫自潔抑菌</span></div><div class="hl-item"><span class="hl-val">Wi-Fi 聯網</span><span class="hl-lbl">米家 / 雲米 App 遠端操控</span></div>
+        <div class="hl-item"><span class="hl-val">10kg 洗滌</span><span class="hl-lbl">7kg 熱風冷凝烘乾</span></div><div class="hl-item"><span class="hl-val">1400 轉</span><span class="hl-lbl">變頻高轉速脫水</span></div><div class="hl-item"><span class="hl-val">90℃ 煮洗</span><span class="hl-lbl">高溫蒸氣深度除菌</span></div><div class="hl-item"><span class="hl-val">筒自潔</span><span class="hl-lbl">定期高壓自洗除垢</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="programs">
+        <section class="doc-section" id="install-bolts">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Wash Programs</div>
-            <h2 class="sec-title">常用洗滌與烘乾行程速查</h2>
+            <div class="sec-eyebrow">Installation Notice</div>
+            <h2 class="sec-title">重要：4 顆背部運輸螺栓拆卸守則</h2>
+          </div>
+          
+                <div class="warn-box">
+                  🚨 <strong>極度重要安全警告：</strong><br>
+                  新機背面原廠安裝了 <strong>4 顆運輸保護螺栓</strong>，用於在搬運過程中固定懸掛滾筒：<br>
+                  • <strong>首次通電使用前，必須使用扳手將背部 4 顆螺栓全部卸下</strong>，並用隨附塑膠孔蓋封閉螺栓孔。<br>
+                  • <strong>若未拆除螺栓就啟動脫水</strong>，高速運轉時會產生<strong>劇烈跳動、移位、發出巨響撞擊聲並嚴重損壞避震結構與內部滾筒</strong>。
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="dispenser">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Detergent Dispenser</div>
+            <h2 class="sec-title">洗滌劑分配盒 3 分槽投放指南</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">黃金洗 (Daily Wash)</span>
-                    <div class="ctrl-name">日常棉麻衣物 (45分鐘)</div>
-                    <div class="ctrl-desc">標準洗滌流程，自動秤重給水，平衡洗淨度與省水省電。</div>
+                    <span class="ctrl-badge">主洗槽 (標記 II)</span>
+                    <div class="ctrl-name">主要洗滌劑投放格</div>
+                    <div class="ctrl-desc">放入日常洗衣粉、洗衣精或濃縮洗滌劑。若使用滾筒專用低泡洗衣精，能防止泡沫過多溢出。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">超快洗 (15min Quick)</span>
-                    <div class="ctrl-name">輕度髒污夏季短袖</div>
-                    <div class="ctrl-desc">僅需 15 分鐘快速洗脫，建議衣量不超過 2 公斤以達最佳效果。</div>
+                    <span class="ctrl-badge">柔順劑槽 (梅花圖標 ✿)</span>
+                    <div class="ctrl-name">衣物柔軟精投放格</div>
+                    <div class="ctrl-desc">只能倒入液體柔軟精，<strong>液面絕對不可超過「MAX」最大刻度線</strong>，否則會在注水初期提早虹吸流失。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">筒自潔 (Drum Clean)</span>
-                    <div class="ctrl-name">90℃ 內外筒殺菌除垢</div>
-                    <div class="ctrl-desc">空筒狀態下啟動，超高溫高壓水流沖刷內外筒夾層，建議每個月運行一次。</div>
+                    <span class="ctrl-badge">預洗槽 (標記 I)</span>
+                    <div class="ctrl-name">預洗程序洗滌劑格</div>
+                    <div class="ctrl-desc">僅在選擇「預洗」功能（針對重度泥沙髒污衣物）時才需添加，一般日常標準洗衣請保持空置。</div>
                   </div>
-                  <div class="ctrl-card">
-                    <span class="ctrl-badge">單烘乾 (Dry Only)</span>
-                    <div class="ctrl-name">智慧溫感烘乾防縮水</div>
-                    <div class="ctrl-desc">熱風循環烘乾，衣乾即停，避免衣物纖維因過度烘烤而變形。</div>
-                  </div>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="programs">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Wash Programs Table</div>
+            <h2 class="sec-title">完整洗滌與烘乾行程參數速查表</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>行程名稱</th><th>預設溫度</th><th>預設轉速</th><th>預設時間</th><th>適合衣物類型與特性</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>黃金洗 (Daily)</strong></td><td>40℃</td><td>1000 轉</td><td>約 45 分鐘</td><td>日常棉麻混紡混洗，自動感應重量配水。</td></tr>
+                      <tr><td><strong>超快洗 (15min)</strong></td><td>冷水</td><td>800 轉</td><td>15 分鐘</td><td>輕度髒污、夏季短袖薄衣，衣量限 2kg 以內。</td></tr>
+                      <tr><td><strong>節能洗 (Eco)</strong></td><td>40℃</td><td>1200 轉</td><td>約 60 分鐘</td><td>耗水量少、耗電最低的一級節能洗程。</td></tr>
+                      <tr><td><strong>高溫除菌 (90℃)</strong></td><td>90℃</td><td>1000 轉</td><td>約 90 分鐘</td><td>嬰幼兒純棉衣物、貼身衣物，深度滅菌抑蟎。</td></tr>
+                      <tr><td><strong>筒自潔 (Clean)</strong></td><td>90℃</td><td>800 轉</td><td>約 70 分鐘</td><td><strong>空筒進行</strong>，超高溫水流高速沖刷夾層水垢，每月一次。</td></tr>
+                      <tr><td><strong>單脫水 (Spin)</strong></td><td>--</td><td>1000 轉</td><td>約 11 分鐘</td><td>手洗後單純甩乾，可手動按轉速鍵調節 600~1400 轉。</td></tr>
+                      <tr><td><strong>單烘乾 (Dry)</strong></td><td>溫風</td><td>1200 轉</td><td>約 60~120 分</td><td>熱風冷凝烘乾，支援即穿、熨燙、超乾三檔乾衣度。</td></tr>
+                      <tr><td><strong>洗+烘 (Wash & Dry)</strong></td><td>40℃</td><td>1200 轉</td><td>約 150 分鐘</td><td>一鍵完成清洗、脫水、烘乾全套，拿出即可直接穿。</td></tr>
+                    </tbody>
+                  </table>
                 </div>
                 
         </section>
         
         <section class="doc-section" id="errors">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Error Codes</div>
-            <h2 class="sec-title">常見故障報警代碼排錯表</h2>
+            <div class="sec-eyebrow">Error Code Matrix</div>
+            <h2 class="sec-title">原廠完整 E 系列故障代碼排除表</h2>
           </div>
           
                 <div class="table-frame">
                   <table class="spec-table">
-                    <thead><tr><th>錯誤代號</th><th>故障原因</th><th>排錯排除方式</th></tr></thead>
+                    <thead><tr><th>報警代碼</th><th>故障名稱</th><th>可能原因</th><th>自查排除與解決方法</th></tr></thead>
                     <tbody>
-                      <tr><td><strong>E01 / E10</strong></td><td>進水超時 (未進水)</td><td>檢查水龍頭是否打開、水壓是否正常、清理進水閥濾網雜質。</td></tr>
-                      <tr><td><strong>E03 / E20</strong></td><td>排水超時 (水排不出)</td><td>檢查排水管是否彎折壓扁、旋開右下方排污閥清理硬幣或毛屑異物。</td></tr>
-                      <tr><td><strong>E04</strong></td><td>筒內溢水異常</td><td>拔掉電源插頭，關閉水龍頭並聯繫售後技術人員檢修。</td></tr>
-                      <tr><td><strong>U4 / dOOR</strong></td><td>門鎖未關閉鎖緊</td><td>用力將機門推緊關好後重新按下「啟動鍵」。</td></tr>
+                      <tr><td><strong>E01 / E10</strong></td><td>進水超時報警</td><td>水龍頭未開、水壓不足、進水閥過濾網被水垢堵塞。</td><td>打開水龍頭、檢查水壓、旋開進水管清理濾網雜質。</td></tr>
+                      <tr><td><strong>E02 / E12</strong></td><td>排水逾時受阻</td><td>排水管被壓扁、排水管掛起高度過高、排污閥堵塞。</td><td>理順排水管、清理右下角排污過濾器硬幣毛屑。</td></tr>
+                      <tr><td><strong>E03 / E20</strong></td><td>脫水不平衡報警</td><td>洗滌物過少 (如單件毛毯) 捲成一團導致重心偏斜。</td><td>暫停開門，抖散均勻分佈衣物，或增加一件毛巾配重重新脫水。</td></tr>
+                      <tr><td><strong>E04</strong></td><td>筒內溢水異常</td><td>進水閥損壞無法關閉、水位感應器管路漏氣。</td><td>立即拔掉電源插頭，關閉進水水龍頭，撥打報修。</td></tr>
+                      <tr><td><strong>U4 / dOOR</strong></td><td>機門未關閉鎖緊</td><td>衣物夾在門框膠條處、門鎖未推緊扣入鎖孔。</td><td>檢查門邊無衣物卡住，用力將機門推緊，聽到喀噠聲後按啟動。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="specs">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Specifications</div>
+            <h2 class="sec-title">雲米 WD10FT-B6T 規格參數</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <tbody>
+                      <tr><td style="width:160px;"><strong>產品型號</strong></td><td>WD10FT-B6T</td></tr>
+                      <tr><td><strong>容量規格</strong></td><td>洗滌 10.0 kg ｜ 脫水 10.0 kg ｜ 烘乾 7.0 kg</td></tr>
+                      <tr><td><strong>脫水轉速</strong></td><td>最高 1400 rpm ｜ 功率: 洗滌 1800W / 烘乾 1200W</td></tr>
+                      <tr><td><strong>外觀尺寸</strong></td><td>595 mm × 600 mm × 850 mm (淨重約 70 kg)</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -271,11 +337,34 @@
         </section>
         
 
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
+        </section>
+        
+
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · VIOMI 雲米 WD10FT-B6T 10KG 洗脫烘滾筒洗衣機 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · 雲米 WD10FT 洗衣機 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

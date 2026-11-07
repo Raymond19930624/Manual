@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Panasonic NN-ST34H 微電腦微波爐 (25L) 使用指南 | Prism Manuals</title>
-  <meta name="description" content="25公升大容量微電腦微波爐。具備 5 段火力調節、8 道自動菜單行程、重量快速解凍與兒童安全鎖定。">
+  <title>Panasonic NN-ST34H 微電腦微波爐 (25L) 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 36 頁使用說明書完整數位化。全面收錄機身與爐腔各組件構造、微波適宜容器清單、5 段微波火力選擇與手動時間設定、8 道自動烹調行程參數表、快速重量解凍翻面指引、兒童安全鎖設定與檸檬蒸氣爐腔去味清潔全攻略。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📻</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">Panasonic NN-ST34H 微電腦微波爐 (25L)</span>
+        <span class="breadcrumb-current">Panasonic NN-ST34H 微波爐</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#power-levels" class="pill-link">5 段微波火力</a><a href="#auto-menu" class="pill-link">常用自動菜單代碼與兒童鎖</a>
+      <a href="#components" class="pill-link">構造與按鍵</a><a href="#cookware" class="pill-link">容器指南</a><a href="#power-steps" class="pill-link">5段火力與操作</a><a href="#auto-menus" class="pill-link">8道自動菜單</a><a href="#safety-lock" class="pill-link">兒童鎖與排錯</a><a href="#specs" class="pill-link">規格參數</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,65 +221,194 @@
       <div class="hero-tags">
         <span class="badge-tag">Panasonic 松下</span>
         <span class="badge-tag">廚房生活</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">Panasonic NN-ST34H 微電腦微波爐使用指南</h1>
-      <p class="hero-summary">25公升大容量微電腦微波爐。具備 5 段火力調節、8 道自動菜單行程、重量快速解凍與兒童安全鎖定。</p>
+      <h1 class="hero-headline">Panasonic NN-ST34H 25L 微電腦微波爐 深度使用手冊</h1>
+      <p class="hero-summary">原廠 36 頁使用說明書完整數位化。全面收錄機身與爐腔各組件構造、微波適宜容器清單、5 段微波火力選擇與手動時間設定、8 道自動烹調行程參數表、快速重量解凍翻面指引、兒童安全鎖設定與檸檬蒸氣爐腔去味清潔全攻略。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">25L</span><span class="hl-lbl">特大爐腔容積</span></div><div class="hl-item"><span class="hl-val">800W</span><span class="hl-lbl">強火快速加熱</span></div><div class="hl-item"><span class="hl-val">5 段火力</span><span class="hl-lbl">從保溫到大火爆煮</span></div><div class="hl-item"><span class="hl-val">快速解凍</span><span class="hl-lbl">按重量自動匹配時間</span></div>
+        <div class="hl-item"><span class="hl-val">25L</span><span class="hl-lbl">特大爐腔容積</span></div><div class="hl-item"><span class="hl-val">800W</span><span class="hl-lbl">強火快速加熱</span></div><div class="hl-item"><span class="hl-val">5 段火力</span><span class="hl-lbl">100W ~ 800W 調控</span></div><div class="hl-item"><span class="hl-val">8 道菜單</span><span class="hl-lbl">一鍵自動烹飪</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="power-levels">
+        <section class="doc-section" id="components">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Power Levels</div>
-            <h2 class="sec-title">5 段微波火力對照表</h2>
+            <div class="sec-eyebrow">Components & Control Panel</div>
+            <h2 class="sec-title">機身構造與控制面板各按鍵解說</h2>
+          </div>
+          
+                <div class="controls-grid">
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">機身外部構造</span>
+                    <div class="ctrl-name">爐門、密封圈與安全鎖扣</div>
+                    <div class="ctrl-desc">
+                      • <strong>爐門安全門鎖</strong>：雙重連鎖微動開關，微波過程中拉開爐門會瞬間切斷微波發射。<br>
+                      • <strong>爐門密封條</strong>：高精密度微波屏蔽膠條，嚴禁用鋼絲球粗糙物刷洗以防破損漏波。<br>
+                      • <strong>爐內照明燈</strong>：烹調啟動或開門時點亮，方便觀察內部沸騰狀態。
+                    </div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">爐腔內部組件</span>
+                    <div class="ctrl-name">高硼矽玻璃轉盤與滾輪環</div>
+                    <div class="ctrl-desc">
+                      • <strong>玻璃轉盤 (底盤)</strong>：耐熱強化玻璃，烹飪時必須確實卡入旋轉底座中。<br>
+                      • <strong>滾輪環 (Roller Ring)</strong>：支撐玻璃轉盤平穩旋轉，清潔時可取下水洗。<br>
+                      • <strong>雲母片 (波導蓋)</strong>：位於爐腔右側壁，保護磁控管，<strong>嚴禁隨意拆卸</strong>。
+                    </div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">微電腦面板</span>
+                    <div class="ctrl-name">主要操作按鍵功能總覽</div>
+                    <div class="ctrl-desc">
+                      • <strong>微波強度鍵</strong>：循環切換 5 檔火力 (高/中高/中/中低/低)。<br>
+                      • <strong>自動烹調鍵</strong>：選擇 8 道自動烹調菜單行程。<br>
+                      • <strong>快速重量解凍鍵</strong>：輸入食材重量 (0.1kg ~ 2.0kg) 自動匹配最佳時間。<br>
+                      • <strong>旋鈕 / 時間增減鍵</strong>：設定烹調分秒 (最高 99 分鐘 50 秒)。<br>
+                      • <strong>開始鍵 (Start)</strong>：啟動烹調；待機時短按一次可直接進行 30 秒高火快熱。<br>
+                      • <strong>停止/取消鍵 (Stop/Reset)</strong>：暫停烹調或清除輸入設定。
+                    </div>
+                  </div>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="cookware">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Cookware Materials</div>
+            <h2 class="sec-title">微波器具材質適用性完整對照表</h2>
           </div>
           
                 <div class="table-frame">
                   <table class="spec-table">
-                    <thead><tr><th>按壓微波鍵次數</th><th>火力檔位</th><th>輸出功率</th><th>適合料理用途</th></tr></thead>
+                    <thead><tr><th>容器材質</th><th>是否可用</th><th>使用注意事項與原廠守則</th></tr></thead>
                     <tbody>
-                      <tr><td><strong>按 1 下</strong></td><td>高火 (High)</td><td>800W (100%)</td><td>煮水、煮湯、加熱蔬菜與熟食便當</td></tr>
-                      <tr><td><strong>按 2 下</strong></td><td>中高火 (Medium High)</td><td>700W (85%)</td><td>烹調肉類、烘烤點心、蒸魚</td></tr>
-                      <tr><td><strong>按 3 下</strong></td><td>中火 (Medium)</td><td>500W (60%)</td><td>慢燉肉湯、加熱乳製品、煮布丁</td></tr>
-                      <tr><td><strong>按 4 下</strong></td><td>中低火 (解凍)</td><td>300W (35%)</td><td>冷凍肉塊均勻解凍、融化巧克力</td></tr>
-                      <tr><td><strong>按 5 下</strong></td><td>低火 / 保溫</td><td>100W (10%)</td><td>麵團發酵、軟化冰淇淋、食物保溫</td></tr>
+                      <tr><td><strong>耐熱玻璃 / 強化玻璃</strong></td><td><strong style="color:#34c759;">⭕ 安全可用</strong></td><td>理想的微波容器，耐熱溫度 120℃ 以上者皆可安全使用。</td></tr>
+                      <tr><td><strong>陶瓷 / 骨瓷器皿</strong></td><td><strong style="color:#34c759;">⭕ 安全可用</strong></td><td><strong>嚴禁帶有金邊、銀邊或金屬描花圖案</strong>，金屬釉料會產生強烈火花放電。</td></tr>
+                      <tr><td><strong>微波專用塑膠保鮮盒</strong></td><td><strong style="color:#34c759;">⭕ 安全可用</strong></td><td>須確認標有「耐熱 120℃ 以上」且註明可微波，加熱高油高糖食品時溫度易超標應避免。</td></tr>
+                      <tr><td><strong>金屬餐具 / 不鏽鋼 / 鐵鋁罐</strong></td><td><strong style="color:#ff3b30;">❌ 絕對嚴禁</strong></td><td>微波無法穿透金屬，會引起嚴重火花反射損壞磁控管，引發火災。</td></tr>
+                      <tr><td><strong>紙盒 / 純木製竹製器皿</strong></td><td><strong style="color:#ff9500;">⚠️ 僅限短暫溫熱</strong></td><td>長時間加熱可能乾枯炭化著火；不可使用含再生紙或金屬釘的紙盒。</td></tr>
+                      <tr><td><strong>鋁箔紙 (Aluminum Foil)</strong></td><td><strong style="color:#ff9500;">⚠️ 謹慎使用</strong></td><td>僅可用微量鋁箔遮蔽雞翅尖、魚尾防止過熟，且鋁箔距爐壁必須保持 2.5cm 以上。</td></tr>
                     </tbody>
                   </table>
                 </div>
                 
         </section>
         
-        <section class="doc-section" id="auto-menu">
+        <section class="doc-section" id="power-steps">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Auto Menus & Child Lock</div>
-            <h2 class="sec-title">常用自動菜單代碼與兒童鎖</h2>
+            <div class="sec-eyebrow">Power Settings & Steps</div>
+            <h2 class="sec-title">5 段微波火力選擇與手動烹調流程</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>按鍵次數</th><th>面板顯示</th><th>輸出功率</th><th>適用食材與烹調建議</th></tr></thead>
+                    <tbody>
+                      <tr><td>按 1 次</td><td><strong>P-HI (高火)</strong></td><td>800W (100%)</td><td>熱水、滾湯、熱便當、煮青菜、熱牛奶、薄切肉片快速烹煮</td></tr>
+                      <tr><td>按 2 次</td><td><strong>P-70 (中高火)</strong></td><td>700W (85%)</td><td>烤雞肉、烘烤點心、蒸魚、蒸肉餅、米飯加熱</td></tr>
+                      <tr><td>按 3 次</td><td><strong>P-50 (中火)</strong></td><td>500W (60%)</td><td>慢燉肉湯、加熱布丁、奶蛋類易老料理、燜煮海鮮</td></tr>
+                      <tr><td>按 4 次</td><td><strong>P-30 (解凍火)</strong></td><td>300W (35%)</td><td>冷凍生肉、肉排、海鮮等緩慢均勻解凍，融化奶油巧克力</td></tr>
+                      <tr><td>按 5 次</td><td><strong>P-10 (微火保溫)</strong></td><td>100W (10%)</td><td>麵團低溫發酵、軟化冰淇淋、料理長效保溫</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="auto-menus">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Auto Cooking Menus</div>
+            <h2 class="sec-title">8 道自動烹調菜單重量與操作明細表</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>菜單代碼</th><th>菜單名稱</th><th>可設定重量 / 份量</th><th>烹調注意事項</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>A-1</strong></td><td>白飯加熱 (Reheat Rice)</td><td>100g ~ 500g</td><td>容器加蓋或覆蓋保鮮膜（留一排氣小孔），米飯口感回軟濕潤。</td></tr>
+                      <tr><td><strong>A-2</strong></td><td>麵包回溫 (Bread)</td><td>50g ~ 200g</td><td>墊在餐巾紙上加熱，吸附多餘濕氣，避免麵包底部潮爛。</td></tr>
+                      <tr><td><strong>A-3</strong></td><td>蒸魚 (Fish)</td><td>100g ~ 600g</td><td>魚身劃花刀，加入蔥薑酒，蓋上耐熱保鮮膜烹煮。</td></tr>
+                      <tr><td><strong>A-4</strong></td><td>煮青菜 (Vegetables)</td><td>100g ~ 500g</td><td>洗淨瀝乾放入大碗，灑少許鹽與油拌勻，封膜微波保持翠綠。</td></tr>
+                      <tr><td><strong>A-5</strong></td><td>燉排骨 / 燉肉 (Meat)</td><td>200g ~ 800g</td><td>切小塊肉類，湯汁淹過食材，蓋蓋以中火自動燉煮。</td></tr>
+                      <tr><td><strong>A-6</strong></td><td>微波爆米花 (Popcorn)</td><td>85g / 100g</td><td>將市售專用袋正面朝上平鋪於玻璃轉盤中央，聽到爆聲間隔 2 秒即停。</td></tr>
+                      <tr><td><strong>A-7</strong></td><td>煮泡麵 (Instant Noodles)</td><td>1 包 / 2 包</td><td>大碗加水 450ml 淹過麵體，中途若沸騰可開門攪拌。</td></tr>
+                      <tr><td><strong>A-8</strong></td><td>煮湯圓 / 水餃 (Dumplings)</td><td>100g ~ 400g</td><td>水必須完全淹沒湯圓，水餃需先解凍再煮。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="safety-lock">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Child Lock & Troubleshooting</div>
+            <h2 class="sec-title">兒童安全鎖與常見故障排錯指南</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">自動菜單 1~8</span>
-                    <div class="ctrl-name">一鍵自動烹煮行程</div>
-                    <div class="ctrl-desc">
-                      1: 白飯加熱 ｜ 2: 麵包回溫 ｜ 3: 蒸魚 ｜ 4: 煮青菜 ｜ 5: 燉排骨 ｜ 6: 爆米花 ｜ 7: 泡麵 ｜ 8: 煮湯圓。
-                    </div>
+                    <span class="ctrl-badge">兒童安全鎖設定</span>
+                    <div class="ctrl-name">連按 3 次「開始鍵」</div>
+                    <div class="ctrl-desc">在待機時連續按 3 次「開始」，發出蜂鳴聲且螢幕出現鎖形圖示或「Child」，此時所有按鈕鎖定。<br><strong>解除方式</strong>：連按 3 次「停止/取消鍵」即可解除。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">連按 3 次「開始鍵」</span>
-                    <div class="ctrl-name">啟動兒童安全鎖 (Child Lock)</div>
-                    <div class="ctrl-desc">螢幕會顯示「Child」字樣，此時所有按鈕均失效，防止孩童誤觸。解鎖方式：連按 3 次「停止/取消鍵」。</div>
+                    <span class="ctrl-badge">爐內除味清潔秘訣</span>
+                    <div class="ctrl-name">檸檬水蒸氣自潔</div>
+                    <div class="ctrl-desc">微波加熱魚腥味重時，放一碗加了檸檬片的水（約 300ml），高火加熱 4 分鐘使其充滿水蒸氣，靜置 5 分鐘後拿抹布輕輕擦拭爐壁，油漬立除且滿室清香。</div>
                   </div>
                 </div>
                 
+        </section>
+        
+        <section class="doc-section" id="specs">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Specifications</div>
+            <h2 class="sec-title">Panasonic NN-ST34H 詳細技術規格</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <tbody>
+                      <tr><td style="width:160px;"><strong>產品型號</strong></td><td>NN-ST34H</td></tr>
+                      <tr><td><strong>額定微波輸出</strong></td><td>800 W</td></tr>
+                      <tr><td><strong>額定消耗功率</strong></td><td>1270 W (AC 110V ~ 60Hz)</td></tr>
+                      <tr><td><strong>爐腔容積</strong></td><td>25 公升 (轉盤直徑 288 mm)</td></tr>
+                      <tr><td><strong>外觀尺寸</strong></td><td>485 mm × 400 mm × 287 mm (淨重約 12.7 kg)</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · Panasonic NN-ST34H 微電腦微波爐 (25L) Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · Panasonic NN-ST34H 微波爐 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

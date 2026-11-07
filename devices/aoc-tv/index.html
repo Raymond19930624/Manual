@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>AOC 70U6418/96T 70吋 4K 智慧顯示器 使用指南 | Prism Manuals</title>
-  <meta name="description" content="70吋 Android TV 4K HDR 智慧大型液晶電視。收錄藍牙語音遙控器配對、HDMI eARC 聲霸音訊回傳設置與最佳影像調校教學。">
+  <title>AOC 70U6418/96T 70吋 4K 智慧顯示器 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 38 頁使用手冊完整數位還原。收錄 Android TV 系統設定、藍牙語音遙控器配對、HDMI eARC 音訊回傳設置、影像模式調校（杜比視界/劇院/遊戲低延遲）與排錯指引。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📺</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">AOC 70U6418/96T 70吋 4K 智慧顯示器</span>
+        <span class="breadcrumb-current">AOC 70吋 4K 電視</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#remote-pair" class="pill-link">藍牙語音遙控器配對與按鍵</a>
+      <a href="#remote-pair" class="pill-link">遙控器配對</a><a href="#picture-modes" class="pill-link">影像模式調校</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -209,10 +220,11 @@
     <section class="product-hero" id="overview">
       <div class="hero-tags">
         <span class="badge-tag">AOC 冠捷</span>
-        <span class="badge-tag">影音娛樂</span>
+        <span class="badge-tag">大型顯示器</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">AOC 70U6418/96T 4K HDR 智慧顯示器使用指南</h1>
-      <p class="hero-summary">70吋 Android TV 4K HDR 智慧大型液晶電視。收錄藍牙語音遙控器配對、HDMI eARC 聲霸音訊回傳設置與最佳影像調校教學。</p>
+      <h1 class="hero-headline">AOC 70U6418/96T 70吋 4K HDR 智慧顯示器 深度手冊</h1>
+      <p class="hero-summary">原廠 38 頁使用手冊完整數位還原。收錄 Android TV 系統設定、藍牙語音遙控器配對、HDMI eARC 音訊回傳設置、影像模式調校（杜比視界/劇院/遊戲低延遲）與排錯指引。</p>
       <div class="spec-highlights">
         <div class="hl-item"><span class="hl-val">70 吋 4K</span><span class="hl-lbl">大螢幕極窄邊框</span></div><div class="hl-item"><span class="hl-val">Android TV</span><span class="hl-lbl">官方正版系統海量 App</span></div><div class="hl-item"><span class="hl-val">語音搜尋</span><span class="hl-lbl">遙控器 Google 語音助手</span></div><div class="hl-item"><span class="hl-val">HDMI eARC</span><span class="hl-lbl">無損劇院音訊回傳</span></div>
       </div>
@@ -221,36 +233,74 @@
     
         <section class="doc-section" id="remote-pair">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Remote Pairing</div>
+            <div class="sec-eyebrow">Remote Control Pairing</div>
             <h2 class="sec-title">藍牙語音遙控器配對與按鍵指南</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
                     <span class="ctrl-badge">遙控器藍牙配對</span>
-                    <div class="ctrl-name">同時按住「左鍵」與「首頁鍵」</div>
-                    <div class="ctrl-desc">新換電池或配對斷開時，靠近電視同時長按 3 秒，遙控器指示燈閃爍後進入系統自動配對完成。</div>
+                    <div class="ctrl-name">同時長按「首頁鍵」與「左鍵」3 秒</div>
+                    <div class="ctrl-desc">靠近電視 1 公尺內同時按住，遙控器頂部指示燈閃爍，電視畫面提示配對成功，啟用 Google 語音搜尋。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">Google 語音助手鍵</span>
-                    <div class="ctrl-name">彩色多彩按鈕一鍵語音辨識</div>
-                    <div class="ctrl-desc">按一下直接對著遙控器頂部麥克風說出「播放 YouTube」、「今天天氣如何」即可秒速語音檢索。</div>
-                  </div>
-                  <div class="ctrl-card">
-                    <span class="ctrl-badge">HDMI eARC 連接音響</span>
-                    <div class="ctrl-name">必須插在「HDMI 1 (ARC)」孔位</div>
-                    <div class="ctrl-desc">外接聲霸 (Soundbar) 或家庭劇院擴大機時，至系統設定開啟「HDMI 控制 (CEC)」即可由電視遙控器同步開關與調節音量。</div>
+                    <span class="ctrl-badge">HDMI eARC 聲霸連接</span>
+                    <div class="ctrl-name">必須連接在「HDMI 1 (eARC)」孔位</div>
+                    <div class="ctrl-desc">外接 Soundbar 聲霸時，插在 HDMI 1，並至「設定」➔「顯示與音效」開啟 HDMI-CEC 與數位音訊旁路輸出。</div>
                   </div>
                 </div>
                 
+        </section>
+        
+        <section class="doc-section" id="picture-modes">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Picture Modes</div>
+            <h2 class="sec-title">最佳影像與色彩模式調校推薦</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>影像模式</th><th>色溫與對比特徵</th><th>適合觀看內容</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>劇院模式 (Cinema)</strong></td><td>溫暖色溫 (暖色調)、色準精確、暗部細節豐富</td><td>Netflix 4K 電影、電影大片</td></tr>
+                      <tr><td><strong>遊戲模式 (Game)</strong></td><td>超低輸入延遲 (Low Input Lag)、關閉多餘補幀</td><td>PS5、Xbox Series X、Switch 遊戲主機</td></tr>
+                      <tr><td><strong>鮮明模式 (Vivid)</strong></td><td>高對比、冷色調、高飽和度</td><td>明亮客廳環境、體育賽事、動畫卡通</td></tr>
+                      <tr><td><strong>標準模式 (Standard)</strong></td><td>平衡色彩、兼顧節能與日常觀看</td><td>日常第四台、新聞、綜藝節目</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · AOC 70U6418/96T 70吋 4K 智慧顯示器 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · AOC 70吋 4K 電視 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

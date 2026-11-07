@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Nitecore / XTAR D4 四槽液晶電池充電器 使用指南 | Prism Manuals</title>
-  <meta name="description" content="全功能四槽智慧電池充電器。支援 18650 / 21700 / 鎳氫 AA AAA 自動辨識相容、即時電壓電流動態螢幕與低電流模式手動切換。">
+  <title>Nitecore D4 (D4EU) 四槽液晶電池充電器 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 11 頁手冊完整數位還原。4 槽獨立微電腦控制，收錄 18650 / 21700 / 鎳氫 AA AAA 自動辨識、側邊 SLOT / MODE 按鍵功能、小容量電池 LOW 電流模式 (300mA) 與夜間關閉 LCD 背光手勢。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔋</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">Nitecore / XTAR D4 四槽液晶電池充電器</span>
+        <span class="breadcrumb-current">Nitecore D4 充電器</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#slots-guide" class="pill-link">槽位辨識與充電電流切換</a>
+      <a href="#slots-guide" class="pill-link">按鍵與槽位切換</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,9 +221,10 @@
       <div class="hero-tags">
         <span class="badge-tag">Nitecore 奈特科爾</span>
         <span class="badge-tag">快充電源</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">D4 (D4EU) 四槽微電腦液晶充電器使用指南</h1>
-      <p class="hero-summary">全功能四槽智慧電池充電器。支援 18650 / 21700 / 鎳氫 AA AAA 自動辨識相容、即時電壓電流動態螢幕與低電流模式手動切換。</p>
+      <h1 class="hero-headline">Nitecore D4 四槽智慧微電腦液晶充電器 深度指南</h1>
+      <p class="hero-summary">原廠 11 頁手冊完整數位還原。4 槽獨立微電腦控制，收錄 18650 / 21700 / 鎳氫 AA AAA 自動辨識、側邊 SLOT / MODE 按鍵功能、小容量電池 LOW 電流模式 (300mA) 與夜間關閉 LCD 背光手勢。</p>
       <div class="spec-highlights">
         <div class="hl-item"><span class="hl-val">4 槽獨立</span><span class="hl-lbl">獨立通道互不干擾</span></div><div class="hl-item"><span class="hl-val">LCD 大螢幕</span><span class="hl-lbl">電壓/電流/時間/電量</span></div><div class="hl-item"><span class="hl-val">全能相容</span><span class="hl-lbl">鋰電 / 鎳氫 / 磷酸鐵鋰</span></div><div class="hl-item"><span class="hl-val">夜間模式</span><span class="hl-lbl">手動關閉背光燈</span></div>
       </div>
@@ -221,36 +233,59 @@
     
         <section class="doc-section" id="slots-guide">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Slot & Current Control</div>
-            <h2 class="sec-title">槽位辨識與充電電流切換</h2>
+            <div class="sec-eyebrow">Buttons & Slot Control</div>
+            <h2 class="sec-title">SLOT 與 MODE 按鈕操作功能</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">側邊 SLOT 鍵</span>
-                    <div class="ctrl-name">切換各槽獨立數據顯示</div>
-                    <div class="ctrl-desc">單擊側邊「SLOT 按鈕」，螢幕會在第 1 ~ 第 4 槽位輪播切換即時電壓、充電電流與已充時間。</div>
+                    <span class="ctrl-badge">單擊側邊 SLOT 鍵</span>
+                    <div class="ctrl-name">切換各槽位詳細數據</div>
+                    <div class="ctrl-desc">在第 1 ~ 第 4 槽位間切換，LCD 螢幕顯示該槽即時電壓 (V)、充電電流 (mA) 與充電經過時間。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">側邊 MODE 鍵</span>
-                    <div class="ctrl-name">小容量電池切換 LOW 電流</div>
-                    <div class="ctrl-desc">長按 MODE 鍵可手動啟動「LOW 低電流充電 (300mA)」，充小容量 10440 或 AAA 鎳氫電池更溫和不傷電芯。</div>
+                    <span class="ctrl-badge">長按側邊 MODE 鍵</span>
+                    <div class="ctrl-name">手動啟用 LOW 低電流模式</div>
+                    <div class="ctrl-desc">充小容量電池 (如 10440 或 AAA 鎳氫) 時長按進入「LOW」模式，強制降至 300mA 溫和充電保護電芯壽命。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">長按 SLOT 鍵 1 秒</span>
+                    <span class="ctrl-badge">長按側邊 SLOT 鍵 1秒</span>
                     <div class="ctrl-name">夜間關閉 LCD 背光</div>
-                    <div class="ctrl-desc">夜間在臥室充電不刺眼，長按 SLOT 鍵 1 秒關閉螢幕藍色背光，再次長按即可恢復亮屏。</div>
+                    <div class="ctrl-desc">關閉藍色螢幕背光，進入夜間靜音模式，充電正常進行不刺眼；再次長按 1 秒即可喚醒螢幕。</div>
                   </div>
                 </div>
                 
         </section>
         
 
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
+        </section>
+        
+
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · Nitecore / XTAR D4 四槽液晶電池充電器 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · Nitecore D4 充電器 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

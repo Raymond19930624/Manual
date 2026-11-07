@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>飛利浦 / 特福 鮮呼吸智能萬用鍋 使用指南 | Prism Manuals</title>
-  <meta name="description" content="全方位微電腦雙重脈衝壓力萬用鍋。獨家鮮呼吸降壓沸騰技術，收錄中途加料、自動旋轉排氣洩壓與預約燉煮料理選單。">
+  <title>飛利浦 / 特福 鮮呼吸智能萬用鍋 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 24 頁手冊完整數位還原。雙重脈衝降壓沸騰技術，收錄智慧自動排氣洩壓、手動強制排氣鍵、中途加料按鍵保脆流程、18 道常用料理菜單壓力參數與防堵罩清洗保養手冊。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">飛利浦 / 特福 鮮呼吸智能萬用鍋</span>
+        <span class="breadcrumb-current">鮮呼吸智能萬用鍋</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#safety-exhaust" class="pill-link">安全洩壓與排氣操作</a><a href="#menus" class="pill-link">常用料理模式建議時間表</a>
+      <a href="#steam-release" class="pill-link">排氣與洩壓</a><a href="#recipes-table" class="pill-link">常用料理菜單</a><a href="#maintenance" class="pill-link">防堵罩與密封圈</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,67 +221,106 @@
       <div class="hero-tags">
         <span class="badge-tag">PHILIPS / TEFAL</span>
         <span class="badge-tag">廚房生活</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">鮮呼吸智能萬用鍋 (Smart Pro Multicooker) 使用指南</h1>
-      <p class="hero-summary">全方位微電腦雙重脈衝壓力萬用鍋。獨家鮮呼吸降壓沸騰技術，收錄中途加料、自動旋轉排氣洩壓與預約燉煮料理選單。</p>
+      <h1 class="hero-headline">鮮呼吸智能萬用鍋 (Smart Pro Multicooker) 深度手冊</h1>
+      <p class="hero-summary">原廠 24 頁手冊完整數位還原。雙重脈衝降壓沸騰技術，收錄智慧自動排氣洩壓、手動強制排氣鍵、中途加料按鍵保脆流程、18 道常用料理菜單壓力參數與防堵罩清洗保養手冊。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">雙重脈衝</span><span class="hl-lbl">鮮呼吸深度釋味</span></div><div class="hl-item"><span class="hl-val">智慧排氣</span><span class="hl-lbl">全自動免顧火安全洩壓</span></div><div class="hl-item"><span class="hl-val">中途加料</span><span class="hl-lbl">保持蔬菜鮮脆不軟爛</span></div><div class="hl-item"><span class="hl-val">多合一</span><span class="hl-lbl">壓力/慢燉/烘烤/蒸煮</span></div>
+        <div class="hl-item"><span class="hl-val">雙重脈衝</span><span class="hl-lbl">鮮呼吸深度釋香釋味</span></div><div class="hl-item"><span class="hl-val">自動排氣</span><span class="hl-lbl">全自動分段智慧洩壓</span></div><div class="hl-item"><span class="hl-val">中途加料</span><span class="hl-lbl">按鍵開蓋添加蔬菜</span></div><div class="hl-item"><span class="hl-val">18大行程</span><span class="hl-lbl">煲湯/慢燉/米飯/烘烤</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="safety-exhaust">
+        <section class="doc-section" id="steam-release">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Safety & Steam Release</div>
-            <h2 class="sec-title">安全洩壓與排氣操作指南</h2>
+            <div class="sec-eyebrow">Steam Release & Exhaust</div>
+            <h2 class="sec-title">智慧排氣洩壓與中途加料操作指引</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">全自動排氣 (Auto)</span>
-                    <div class="ctrl-name">烹調結束自動降壓</div>
-                    <div class="ctrl-desc">程式烹煮倒數完成後，微電腦會分段脈衝自動排出蒸氣，直到浮子閥落下提示解鎖。</div>
+                    <span class="ctrl-badge">自動智慧排氣</span>
+                    <div class="ctrl-name">烹調倒數結束自動洩壓</div>
+                    <div class="ctrl-desc">行程完成後微電腦會分段微量噴氣降壓，頂部浮子閥未落下前鎖死鍋蓋，保證 100% 安全。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">長按排氣鍵 (Manual)</span>
-                    <div class="ctrl-name">手動快速排氣</div>
-                    <div class="ctrl-desc">急需開蓋時長按控制面板上的「快速排氣鍵」，嚴禁用手觸碰頂部蒸氣閥以防燙傷。</div>
+                    <span class="ctrl-badge">手動排氣按鍵</span>
+                    <div class="ctrl-name">急需開蓋時長按排氣鍵</div>
+                    <div class="ctrl-desc">按住面板「排氣鍵」可手動連續釋放蒸氣，<strong>嚴禁用手直接觸碰頂部蒸氣孔</strong>。</div>
                   </div>
                   <div class="ctrl-card">
                     <span class="ctrl-badge">中途加料鍵</span>
-                    <div class="ctrl-name">加煮易爛食材</div>
-                    <div class="ctrl-desc">烹調進行中按下「中途加料」，鍋體自動釋放微壓，蜂鳴器響起後可開蓋加入易熟蔬菜。</div>
+                    <div class="ctrl-name">燉肉中途加入根莖蔬菜</div>
+                    <div class="ctrl-desc">按下「中途加料」鍵，萬用鍋自動釋放微壓並發出蜂鳴提示，此時可開蓋加入易熟綠色蔬菜，保持鮮脆口感。</div>
                   </div>
                 </div>
                 
         </section>
         
-        <section class="doc-section" id="menus">
+        <section class="doc-section" id="recipes-table">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Menu Presets</div>
-            <h2 class="sec-title">常用料理模式建議時間表</h2>
+            <div class="sec-eyebrow">Cooking Presets</div>
+            <h2 class="sec-title">常用食材壓力與烹調時間參數表</h2>
           </div>
           
                 <div class="table-frame">
                   <table class="spec-table">
-                    <thead><tr><th>料理模式</th><th>預設壓力值</th><th>烹調建議時間</th><th>開蓋與口感秘訣</th></tr></thead>
+                    <thead><tr><th>食材行程</th><th>壓力值設定</th><th>烹調時間</th><th>料理口感建議</th></tr></thead>
                     <tbody>
-                      <tr><td><strong>牛肉 / 羊肉</strong></td><td>高壓 70kPa</td><td>35 ~ 45 分鐘</td><td>肉質軟爛多汁，完成後保溫燜 10 分鐘更入味</td></tr>
-                      <tr><td><strong>煮飯 / 煲粥</strong></td><td>中壓 40kPa</td><td>15 ~ 20 分鐘</td><td>米水比例 1:1 (飯) 或 1:7 (稀飯)</td></tr>
-                      <tr><td><strong>濃香煲湯</strong></td><td>高壓 60kPa</td><td>40 ~ 50 分鐘</td><td>排骨骨肉分離，湯色濃郁白潤</td></tr>
-                      <tr><td><strong>慢火無水烹調</strong></td><td>常壓 0kPa</td><td>30 ~ 40 分鐘</td><td>適用於烤雞、無水海鮮焗烤</td></tr>
+                      <tr><td><strong>牛肉 / 羊肉</strong></td><td>高壓 70 kPa</td><td>35 ~ 45 分鐘</td><td>大塊牛腩軟爛化渣，筋膜軟糯。</td></tr>
+                      <tr><td><strong>排骨 / 蹄筋</strong></td><td>高壓 70 kPa</td><td>30 ~ 40 分鐘</td><td>骨肉輕鬆分離，膠原蛋白濃郁。</td></tr>
+                      <tr><td><strong>白米飯 / 雜糧飯</strong></td><td>中壓 40 kPa</td><td>14 ~ 18 分鐘</td><td>米粒飽滿 Q 彈，保留胚芽營養。</td></tr>
+                      <tr><td><strong>濃香煲湯</strong></td><td>高壓 60 kPa</td><td>40 ~ 50 分鐘</td><td>雞湯、排骨玉米湯，湯汁香濃乳化。</td></tr>
+                      <tr><td><strong>無水烹調 / 焗烤</strong></td><td>常壓 0 kPa</td><td>25 ~ 35 分鐘</td><td>利用食材自帶水分焗烤，鎖住原汁原味。</td></tr>
                     </tbody>
                   </table>
                 </div>
                 
         </section>
         
+        <section class="doc-section" id="maintenance">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Cleaning & Gaskets</div>
+            <h2 class="sec-title">上蓋防堵罩與矽膠密封圈拆洗保養</h2>
+          </div>
+          
+                <div class="tip-box">
+                  🧼 <strong>防堵罩與密封圈清潔要訣：</strong><br>
+                  • <strong>可拆卸內蓋</strong>：每次煲湯或煮粥後，輕拉內蓋卡扣取下內蓋板與防堵罩，用溫水沖洗清除食物碎渣，防止排氣孔堵塞。<br>
+                  • <strong>矽膠密封圈</strong>：定期取下密封圈清洗，晾乾後必須平整塞入內蓋卡槽，若未裝平會導致漏氣無法升壓。
+                </div>
+                
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
+        </section>
+        
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · 飛利浦 / 特福 鮮呼吸智能萬用鍋 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · 鮮呼吸智能萬用鍋 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

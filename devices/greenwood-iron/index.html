@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>綠林數顯可調溫電烙鐵 使用指南 | Prism Manuals</title>
-  <meta name="description" content="精密數位溫控電烙鐵。具備 180℃~480℃ 快速升溫調溫、數位微調校正、智慧自動休眠防乾燒與烙鐵頭保養指引。">
+  <title>綠林數顯可調溫電烙鐵 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 18 頁手冊完整數位還原。收錄 180℃~480℃ 按鍵調溫、CAL 數位溫度誤差校準模式、智慧自動休眠定時防乾燒、陶瓷發熱芯更換流程與烙鐵頭抗氧化保養規範。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">綠林數顯可調溫電烙鐵</span>
+        <span class="breadcrumb-current">綠林數顯電烙鐵</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#temp-control" class="pill-link">按鍵調溫與數位溫度校準步驟</a>
+      <a href="#calibration" class="pill-link">調溫與CAL校準</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -209,48 +220,70 @@
     <section class="product-hero" id="overview">
       <div class="hero-tags">
         <span class="badge-tag">綠林工具</span>
-        <span class="badge-tag">戶外工具</span>
+        <span class="badge-tag">維修工具</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">綠林數顯可調溫電烙鐵使用指南</h1>
-      <p class="hero-summary">精密數位溫控電烙鐵。具備 180℃~480℃ 快速升溫調溫、數位微調校正、智慧自動休眠防乾燒與烙鐵頭保養指引。</p>
+      <h1 class="hero-headline">綠林數顯可調溫電烙鐵 深度使用指南</h1>
+      <p class="hero-summary">原廠 18 頁手冊完整數位還原。收錄 180℃~480℃ 按鍵調溫、CAL 數位溫度誤差校準模式、智慧自動休眠定時防乾燒、陶瓷發熱芯更換流程與烙鐵頭抗氧化保養規範。</p>
       <div class="spec-highlights">
         <div class="hl-item"><span class="hl-val">180℃~480℃</span><span class="hl-lbl">寬幅精準調溫</span></div><div class="hl-item"><span class="hl-val">數位螢幕</span><span class="hl-lbl">實時溫度直觀顯示</span></div><div class="hl-item"><span class="hl-val">智慧休眠</span><span class="hl-lbl">靜置自動降溫保護</span></div><div class="hl-item"><span class="hl-val">快速升溫</span><span class="hl-lbl">陶瓷發熱芯秒速化錫</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="temp-control">
+        <section class="doc-section" id="calibration">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Temperature Control</div>
-            <h2 class="sec-title">按鍵調溫與數位溫度校準步驟</h2>
+            <div class="sec-eyebrow">Temperature & Calibration</div>
+            <h2 class="sec-title">按鍵調溫與 CAL 溫度校準步驟</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">「+」/「-」按鍵</span>
-                    <div class="ctrl-name">常規調溫 (以 1℃ 或 5℃ 微調)</div>
-                    <div class="ctrl-desc">短按以 1℃ 步進增減，長按連續快速跳溫。焊接普通電路板建議設定在 320℃~360℃。</div>
+                    <span class="ctrl-badge">常規溫度加減鍵</span>
+                    <div class="ctrl-name">以 1℃ 或 5℃ 步進調溫</div>
+                    <div class="ctrl-desc">短按點按精確增減，長按快速升降溫。無鉛銲錫推薦 340℃~360℃，普通有鉛銲錫推薦 300℃~320℃。</div>
                   </div>
                   <div class="ctrl-card">
                     <span class="ctrl-badge">同時按住「+」與「-」</span>
-                    <div class="ctrl-name">進入溫度誤差校準模式 (CAL)</div>
-                    <div class="ctrl-desc">更換不同批次烙鐵頭時，使用測溫儀量測頭部溫度，同時按兩鍵進入 CAL，輸入溫差進行精確修正。</div>
-                  </div>
-                  <div class="ctrl-card">
-                    <span class="ctrl-badge">烙鐵頭保養秘訣</span>
-                    <div class="ctrl-name">隨時上錫防氧化</div>
-                    <div class="ctrl-desc">每次用完關閉電源前，務必在烙鐵頭表面均勻鍍上一層新鮮焊錫，防止頭部高溫氧化發黑不上錫。</div>
+                    <div class="ctrl-name">進入 CAL 溫度校準模式</div>
+                    <div class="ctrl-desc">使用烙鐵測溫儀量測烙鐵頭實際溫度，若與螢幕顯示有偏差，同時長按兩鍵進入 CAL，輸入正負補償值修正。</div>
                   </div>
                 </div>
+                <div class="tip-box">
+                  💡 <strong>烙鐵頭抗氧化鐵律：</strong>每次使用完畢拔掉插頭前，<strong>必須在烙鐵頭表面鍍上一層厚厚的銲錫</strong>。這層保護錫能隔絕空氣，防止烙鐵頭在高溫降溫時氧化發黑「死頭不上錫」。
+                </div>
                 
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · 綠林數顯可調溫電烙鐵 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · 綠林數顯電烙鐵 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

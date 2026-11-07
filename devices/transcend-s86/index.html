@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>快譯通 S86 星光夜視行車記錄器 使用指南 | Prism Manuals</title>
-  <meta name="description" content="SONY 星光夜視 HDR 高畫質前後雙鏡頭行車記錄器。收錄 Wi-Fi 手機連線下載、實體緊急鎖檔按鍵與記憶卡格式化保養教學。">
+  <title>快譯通 S86 星光夜視行車記錄器 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 22 頁說明手冊完整數位還原。收錄 Sony Starvis 星光級夜視設定、機身實體按鍵配置、手機 Wi-Fi 互聯連線密碼、實體緊急碰撞鎖檔按鍵、MicroSD 記憶卡格式化保養教學與 GPS 定位功能解說。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">快譯通 S86 星光夜視行車記錄器</span>
+        <span class="breadcrumb-current">快譯通 S86 行車記錄器</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#wifi-guide" class="pill-link">手機 Wi-Fi 連線下載影片步驟</a><a href="#sd-card" class="pill-link">記憶卡格式化與緊急鎖檔重要提醒</a>
+      <a href="#buttons-osd" class="pill-link">按鍵與螢幕圖標</a><a href="#wifi-guide" class="pill-link">手機Wi-Fi直連</a><a href="#sd-card" class="pill-link">記憶卡格式化</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -209,57 +220,100 @@
     <section class="product-hero" id="overview">
       <div class="hero-tags">
         <span class="badge-tag">快譯通 Abee</span>
-        <span class="badge-tag">戶外工具</span>
+        <span class="badge-tag">車用工具</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">快譯通 S86 行車記錄器使用指南</h1>
-      <p class="hero-summary">SONY 星光夜視 HDR 高畫質前後雙鏡頭行車記錄器。收錄 Wi-Fi 手機連線下載、實體緊急鎖檔按鍵與記憶卡格式化保養教學。</p>
+      <h1 class="hero-headline">快譯通 Abee S86 前後雙鏡頭行車記錄器 深度手冊</h1>
+      <p class="hero-summary">原廠 22 頁說明手冊完整數位還原。收錄 Sony Starvis 星光級夜視設定、機身實體按鍵配置、手機 Wi-Fi 互聯連線密碼、實體緊急碰撞鎖檔按鍵、MicroSD 記憶卡格式化保養教學與 GPS 定位功能解說。</p>
       <div class="spec-highlights">
         <div class="hl-item"><span class="hl-val">Sony Starvis</span><span class="hl-lbl">星光夜視極致清晰</span></div><div class="hl-item"><span class="hl-val">Wi-Fi 互聯</span><span class="hl-lbl">免拔記憶卡手機即看</span></div><div class="hl-item"><span class="hl-val">GPS 測速</span><span class="hl-lbl">科技執法語音定點提示</span></div><div class="hl-item"><span class="hl-val">緊急鎖檔</span><span class="hl-lbl">獨立按鍵碰撞自動留證</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="wifi-guide">
+        <section class="doc-section" id="buttons-osd">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Wi-Fi Connection</div>
-            <h2 class="sec-title">手機 Wi-Fi 連線下載影片步驟</h2>
+            <div class="sec-eyebrow">Buttons & Display Icons</div>
+            <h2 class="sec-title">主機實體按鍵配置與螢幕 OSD 圖示解讀</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">開啟主機 Wi-Fi</span>
-                    <div class="ctrl-name">按主機選單開啟 Wi-Fi 熱點</div>
-                    <div class="ctrl-desc">螢幕會顯示 Wi-Fi 名稱（如 Abee-S86_xxxx）與預設連線密碼（預設為 12345678）。</div>
+                    <span class="ctrl-badge">實體緊急鎖檔鍵</span>
+                    <div class="ctrl-name">驚嘆號 / 橘色鎖頭按鍵</div>
+                    <div class="ctrl-desc">遇到突發路況或美景時按下，當前錄製片段立即被存入獨立「EMG 緊急事件」資料夾，防止被循環錄影覆蓋。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">手機 App 直連</span>
-                    <div class="ctrl-name">打開「AbeeCam」App</div>
-                    <div class="ctrl-desc">手機連上主機 Wi-Fi 後開啟專屬 App，即可免拔記憶卡隨時回放、剪輯與下載行車錄影。</div>
+                    <span class="ctrl-badge">螢幕圖標解讀</span>
+                    <div class="ctrl-name">REC / GPS / 麥克風圖示</div>
+                    <div class="ctrl-desc">
+                      • <strong>紅點閃爍 REC</strong>：正在正常錄影中。<br>
+                      • <strong>白色衛星 GPS</strong>：定位成功並已校準衛星時間。<br>
+                      • <strong>麥克風斜線</strong>：錄音已關閉（保護車內隱私）。
+                    </div>
                   </div>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="wifi-guide">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Wi-Fi App Guide</div>
+            <h2 class="sec-title">手機 Wi-Fi 直連免拔卡下載教學</h2>
+          </div>
+          
+                <div class="tip-box">
+                  📲 <strong>手機 App 連線步驟：</strong><br>
+                  1. 開啟 S86 主機選單，點選「開啟 Wi-Fi 熱點」，螢幕顯示 SSID 與密碼（預設密碼通常為：<code>12345678</code>）。<br>
+                  2. 手機至 Wi-Fi 設定連接 S86 熱點。<br>
+                  3. 開啟手機端「AbeeCam」App，即可即時觀看前後鏡頭畫面、回放歷史錄影與無損下載至手機相簿。
                 </div>
                 
         </section>
         
         <section class="doc-section" id="sd-card">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">SD Card Maintenance</div>
-            <h2 class="sec-title">記憶卡格式化與緊急鎖檔重要提醒</h2>
+            <div class="sec-eyebrow">MicroSD Maintenance</div>
+            <h2 class="sec-title">記憶卡定期格式化與保養守則</h2>
           </div>
           
-                <div class="tip-box">
-                  💾 <strong>行車記憶卡保養守則：</strong><br>
-                  • <strong>定期格式化</strong>：建議每 1~2 個月在主機選單內執行「格式化記憶卡」，防止碎片化或壞軌造成漏秒斷錄。<br>
-                  • <strong>實體緊急鎖檔</strong>：行駛中遇到危險突發狀況，按下螢幕下方的<strong>「驚嘆號 / 橘色鎖檔鍵」</strong>，當前影片會被移至獨立鎖檔資料夾，防止被後續循環錄影覆蓋。
+                <div class="warn-box">
+                  💾 <strong>防漏秒重要提醒：</strong><br>
+                  • 建議每 1~2 個月在主機選單內執行「格式化記憶卡」，清除碎檔案壞軌。<br>
+                  • 請務必使用 U3 / V30 / A2 規格以上的高寫入壽命專用行車紀錄卡（推薦 SanDisk High Endurance 或 Kingston 監控專用卡）。
                 </div>
                 
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · 快譯通 S86 星光夜視行車記錄器 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · 快譯通 S86 行車記錄器 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

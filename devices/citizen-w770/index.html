@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>CITIZEN W770 藍牙光動能腕錶 使用指南 | Prism Manuals</title>
-  <meta name="description" content="光動能藍牙旗艦手錶。具備自動時間同步、來電/訊息震動提示、兩地時區切換、指針基準位置校準與太陽能電量指示。">
+  <title>CITIZEN W770 藍牙光動能腕錶 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠多冊說明手冊完整數位整合。收錄手機 App 藍牙配對與時間自動同步、CALL/INFO/LL 來電訊息指針判讀、第二時區切換、指針基準位置校準（0-Position Alignment）與光動能照光充電時間表。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">CITIZEN W770 藍牙光動能腕錶</span>
+        <span class="breadcrumb-current">CITIZEN W770 腕錶</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#pairing-buttons" class="pill-link">手機配對與藍牙連線步驟</a><a href="#hand-align" class="pill-link">指針基準位置校正（指針偏差修復）</a>
+      <a href="#pairing" class="pill-link">藍牙連線與通知</a><a href="#alignment" class="pill-link">指針基準位置校正</a><a href="#charging-time" class="pill-link">光動能充電表</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,69 +221,112 @@
       <div class="hero-tags">
         <span class="badge-tag">CITIZEN 星辰錶</span>
         <span class="badge-tag">個人穿戴</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">CITIZEN Eco-Drive Bluetooth W770 使用指南</h1>
-      <p class="hero-summary">光動能藍牙旗艦手錶。具備自動時間同步、來電/訊息震動提示、兩地時區切換、指針基準位置校準與太陽能電量指示。</p>
+      <h1 class="hero-headline">CITIZEN Eco-Drive Bluetooth W770 深度指南</h1>
+      <p class="hero-summary">原廠多冊說明手冊完整數位整合。收錄手機 App 藍牙配對與時間自動同步、CALL/INFO/LL 來電訊息指針判讀、第二時區切換、指針基準位置校準（0-Position Alignment）與光動能照光充電時間表。</p>
       <div class="spec-highlights">
         <div class="hl-item"><span class="hl-val">Eco-Drive</span><span class="hl-lbl">光動能終身免換電池</span></div><div class="hl-item"><span class="hl-val">Bluetooth 4.0</span><span class="hl-lbl">手機 App 智慧校時</span></div><div class="hl-item"><span class="hl-val">指針基準校準</span><span class="hl-lbl">強磁衝擊後復位修復</span></div><div class="hl-item"><span class="hl-val">來電震動</span><span class="hl-lbl">重要通知指針指向提示</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="pairing-buttons">
+        <section class="doc-section" id="pairing">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Phone Connection</div>
-            <h2 class="sec-title">手機配對與藍牙連線步驟</h2>
+            <div class="sec-eyebrow">Phone Bluetooth & Notifications</div>
+            <h2 class="sec-title">手機配對流程與指針通知判讀</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">首次配對 (Pairing)</span>
+                    <span class="ctrl-badge">首次藍牙配對</span>
                     <div class="ctrl-name">龍頭推入 + 長按右下按鈕 B</div>
                     <div class="ctrl-desc">
-                      1. 打開手機「CITIZEN Bluetooth Watch」App。<br>
-                      2. 手錶龍頭保持推入（第 0 段），按住右下角 <strong>按鈕 B 2~3 秒</strong>。<br>
-                      3. 二手會指向「ACT」並移動至「CONNECT」，手機 App 點選確認配對。
+                      1. 開啟手機「CITIZEN Bluetooth Watch」App。<br>
+                      2. 手錶龍頭保持推入（第 0 段），按住右下角 <strong>按鈕 B 約 2~3 秒</strong>。<br>
+                      3. 秒針轉動指向「ACT」並移動至「CONNECT」，手機 App 點選確認配對。
                     </div>
-                  </div>
-                  <div class="ctrl-card">
-                    <span class="ctrl-badge">手動連線 (Reconnect)</span>
-                    <div class="ctrl-name">按住按鈕 B 2 秒</div>
-                    <div class="ctrl-desc">日常手動同步時間時，短按或長按按鈕 B 2 秒，秒針旋轉至 CONNECT 成功同步後自動歸位。</div>
                   </div>
                   <div class="ctrl-card">
                     <span class="ctrl-badge">通知指針位置解讀</span>
                     <div class="ctrl-name">CALL / INFO / LL / ACT</div>
                     <div class="ctrl-desc">
-                      • <strong>CALL</strong>：電話來電 ｜ • <strong>INFO</strong>：簡訊或 LINE 訊息 ｜ • <strong>LL</strong>：藍牙連線中斷提示 ｜ • <strong>ACT</strong>：正在搜尋通訊中。
+                      • <strong>CALL</strong>：電話來電提示。<br>
+                      • <strong>INFO</strong>：簡訊、郵件或 LINE 訊息。<br>
+                      • <strong>LL (Link Loss)</strong>：與手機距離過遠斷線提示。<br>
+                      • <strong>ACT</strong>：正在搜尋手機訊號中。
                     </div>
                   </div>
                 </div>
                 
         </section>
         
-        <section class="doc-section" id="hand-align">
+        <section class="doc-section" id="alignment">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Zero Position Calibration</div>
-            <h2 class="sec-title">指針基準位置校正（指針偏差修復）</h2>
+            <div class="sec-eyebrow">Zero Position Alignment</div>
+            <h2 class="sec-title">指針偏差基準位置校正 (0-Position) 完整步驟</h2>
           </div>
           
                 <div class="tip-box">
-                  🎯 <strong>指針位置對不準時的校準步驟：</strong><br>
+                  🎯 <strong>手錶受到撞擊或強磁導致指針走位時的校準程序：</strong><br>
                   1. 將龍頭向外拉出 <strong>兩段 (第 2 段)</strong>。<br>
-                  2. 同時長按右上角按鈕 A 與右下角按鈕 B 約 3 秒以上，指針微動發出嗶聲進入基準校準模式。<br>
-                  3. 按按鈕 A 切換要校正的指針（時針/分針/功能盤/小指針），旋轉龍頭調整指針精確對齊正 12 點鐘或正中央。<br>
-                  4. 全數對齊後，將龍頭推回第 0 段，完成校準。
+                  2. 同時長按右上角「按鈕 A」與右下角「按鈕 B」約 3 秒以上，指針微動發出嗶聲進入基準校準。<br>
+                  3. 按按鈕 A 切換目標指針（時針、分針、24小時指針、秒針、功能小盤）。<br>
+                  4. 旋轉龍頭調整目標指針精準對齊 <strong>正 12 點鐘或 0 點基準點</strong>。<br>
+                  5. 所有指針歸零完成後，將龍頭推回原位，手錶自動還原正確走時。
                 </div>
                 
+        </section>
+        
+        <section class="doc-section" id="charging-time">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Solar Charging Guide</div>
+            <h2 class="sec-title">光動能照光環境充電時間表</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>照光光源環境</th><th>照度 (Lux)</th><th>運轉 1 天所需時間</th><th>從完全沒電充至滿電</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>戶外直射晴天烈日</strong></td><td>100,000 Lux</td><td>約 2 分鐘</td><td>約 11 小時</td></tr>
+                      <tr><td><strong>戶外陰天日光</strong></td><td>10,000 Lux</td><td>約 12 分鐘</td><td>約 40 小時</td></tr>
+                      <tr><td><strong>室內靠窗陽光</strong></td><td>5,000 Lux</td><td>約 25 分鐘</td><td>約 80 小時</td></tr>
+                      <tr><td><strong>室內普通日光燈</strong></td><td>500 Lux</td><td>約 4 小時</td><td>約 300 小時</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · CITIZEN W770 藍牙光動能腕錶 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · CITIZEN W770 腕錶 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

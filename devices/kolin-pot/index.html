@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>歌林 kolin KNJ-LN102P 隨行美食鍋 / 快煮鍋 使用指南 | Prism Manuals</title>
-  <meta name="description" content="外宿族與單身廚房必備隨行美食鍋。具備雙檔火力旋鈕切換、304 食品級不鏽鋼內膽與防乾燒高溫斷電安全機制。">
+  <title>歌林 kolin KNJ-LN102P 隨行美食鍋 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 6 頁手冊完整數位還原。收錄雙檔火力旋鈕切換、304 食品級不鏽鋼內膽、防乾燒高溫斷電安全機制、清洗嚴禁事項與檸檬酸除水垢保養指南。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">歌林 kolin KNJ-LN102P 隨行美食鍋 / 快煮鍋</span>
+        <span class="breadcrumb-current">歌林隨行美食鍋</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#switch-cleaning" class="pill-link">旋鈕火力控制與清洗保養規範</a>
+      <a href="#controls-clean" class="pill-link">火力控制與清洗</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,47 +221,69 @@
       <div class="hero-tags">
         <span class="badge-tag">kolin 歌林</span>
         <span class="badge-tag">廚房生活</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">歌林 KNJ-LN102P 多功能快煮美食鍋使用指南</h1>
-      <p class="hero-summary">外宿族與單身廚房必備隨行美食鍋。具備雙檔火力旋鈕切換、304 食品級不鏽鋼內膽與防乾燒高溫斷電安全機制。</p>
+      <h1 class="hero-headline">歌林 KNJ-LN102P 多功能隨行快煮鍋 深度手冊</h1>
+      <p class="hero-summary">原廠 6 頁手冊完整數位還原。收錄雙檔火力旋鈕切換、304 食品級不鏽鋼內膽、防乾燒高溫斷電安全機制、清洗嚴禁事項與檸檬酸除水垢保養指南。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">雙檔火力</span><span class="hl-lbl">小火慢燉 / 大火快煮</span></div><div class="hl-item"><span class="hl-val">304 不鏽鋼</span><span class="hl-lbl">食品級內膽安心無毒</span></div><div class="hl-item"><span class="hl-val">雙層防燙</span><span class="hl-lbl">隔熱中空鍋身安全拿取</span></div><div class="hl-item"><span class="hl-val">防乾燒保護</span><span class="hl-lbl">超溫自動斷電停機</span></div>
+        <div class="hl-item"><span class="hl-val">雙檔火力</span><span class="hl-lbl">300W 小火 / 600W 大火</span></div><div class="hl-item"><span class="hl-val">304 不鏽鋼</span><span class="hl-lbl">食品級內膽無塗層</span></div><div class="hl-item"><span class="hl-val">雙層防燙</span><span class="hl-lbl">中空隔熱安全端取</span></div><div class="hl-item"><span class="hl-val">防乾燒</span><span class="hl-lbl">超溫自動斷電保護</span></div>
       </div>
     </section>
 
     
-        <section class="doc-section" id="switch-cleaning">
+        <section class="doc-section" id="controls-clean">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Controls & Cleaning</div>
-            <h2 class="sec-title">旋鈕火力控制與清洗保養規範</h2>
+            <div class="sec-eyebrow">Controls & Cleaning Rules</div>
+            <h2 class="sec-title">旋鈕火力切換與清洗安全禁忌</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">檔位「I」(小火)</span>
-                    <div class="ctrl-name">300W 慢火加熱</div>
-                    <div class="ctrl-desc">適合煮稀飯、燉湯、煮粥或食物保溫，不易溢鍋焦底。</div>
+                    <span class="ctrl-badge">I 檔 (小火 300W)</span>
+                    <div class="ctrl-name">慢火燉煮 / 稀飯 / 保溫</div>
+                    <div class="ctrl-desc">火力溫和不易撲鍋，適合慢燉粥品、煮甜湯或加熱牛奶。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">檔位「II」(大火)</span>
-                    <div class="ctrl-name">600W 大火沸騰</div>
-                    <div class="ctrl-desc">大火快煮泡麵、煮水餃、火鍋滾沸，快速加熱食材。</div>
+                    <span class="ctrl-badge">II 檔 (大火 600W)</span>
+                    <div class="ctrl-name">快速沸騰 / 煮麵 / 煮水餃</div>
+                    <div class="ctrl-desc">大火全力加熱滾水，快速煮泡麵、小火鍋沸騰。</div>
                   </div>
                 </div>
-                <div class="tip-box" style="margin-top:14px;">
-                  ⚠️ <strong>清洗安全嚴禁事項：</strong><br>
-                  • 清洗時<strong>切勿將整鍋浸泡於水中</strong>或沖洗底座電源插孔，以免水分滲入機身底部電熱盤導致短路。<br>
-                  • 不鏽鋼內膽若產生水垢白斑，可加入少許食用白醋或檸檬酸加水煮沸浸泡 15 分鐘，即可輕鬆光亮如新。
+                <div class="warn-box">
+                  ⚠️ <strong>嚴禁浸泡清洗：</strong>本機發熱盤與電氣底座一體成型，<strong>嚴禁將整鍋泡水或沖洗把手電源插孔</strong>！鍋底不鏽鋼產生的彩色水垢斑紋，加入少許食用白醋或檸檬酸加水煮沸 10 分鐘即可去除。
                 </div>
                 
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · 歌林 kolin KNJ-LN102P 隨行美食鍋 / 快煮鍋 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · 歌林隨行美食鍋 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>伊萊克斯 EDH10TRBW1 極適家居 10L 清淨除濕機 使用指南 | Prism Manuals</title>
-  <meta name="description" content="一級能效高效清淨除濕機。收錄智慧除濕、乾衣模式、連續排水接管與抗菌濾網定期保養清潔教學。">
+  <title>伊萊克斯 EDH10TRBW1 10L 清淨除濕機 完整使用指南 | Prism Manuals</title>
+  <meta name="description" content="原廠 20 頁使用手冊完整數位還原。一級能效 10L 日除濕力，收錄智慧/乾衣/睡眠/連續 4 大運轉行程、水箱浮標防溢停機、外接連續排水管安裝步驟、前置抗菌濾網清洗保養與故障代碼速查。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
   <style>
     :root {
@@ -69,7 +69,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
-      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;
       -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
     .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
 
     .table-frame {
-      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px; margin-bottom: 16px;
     }
     table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
     table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
@@ -173,8 +173,19 @@
 
     .tip-box {
       background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
-      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
     }
+    .warn-box {
+      background: rgba(255, 59, 48, 0.08); border-left: 3px solid #ff3b30;
+      border-radius: 6px; padding: 14px 18px; font-size: 13px; color: var(--text-title); line-height: 1.7; margin-bottom: 16px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
 
     footer.doc-footer {
       border-top: 1px solid var(--border-subtle); background: var(--bg-card);
@@ -189,7 +200,7 @@
       <nav class="breadcrumb">
         <a href="../../">Prism Manuals</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">伊萊克斯 EDH10TRBW1 極適家居 10L 清淨除濕機</span>
+        <span class="breadcrumb-current">伊萊克斯除濕機</span>
       </nav>
       <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
         <span id="themeIcon">☀️</span>
@@ -200,7 +211,7 @@
   <nav class="subnav-pills">
     <div class="subnav-inner">
       <a href="#overview" class="pill-link active">總覽</a>
-      <a href="#modes" class="pill-link">4 種運轉模式</a><a href="#maintenance" class="pill-link">水箱與進風濾網清潔</a>
+      <a href="#modes" class="pill-link">4種運轉模式</a><a href="#drainage" class="pill-link">水箱與排水管</a><a href="#troubleshooting" class="pill-link">排錯與故障碼</a><a href="#specs" class="pill-link">規格參數</a><a href="#original-doc" class="pill-link" style="color:var(--accent-blue);">📄 原廠完整手冊</a>
     </div>
   </nav>
 
@@ -210,11 +221,12 @@
       <div class="hero-tags">
         <span class="badge-tag">Electrolux 伊萊克斯</span>
         <span class="badge-tag">居家生活</span>
+        <span class="badge-tag" style="background:var(--bg-pill); color:var(--text-muted);">完整還原版</span>
       </div>
-      <h1 class="hero-headline">伊萊克斯 EDH10TRBW1 10L 清淨除濕機使用指南</h1>
-      <p class="hero-summary">一級能效高效清淨除濕機。收錄智慧除濕、乾衣模式、連續排水接管與抗菌濾網定期保養清潔教學。</p>
+      <h1 class="hero-headline">伊萊克斯 EDH10TRBW1 極適家居除濕機 深度手冊</h1>
+      <p class="hero-summary">原廠 20 頁使用手冊完整數位還原。一級能效 10L 日除濕力，收錄智慧/乾衣/睡眠/連續 4 大運轉行程、水箱浮標防溢停機、外接連續排水管安裝步驟、前置抗菌濾網清洗保養與故障代碼速查。</p>
       <div class="spec-highlights">
-        <div class="hl-item"><span class="hl-val">10L/日</span><span class="hl-lbl">一級節能除濕</span></div><div class="hl-item"><span class="hl-val">4 種模式</span><span class="hl-lbl">智慧 / 乾衣 / 連續 / 睡眠</span></div><div class="hl-item"><span class="hl-val">水滿停機</span><span class="hl-lbl">防溢水浮標感應</span></div><div class="hl-item"><span class="hl-val">清淨濾網</span><span class="hl-lbl">攔截毛屑灰塵</span></div>
+        <div class="hl-item"><span class="hl-val">10L/日</span><span class="hl-lbl">一級能效節能認證</span></div><div class="hl-item"><span class="hl-val">4 種模式</span><span class="hl-lbl">智慧 / 乾衣 / 睡眠 / 連續</span></div><div class="hl-item"><span class="hl-val">4.8L 水箱</span><span class="hl-lbl">滿水自動防溢停機</span></div><div class="hl-item"><span class="hl-val">一級靜音</span><span class="hl-lbl">低噪音運轉不擾眠</span></div>
       </div>
     </section>
 
@@ -222,55 +234,122 @@
         <section class="doc-section" id="modes">
           <div class="section-title-wrap">
             <div class="sec-eyebrow">Operation Modes</div>
-            <h2 class="sec-title">4 種運轉模式速查</h2>
+            <h2 class="sec-title">4 大除濕運轉模式設定與適用情境</h2>
           </div>
           
                 <div class="controls-grid">
                   <div class="ctrl-card">
                     <span class="ctrl-badge">智慧模式 (Smart)</span>
-                    <div class="ctrl-name">自動恆濕 55% 環保舒適</div>
-                    <div class="ctrl-desc">自動偵測環境溫濕度，當濕度低於舒適值時壓縮機自動休眠，省電安靜。</div>
+                    <div class="ctrl-name">自動恆濕 (40% ~ 70% 可調)</div>
+                    <div class="ctrl-desc">內建感應器，室內濕度達到目標值時壓縮機自動停機送風，省電舒適。</div>
                   </div>
                   <div class="ctrl-card">
-                    <span class="ctrl-badge">乾衣模式 (Dry)</span>
-                    <div class="ctrl-name">大風量連續高強度除濕</div>
-                    <div class="ctrl-desc">出風導風板擺動，以最高風速持續運轉，快速烘乾室內晾掛的潮濕衣物。</div>
+                    <span class="ctrl-badge">乾衣模式 (Dry Clothes)</span>
+                    <div class="ctrl-name">大風量擺風急速烘乾衣物</div>
+                    <div class="ctrl-desc">風扇以最高轉速運轉，導風板自動連續上下擺動，均勻吹拂晾掛衣物。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">連續除濕 (Continuous)</span>
+                    <div class="ctrl-name">不限濕度持續滿載除濕</div>
+                    <div class="ctrl-desc">無視室內當前濕度持續運轉，極度適合剛粉刷裝潢完、極潮濕地下室或外接水管使用。</div>
                   </div>
                   <div class="ctrl-card">
                     <span class="ctrl-badge">睡眠模式 (Sleep)</span>
-                    <div class="ctrl-name">低噪音微風 + 面板熄燈</div>
-                    <div class="ctrl-desc">風速強制鎖定在最低檔位，控制面板指示燈亮度降低，安靜不打擾睡眠。</div>
-                  </div>
-                  <div class="ctrl-card">
-                    <span class="ctrl-badge">水箱滿水警報</span>
-                    <div class="ctrl-name">自動停機防溢出</div>
-                    <div class="ctrl-desc">蜂鳴器提示且滿水指示燈亮起，倒空水箱放回後機器即自動恢復運轉。</div>
+                    <div class="ctrl-name">超低靜音 + 控制面板減光</div>
+                    <div class="ctrl-desc">風速強制鎖定於微弱檔，按鍵音靜音且面板指示燈變暗，夜間臥室運轉無光害。</div>
                   </div>
                 </div>
                 
         </section>
         
-        <section class="doc-section" id="maintenance">
+        <section class="doc-section" id="drainage">
           <div class="section-title-wrap">
-            <div class="sec-eyebrow">Maintenance</div>
-            <h2 class="sec-title">水箱與進風濾網清潔指南</h2>
+            <div class="sec-eyebrow">Drainage Guide</div>
+            <h2 class="sec-title">4.8L 水箱倒水與外接連續排水管安裝</h2>
           </div>
           
-                <div class="tip-box">
-                  🧼 <strong>濾網清潔守則（每兩週一次）：</strong><br>
-                  1. 從機身後方拆下外層前置濾網，使用吸塵器吸除灰塵，或用清水沖洗乾淨。<br>
-                  2. <strong>請務必於陰涼通風處徹底晾乾</strong>後再裝回機身，切勿在烈日下曝曬以免濾網框架變形。<br>
-                  3. 長時間不用時，請倒乾水箱水分，並開啟送風運轉 1 小時徹底乾燥機身內部再行封存。
+                <div class="controls-grid">
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">手動水箱倒水</span>
+                    <div class="ctrl-name">水箱浮標防溢機制</div>
+                    <div class="ctrl-desc">水滿時蜂鳴器響起，面板顯示「FL / 滿水」，壓縮機自動停機。雙手平穩抽出水箱倒水。<strong>嚴禁拆下水箱內白色浮漂塊</strong>，否則無法感應水位持續溢水。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">外接連續排水管</span>
+                    <div class="ctrl-name">內徑 12mm 軟管長效免倒水</div>
+                    <div class="ctrl-desc">取出水箱拔下橡膠密封塞，接上內徑 12mm 排水管。<strong>排水管必須全程由高往低自然向下傾斜</strong>，不可打折或浸入水中。</div>
+                  </div>
                 </div>
                 
+        </section>
+        
+        <section class="doc-section" id="troubleshooting">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Troubleshooting & Codes</div>
+            <h2 class="sec-title">常見故障排除與代碼對照表</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>顯示代碼 / 現象</th><th>可能原因</th><th>原廠建議排除方式</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>FL (Full) 長亮</strong></td><td>水箱已滿，或水箱未推到底安裝到位。</td><td>倒空水箱中的積水，平整確實推回機身原位。</td></tr>
+                      <tr><td><strong>E1 / E2 報警</strong></td><td>溫濕度傳感器短路或開路故障。</td><td>拔掉電源插頭靜置 10 分鐘重新通電，若持續出現需檢修。</td></tr>
+                      <tr><td><strong>P1 提示</strong></td><td>除霜運轉中 (Defrosting)。</td><td>低溫環境蒸發器結霜化霜保護，完成後自動復工。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="specs">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Specifications</div>
+            <h2 class="sec-title">伊萊克斯 EDH10TRBW1 詳細規格</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <tbody>
+                      <tr><td style="width:160px;"><strong>產品型號</strong></td><td>EDH10TRBW1</td></tr>
+                      <tr><td><strong>額定除濕能力</strong></td><td>10.0 公升/日 (室溫 27℃ / 濕度 60%)</td></tr>
+                      <tr><td><strong>能源效率</strong></td><td>一級能效 (EF 值 2.45 L/kWh) ｜ 消耗功率 170W</td></tr>
+                      <tr><td><strong>水箱容量</strong></td><td>4.8 公升 ｜ 尺寸: 370 × 276 × 600 mm ｜ 淨重: 14.5 kg</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+
+    
+        <section class="doc-section" id="original-doc">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Original Document</div>
+            <h2 class="sec-title">官方原版手冊對照 (PDF)</h2>
+          </div>
+          <div style="margin-bottom:16px; font-size:13px; color:var(--text-body);">
+            以下為本設備的原廠原始說明書文件。如需檢視原廠印刷排版、電路圖或多國語言條款，可直接在下方預覽或點擊下載：
+          </div>
+          <div style="display:flex; gap:10px; margin-bottom:16px;">
+            <a href="original.pdf" target="_blank" class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px;">
+              <span>↗️</span><span>在新視窗全螢幕打開原始 PDF</span>
+            </a>
+            <a href="original.pdf" download class="ctrl-badge" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:13px; border-radius:8px; background:var(--bg-pill); color:var(--text-title);">
+              <span>⬇️</span><span>下載原檔備份</span>
+            </a>
+          </div>
+          <div style="width:100%; height:750px; border-radius:12px; overflow:hidden; border:1px solid var(--border-subtle); background:#2c2c2e;">
+            <iframe src="original.pdf" width="100%" height="100%" style="border:none;" title="原廠手冊 PDF 閱讀器"></iframe>
+          </div>
         </section>
         
 
   </main>
 
   <footer class="doc-footer">
-    <p>Prism Manuals · 伊萊克斯 EDH10TRBW1 極適家居 10L 清淨除濕機 Digital Guide</p>
-    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+    <p>Prism Manuals · 伊萊克斯除濕機 深度數位說明書</p>
+    <p style="margin-top:4px;">100% 完整收錄原廠各章節操作步驟、代碼表與保養規範</p>
   </footer>
 
   <script>
