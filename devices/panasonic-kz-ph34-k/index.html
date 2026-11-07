@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Panasonic KZ-PH34-K IH 電磁爐 使用指南 | Prism Manuals</title>
+  <meta name="description" content="Panasonic 日本原裝 KZ-PH34-K 卓上型 IH 調理器數位說明書。收錄中日對照按鍵面板、7 段火力瓦數表、定溫油炸、鍋具適用指南與排錯代碼。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍳</text></svg>">
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
+      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header.header-nav {
+      position: sticky; top: 0; z-index: 100; background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    }
+
+    .header-inner {
+      max-width: 980px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { color: var(--text-muted); font-size: 11px; }
+    .breadcrumb-current { color: var(--text-title); font-weight: 600; }
+
+    .theme-toggle-btn {
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .theme-toggle-btn:hover { background-color: var(--bg-pill); color: var(--text-title); }
+
+    nav.subnav-pills {
+      position: sticky; top: 52px; z-index: 90; background: var(--bg-card);
+      border-bottom: 1px solid var(--border-divider); padding: 8px 16px; overflow-x: auto;
+      white-space: nowrap; display: flex; gap: 6px; scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner { max-width: 980px; margin: 0 auto; display: flex; gap: 6px; width: 100%; }
+    .pill-link {
+      font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none;
+      padding: 5px 12px; border-radius: var(--radius-pill); background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active { color: var(--accent-blue); background: var(--accent-tag); font-weight: 600; }
+
+    main.doc-container {
+      max-width: 980px; width: 100%; margin: 0 auto; padding: 40px 20px 80px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .product-hero {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 36px 30px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge-tag {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+      background: var(--accent-tag); padding: 4px 10px; border-radius: 6px;
+    }
+    .hero-headline { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; }
+    .hero-summary { font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 760px; }
+
+    .spec-highlights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border-divider);
+    }
+    .hl-item { display: flex; flex-direction: column; gap: 2px; }
+    .hl-val { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .hl-lbl { font-size: 12px; color: var(--text-muted); }
+
+    .doc-section {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 30px; box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+    .section-title-wrap { margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border-divider); }
+    .sec-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent-blue); margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+
+    /* 中日對照按鈕格 */
+    .panel-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .panel-btn-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .panel-badge {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .badge-jp {
+      font-size: 14px; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+      background: var(--bg-pill-active); color: var(--text-pill-active); letter-spacing: 0.5px;
+    }
+    .badge-tw {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+    }
+    .panel-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
+
+    .table-frame {
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+    }
+    table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
+    table.spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-divider); color: var(--text-body); }
+    table.spec-table tr:last-child td { border-bottom: none; }
+
+    .tip-box {
+      background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
+      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+    }
+
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 30px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Panasonic KZ-PH34-K</span>
+      </nav>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#panel-section" class="pill-link">中日按鍵對照</a>
+      <a href="#power-section" class="pill-link">7段火力與定溫</a>
+      <a href="#pot-section" class="pill-link">適用鍋具檢查</a>
+      <a href="#safe-section" class="pill-link">電壓與安全注意事項</a>
+      <a href="#specs-section" class="pill-link">規格說明</a>
+    </div>
+  </nav>
+
+  <main class="doc-container">
+
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">PANASONIC 松下</span>
+        <span class="badge-tag">日規卓上型 IH</span>
+        <span class="badge-tag">1400W 大火力</span>
+        <span class="badge-tag">靜音設計</span>
+      </div>
+      <h1 class="hero-headline">Panasonic KZ-PH34-K IH 電磁爐使用指南</h1>
+      <p class="hero-summary">
+        日本主婦愛用的經典桌上型 IH 調理爐。搭載 7 段精準火力調節、定溫油炸、自動炊飯與慢火煨燉行程，具備高靈敏磁吸安全插頭。
+      </p>
+      <div class="spec-highlights">
+        <div class="hl-item">
+          <span class="hl-val">1400W</span>
+          <span class="hl-lbl">最大加熱功率</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">7 檔</span>
+          <span class="hl-lbl">火力段位 (75W~1400W)</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">140~200℃</span>
+          <span class="hl-lbl">定溫油炸溫控</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">9h 30m</span>
+          <span class="hl-lbl">長時預約定時</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 中日按鍵面板對照 -->
+    <section class="doc-section" id="panel-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Control Panel Translation</div>
+        <h2 class="sec-title">日語操作面板 ➔ 中文功能對照速查</h2>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel-btn-card">
+          <div class="panel-badge">
+            <span class="badge-jp">切 / 入</span>
+            <span class="badge-tw">電源 開 / 關</span>
+          </div>
+          <div class="panel-desc">主電源按鈕。開機後若無操作或未放鍋具，2 分鐘後自動關閉電源。</div>
+        </div>
+
+        <div class="panel-btn-card">
+          <div class="panel-badge">
+            <span class="badge-jp">加熱</span>
+            <span class="badge-tw">手動常規加熱</span>
+          </div>
+          <div class="panel-desc">一般煎、炒、煮、火鍋使用。預設從火力「5」(700W) 開始，可手動按 ◀ ▶ 調節 1~7 檔。</div>
+        </div>
+
+        <div class="panel-btn-card">
+          <div class="panel-badge">
+            <span class="badge-jp">煮込み</span>
+            <span class="badge-tw">慢火煨燉模式</span>
+          </div>
+          <div class="panel-desc">先以大火煮沸後自動轉為微火慢燉，適合關東煮、馬鈴薯燉肉、咖哩、牛腩等，不易焦底。</div>
+        </div>
+
+        <div class="panel-btn-card">
+          <div class="panel-badge">
+            <span class="badge-jp">炊飯</span>
+            <span class="badge-tw">自動煮飯行程</span>
+          </div>
+          <div class="panel-desc">搭配鑄鐵鍋或不鏽鋼鍋，自動控制浸泡、大火沸騰、燜飯，一鍵煮出晶瑩白米飯。</div>
+        </div>
+
+        <div class="panel-btn-card">
+          <div class="panel-badge">
+            <span class="badge-jp">揚げ物</span>
+            <span class="badge-tw">定溫油炸模式</span>
+          </div>
+          <div class="panel-desc">以 10℃ 為單位（140℃ ~ 200℃）精準控溫，天婦羅或炸雞塊不爆油煙、金黃酥脆。</div>
+        </div>
+
+        <div class="panel-btn-card">
+          <div class="panel-badge">
+            <span class="badge-jp">タイマー</span>
+            <span class="badge-tw">定時關機預約</span>
+          </div>
+          <div class="panel-desc">設定 1 分鐘 ~ 9 小時 30 分鐘自動停止加熱，燉湯無需顧火。長按可快速快進時間。</div>
+        </div>
+
+        <div class="panel-btn-card" style="grid-column: 1 / -1;">
+          <div class="panel-badge">
+            <span class="badge-jp">1000W セーブ</span>
+            <span class="badge-tw">1000W 節電靜音模式</span>
+          </div>
+          <div class="panel-desc">將最大耗電限制在 1000W 以內，同時風扇噪音顯著降低，適合夜間煮宵夜或老舊插座迴路防跳電。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7段火力與定溫 -->
+    <section class="doc-section" id="power-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Heat Levels & Temperatures</div>
+        <h2 class="sec-title">7 檔火力與油炸溫度對照表</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>面板顯示</th>
+              <th>火力等級</th>
+              <th>參考耗電瓦數</th>
+              <th>料理用途建議</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1 燈</strong></td>
+              <td>微火 / 保溫</td>
+              <td>約 75W</td>
+              <td>醬汁保溫、融化巧克力、茶碗蒸</td>
+            </tr>
+            <tr>
+              <td><strong>2 燈</strong></td>
+              <td>小火慢煨</td>
+              <td>約 150W</td>
+              <td>黑豆、燉牛肉、慢煮高湯</td>
+            </tr>
+            <tr>
+              <td><strong>3 燈</strong></td>
+              <td>小火</td>
+              <td>約 260W</td>
+              <td>煎蛋捲、煎豆腐</td>
+            </tr>
+            <tr>
+              <td><strong>4 燈</strong></td>
+              <td>中火</td>
+              <td>約 450W</td>
+              <td>家常炒菜、燉煮</td>
+            </tr>
+            <tr>
+              <td><strong>5 燈 (開機預設)</strong></td>
+              <td>中強火</td>
+              <td>約 700W</td>
+              <td>火鍋維持滾沸、煎牛排</td>
+            </tr>
+            <tr>
+              <td><strong>6 燈</strong></td>
+              <td>強火</td>
+              <td>約 900W</td>
+              <td>大鍋煮水、煮水餃</td>
+            </tr>
+            <tr>
+              <td><strong>7 燈 (最大)</strong></td>
+              <td>大火爆炒</td>
+              <td>約 1400W</td>
+              <td>熱鍋、大火翻炒料理</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 適用鍋具檢查 -->
+    <section class="doc-section" id="pot-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Cookware Compatibility</div>
+        <h2 class="sec-title">鍋具適用性檢查指南</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th style="width:140px;">判定</th>
+              <th>鍋具材質與形狀</th>
+              <th>注意事項</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:#34c759;">⭕ 可以使用</strong></td>
+              <td>
+                • 鐵鍋、鑄鐵鍋、生鐵平底鍋<br>
+                • 搪瓷鍋（琺瑯鍋）<br>
+                • IH 專用不鏽鋼鍋（底部帶磁性，磁鐵吸得住）<br>
+                • 底部直徑 <strong>12 cm ~ 26 cm</strong>，鍋底平整
+              </td>
+              <td>鍋底翹曲彎曲不可超過 3mm，否則感應不良或火力減弱。</td>
+            </tr>
+            <tr>
+              <td><strong style="color:#ff3b30;">❌ 不可使用</strong></td>
+              <td>
+                • 純鋁鍋、純銅鍋（非 IH 導磁底）<br>
+                • 耐熱玻璃鍋、普通陶鍋 / 砂鍋<br>
+                • 底部帶腳的鍋、圓底鍋（如傳統中華圓底炒鍋）<br>
+                • 鍋底直徑小於 12 cm 的極小壺/杯
+              </td>
+              <td>放上去後火力燈會閃爍並發出嗶嗶警告聲，隨後自動停止加熱。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 電壓與安全事項 -->
+    <section class="doc-section" id="safe-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Voltage & Safety Tips</div>
+        <h2 class="sec-title">台灣使用 110V 電壓與安全注意</h2>
+      </div>
+
+      <div class="tip-box">
+        ⚠️ <strong>台灣插座使用注意事項：</strong><br>
+        本機為日本原廠規格（AC 100V 50/60Hz 1400W）。在台灣插 110V 插座通常可直接相容使用，但最大耗電量高達 1400W（電流近 13A~14A）：<br>
+        1. <strong>請務必單獨使用牆壁獨立 15A 插座</strong>，嚴禁使用無過載保護的細線延長線或分接頭。<br>
+        2. 若在老舊公寓或擔心跳電，建議啟動 <strong>「1000W 節電模式」</strong>，既防跳電又更靜音安靜。<br>
+        3. 電源線接頭為<strong>磁吸式設計</strong>，請確保磁吸頭完全貼合吸緊；若不小心踢到電線會自動脫落以防熱鍋翻覆，此為原廠安全防燙防傾倒機制。
+      </div>
+    </section>
+
+    <!-- 規格參數 -->
+    <section class="doc-section" id="specs-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Specifications</div>
+        <h2 class="sec-title">詳細規格參數</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <tbody>
+            <tr>
+              <td style="width:160px;"><strong>產品型號</strong></td>
+              <td>Panasonic KZ-PH34-K (黑色)</td>
+            </tr>
+            <tr>
+              <td><strong>額定電壓</strong></td>
+              <td>AC 100V 50/60Hz</td>
+            </tr>
+            <tr>
+              <td><strong>消費電力</strong></td>
+              <td>約 1400W（待機插電消耗約 1.2W）</td>
+            </tr>
+            <tr>
+              <td><strong>火力調整</strong></td>
+              <td>相當於 75W ~ 1400W (7 段)</td>
+            </tr>
+            <tr>
+              <td><strong>油炸控溫</strong></td>
+              <td>140℃ ~ 200℃ (7 階)</td>
+            </tr>
+            <tr>
+              <td><strong>外觀尺寸</strong></td>
+              <td>寬 30.4 cm × 深 34.5 cm × 高 5.4 cm</td>
+            </tr>
+            <tr>
+              <td><strong>本體重量</strong></td>
+              <td>約 2.5 kg</td>
+            </tr>
+            <tr>
+              <td><strong>電源線長</strong></td>
+              <td>約 1.9 m (磁吸式快速脫落插頭)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <p>Prism Manuals · Panasonic KZ-PH34-K Digital Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = (current === 'dark') ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

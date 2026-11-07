@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GAME’NIR ProX-Legend7Ds 電玩手把 使用指南 | Prism Manuals</title>
+  <meta name="description" content="GAME’NIR ProX-Legend7Ds 無線手把數位手冊。收錄 Switch/PC/手機配對模式、TURBO 連發、背鍵巨集錄製、5 段震動調節與燈號說明。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
+      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header.header-nav {
+      position: sticky; top: 0; z-index: 100; background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    }
+
+    .header-inner {
+      max-width: 980px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { color: var(--text-muted); font-size: 11px; }
+    .breadcrumb-current { color: var(--text-title); font-weight: 600; }
+
+    .theme-toggle-btn {
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .theme-toggle-btn:hover { background-color: var(--bg-pill); color: var(--text-title); }
+
+    nav.subnav-pills {
+      position: sticky; top: 52px; z-index: 90; background: var(--bg-card);
+      border-bottom: 1px solid var(--border-divider); padding: 8px 16px; overflow-x: auto;
+      white-space: nowrap; display: flex; gap: 6px; scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner { max-width: 980px; margin: 0 auto; display: flex; gap: 6px; width: 100%; }
+    .pill-link {
+      font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none;
+      padding: 5px 12px; border-radius: var(--radius-pill); background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active { color: var(--accent-blue); background: var(--accent-tag); font-weight: 600; }
+
+    main.doc-container {
+      max-width: 980px; width: 100%; margin: 0 auto; padding: 40px 20px 80px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .product-hero {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 36px 30px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge-tag {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+      background: var(--accent-tag); padding: 4px 10px; border-radius: 6px;
+    }
+    .hero-headline { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; }
+    .hero-summary { font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 760px; }
+
+    .spec-highlights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border-divider);
+    }
+    .hl-item { display: flex; flex-direction: column; gap: 2px; }
+    .hl-val { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .hl-lbl { font-size: 12px; color: var(--text-muted); }
+
+    .doc-section {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 30px; box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+    .section-title-wrap { margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border-divider); }
+    .sec-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent-blue); margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+
+    .controls-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .ctrl-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .ctrl-badge {
+      font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: var(--bg-pill-active); color: var(--text-pill-active); align-self: flex-start;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+    }
+    .ctrl-name { font-size: 15px; font-weight: 600; }
+    .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
+
+    .tip-box {
+      background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
+      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+    }
+
+    .table-frame {
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+    }
+    table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
+    table.spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-divider); color: var(--text-body); }
+    table.spec-table tr:last-child td { border-bottom: none; }
+
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 30px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">GAME’NIR 7Ds 手把</span>
+      </nav>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#pair-section" class="pill-link">跨平台配對</a>
+      <a href="#turbo-section" class="pill-link">TURBO 連發</a>
+      <a href="#macro-section" class="pill-link">背鍵巨集錄製</a>
+      <a href="#vibe-section" class="pill-link">震動與燈號</a>
+      <a href="#specs-section" class="pill-link">規格說明</a>
+    </div>
+  </nav>
+
+  <main class="doc-container">
+
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">GAME’NIR</span>
+        <span class="badge-tag">ProX-Legend7Ds</span>
+        <span class="badge-tag">Switch / PC / 手機</span>
+        <span class="badge-tag">Amiibo NFC 支援</span>
+      </div>
+      <h1 class="hero-headline">GAME’NIR ProX-Legend7Ds 電玩手把使用指南</h1>
+      <p class="hero-summary">
+        全方位跨平台無線遊戲手把。具備 Switch 遠端主機喚醒、Amiibo 感應、自訂雙背鍵巨集記憶、三段 TURBO 自動連發與 5 階震動調整。
+      </p>
+      <div class="spec-highlights">
+        <div class="hl-item">
+          <span class="hl-val">24~30h</span>
+          <span class="hl-lbl">超長續航時間</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">950mAh</span>
+          <span class="hl-lbl">大容量電芯</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">20 Steps</span>
+          <span class="hl-lbl">背鍵巨集步數</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">5 段</span>
+          <span class="hl-lbl">馬達震動強弱</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 跨平台配對 -->
+    <section class="doc-section" id="pair-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Pairing Methods</div>
+        <h2 class="sec-title">跨平台配對連線方式速查</h2>
+      </div>
+
+      <div class="controls-grid">
+        <div class="ctrl-card">
+          <span class="ctrl-badge">Switch 主機</span>
+          <div class="ctrl-name">首次配對 & 遠端喚醒</div>
+          <div class="ctrl-desc">
+            • <strong>首次連線</strong>：進入 Switch「控制器」➔「更改拿法/順序」，按住手把頂部<strong>配對鍵 3~5 秒</strong>至指示燈快閃。<br>
+            • <strong>後續喚醒</strong>：主機附近短按 <strong>HOME 鍵</strong>，即可連線並直接開機喚醒 Switch。
+          </div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">長按 B + HOME (2~3s)</span>
+          <div class="ctrl-name">PC / 手機：XBOX 模式（推薦）</div>
+          <div class="ctrl-desc">
+            長按 2~3 秒啟動配對，電腦或手機搜尋藍牙裝置「<strong>Xbox Wireless Controller</strong>」點選連線。相容 Steam、Windows 與大部分手遊。
+          </div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">長按 Y + HOME (2~3s)</span>
+          <div class="ctrl-name">PC / 手機：Switch Pro 模式</div>
+          <div class="ctrl-desc">
+            長按 2~3 秒啟動配對，藍牙搜尋「<strong>Pro Controller</strong>」，適用於 PC Steam 啟用陀螺儀體感映射。
+          </div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">PC 有線直插 / R3 特殊模式</span>
+          <div class="ctrl-name">USB 有線連接</div>
+          <div class="ctrl-desc">
+            隨插即用，預設偵測為 XBOX 模式；若 PC 有線要強制以 NS 模式連線，請<strong>按住 R3（右蘑菇頭下壓）再插上 USB 線</strong>。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TURBO 連發功能 -->
+    <section class="doc-section" id="turbo-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Rapid Fire Feature</div>
+        <h2 class="sec-title">TURBO 連發功能設定</h2>
+      </div>
+
+      <div class="controls-grid">
+        <div class="ctrl-card">
+          <span class="ctrl-badge">T 鍵 + 單擊動作鍵</span>
+          <div class="ctrl-name">長按連發 (Manual Turbo)</div>
+          <div class="ctrl-desc">按住該動作鍵時持續連點，放開即停止。支援按鍵：A / B / X / Y / L / R / ZL / ZR。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">T 鍵 + 雙擊動作鍵</span>
+          <div class="ctrl-name">全自動連發 (Auto Turbo)</div>
+          <div class="ctrl-desc">完全放開手把也會自動持續連打！再次單按該動作鍵可「暫停/繼續」自動連打。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">T + "+" / T + "-"</span>
+          <div class="ctrl-name">三段頻率調節</div>
+          <div class="ctrl-desc">按 T 鍵搭配加號或減號切換頻率：<strong>5 次 / 12 次 / 20 次 每秒</strong>。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">長按 T 鍵 5 秒</span>
+          <div class="ctrl-name">一鍵清除所有連發</div>
+          <div class="ctrl-desc">立即重設並關閉當前所有按鍵的連發設定。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 背鍵巨集錄製 -->
+    <section class="doc-section" id="macro-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Macro & Button Memory</div>
+        <h2 class="sec-title">背面自訂鍵 (XL / XR) 巨集記憶錄製</h2>
+      </div>
+
+      <div class="controls-grid">
+        <div class="ctrl-card">
+          <span class="ctrl-badge">單鍵對應 (Copy)</span>
+          <div class="ctrl-name">把單一按鈕複製到背面</div>
+          <div class="ctrl-desc">
+            1. 長按 <strong>ML 或 MR 鍵 3 秒</strong>（手把震動）。<br>
+            2. 按下想複製的目標鍵（如 A 鍵）。<br>
+            3. 再按一次 ML/MR 鍵結束（手把震動），XL/XR 即可作為該按鍵。
+          </div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">多鍵組合 (Macro 連招)</span>
+          <div class="ctrl-name">錄製組合技 (最多 20 步)</div>
+          <div class="ctrl-desc">
+            1. 長按 <strong>ML 或 MR 鍵 3 秒</strong>（手把震動）。<br>
+            2. 依序輸入連招步驟（支援方向鍵、雙搖桿、動作鍵，可帶按壓間隔）。<br>
+            3. 再按一次 ML/MR 儲存，按 XL/XR 即可一鍵施放連招！
+          </div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">清除巨集記憶</span>
+          <div class="ctrl-name">清空 XL / XR 背鍵</div>
+          <div class="ctrl-desc">直接長按 ML 或 MR 鍵 3 秒，<strong>不按任何鍵直接放開</strong>，即可清除該背鍵功能。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">長按 "-" + R/L 5秒</span>
+          <div class="ctrl-name">背鍵防誤觸鎖定</div>
+          <div class="ctrl-desc">同時長按「減號鍵」與「R 鍵」或「L 鍵」5 秒（手把震動），可全面鎖定/解鎖背部巨集鍵，避免激戰誤觸。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 震動與指示燈 -->
+    <section class="doc-section" id="vibe-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Vibration & LEDs</div>
+        <h2 class="sec-title">馬達震動與指示燈含義</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>操作方式 / 燈號狀態</th>
+              <th>說明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>增強震動</strong></td>
+              <td>按住背部<strong>右側震動鍵</strong></td>
+              <td>震動力度 5 檔循環：100% ➔ 75% ➔ 50% ➔ 25% ➔ 0% (關閉)</td>
+            </tr>
+            <tr>
+              <td><strong>減弱震動</strong></td>
+              <td>按住背部<strong>左側震動鍵</strong></td>
+              <td>逐步降低馬達回饋力度</td>
+            </tr>
+            <tr>
+              <td><strong>Xbox 模式 (Xinput)</strong></td>
+              <td>指示燈 <strong>LED 1 & LED 4 常亮</strong></td>
+              <td>PC / 手機標準連線狀態</td>
+            </tr>
+            <tr>
+              <td><strong>Switch 模式 (Dinput)</strong></td>
+              <td>指示燈 <strong>LED 2 & LED 3 常亮</strong></td>
+              <td>Switch 主機連線狀態</td>
+            </tr>
+            <tr>
+              <td><strong>低電量警示</strong></td>
+              <td>指示燈 <strong>緩慢閃爍</strong></td>
+              <td>電量不足，請及時充電以防進入強制休眠保護</td>
+            </tr>
+            <tr>
+              <td><strong>充電狀態</strong></td>
+              <td>充電中：<strong>呼吸閃爍</strong> ｜ 充飽電：<strong>常亮不滅</strong></td>
+              <td>建議使用 5V 1A~2A 充電器，充飽約 2~5 小時</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip-box" style="margin-top:16px;">
+        ⚠️ <strong>低電量保護提醒：</strong>手把若完全耗盡電量可能會觸發強制休眠保護。若手把長久未玩，再次使用前請先充飽電約 1 小時再行開機。
+      </div>
+    </section>
+
+    <!-- 規格說明 -->
+    <section class="doc-section" id="specs-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Technical Data</div>
+        <h2 class="sec-title">詳細規格參數</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <tbody>
+            <tr>
+              <td style="width:160px;"><strong>產品型號</strong></td>
+              <td>GN-ProX-Legend7Ds (GAME’NIR 7Ds)</td>
+            </tr>
+            <tr>
+              <td><strong>電池容量</strong></td>
+              <td>950mAh 鋰聚合物電池 (DC 3.7V ~ 4.12V)</td>
+            </tr>
+            <tr>
+              <td><strong>續航時間</strong></td>
+              <td>工作約 24~30 小時 / 待機最高 1200 小時</td>
+            </tr>
+            <tr>
+              <td><strong>充電規格</strong></td>
+              <td>DC 5V (USB Type-C 接口)</td>
+            </tr>
+            <tr>
+              <td><strong>支援平台</strong></td>
+              <td>Nintendo Switch、PC (Steam / Windows)、Android、iOS / Apple Arcade</td>
+            </tr>
+            <tr>
+              <td><strong>特色硬體</strong></td>
+              <td>六軸體感陀螺儀、雙震動馬達、雙背部巨集鍵、Amiibo NFC 感應區</td>
+            </tr>
+            <tr>
+              <td><strong>外觀尺寸</strong></td>
+              <td>15.2 × 11.3 × 5.9 cm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <p>Prism Manuals · GAME’NIR 7Ds Digital Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = (current === 'dark') ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

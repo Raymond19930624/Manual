@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Anker Prime 160W 充電器 (A2687) 使用指南 | Prism Manuals</title>
+  <meta name="description" content="Anker Prime 160W (A2687) 3口 GaN 智慧充電器使用手冊。收錄多孔動態功率分配表、螢幕按鍵操作、藍牙連接、線材辨識與故障排除。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-page);
+      color: var(--text-title);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header.header-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    }
+
+    .header-inner {
+      max-width: 980px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { color: var(--text-muted); font-size: 11px; }
+    .breadcrumb-current { color: var(--text-title); font-weight: 600; }
+
+    .theme-toggle-btn {
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .theme-toggle-btn:hover { background-color: var(--bg-pill); color: var(--text-title); }
+
+    nav.subnav-pills {
+      position: sticky; top: 52px; z-index: 90;
+      background: var(--bg-card); border-bottom: 1px solid var(--border-divider);
+      padding: 8px 16px; overflow-x: auto; white-space: nowrap; display: flex; gap: 6px;
+      scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner { max-width: 980px; margin: 0 auto; display: flex; gap: 6px; width: 100%; }
+    .pill-link {
+      font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none;
+      padding: 5px 12px; border-radius: var(--radius-pill); background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active { color: var(--accent-blue); background: var(--accent-tag); font-weight: 600; }
+
+    main.doc-container {
+      max-width: 980px; width: 100%; margin: 0 auto; padding: 40px 20px 80px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .product-hero {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 36px 30px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge-tag {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+      background: var(--accent-tag); padding: 4px 10px; border-radius: 6px;
+    }
+    .hero-headline { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; }
+    .hero-summary { font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 760px; }
+
+    .spec-highlights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border-divider);
+    }
+    .hl-item { display: flex; flex-direction: column; gap: 2px; }
+    .hl-val { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .hl-lbl { font-size: 12px; color: var(--text-muted); }
+
+    .doc-section {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 30px; box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+    .section-title-wrap { margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border-divider); }
+    .sec-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent-blue); margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+
+    /* 按鍵操作網格 */
+    .controls-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .ctrl-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .ctrl-badge {
+      font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: var(--bg-pill-active); color: var(--text-pill-active); align-self: flex-start;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+    }
+    .ctrl-name { font-size: 15px; font-weight: 600; }
+    .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
+
+    /* 功率分配視覺卡片 */
+    .power-mode-block { margin-bottom: 24px; }
+    .power-mode-header { font-size: 15px; font-weight: 600; margin-bottom: 10px; color: var(--accent-blue); }
+    .power-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+    }
+    .power-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .power-card-title { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+    .power-chips-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .p-chip {
+      background: var(--accent-tag); color: var(--accent-blue); font-weight: 700;
+      padding: 4px 10px; border-radius: 6px; font-size: 13px; font-family: ui-monospace, monospace;
+    }
+
+    .table-frame {
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+    }
+    table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
+    table.spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-divider); color: var(--text-body); }
+    table.spec-table tr:last-child td { border-bottom: none; }
+
+    /* FAQ 抽屜折疊 */
+    details.faq-item {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    details.faq-item summary { font-size: 14px; font-weight: 600; cursor: pointer; outline: none; }
+    details.faq-item p { margin-top: 10px; font-size: 13px; color: var(--text-body); line-height: 1.6; }
+
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 30px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Anker Prime 160W (A2687)</span>
+      </nav>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#buttons-section" class="pill-link">螢幕與手勢</a>
+      <a href="#power-section" class="pill-link">瓦數分配矩陣</a>
+      <a href="#cable-section" class="pill-link">線材辨識指南</a>
+      <a href="#faq-section" class="pill-link">常見問題與排錯</a>
+      <a href="#specs-section" class="pill-link">規格說明</a>
+    </div>
+  </nav>
+
+  <main class="doc-container">
+
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">ANKER PRIME</span>
+        <span class="badge-tag">160W 氮化鎵</span>
+        <span class="badge-tag">智慧彩顯</span>
+        <span class="badge-tag">藍牙 App 聯網</span>
+      </div>
+      <h1 class="hero-headline">Anker Prime 160W (A2687) 充電器使用指南</h1>
+      <p class="hero-summary">
+        旗艦級 3 個 USB-C 接口氮化鎵充電器。搭載智慧彩色螢幕，支援實時功率顯示、ActiveShield 溫度監控、重力自動旋轉與自訂動態功率分配。
+      </p>
+      <div class="spec-highlights">
+        <div class="hl-item">
+          <span class="hl-val">160W</span>
+          <span class="hl-lbl">最大總輸出功率</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">140W</span>
+          <span class="hl-lbl">單孔 PD 3.1 輸出</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">3 × USB-C</span>
+          <span class="hl-lbl">全 C 口高速配置</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">ActiveShield</span>
+          <span class="hl-lbl">實時溫度智慧保護</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 螢幕與按鍵操作 -->
+    <section class="doc-section" id="buttons-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Button Gestures</div>
+        <h2 class="sec-title">實體按鈕操作手勢速查</h2>
+      </div>
+
+      <div class="controls-grid">
+        <div class="ctrl-card">
+          <span class="ctrl-badge">單擊 (1 Click)</span>
+          <div class="ctrl-name">喚醒螢幕 / 切換頁面</div>
+          <div class="ctrl-desc">螢幕休眠時單擊喚醒；通電時單擊可在「總覽數據頁」與「各孔詳細頁」間輪播切換。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">連按兩下 (2 Clicks)</span>
+          <div class="ctrl-name">切換充電模式 / 藍牙開關</div>
+          <div class="ctrl-desc">在充電模式頁面雙擊切換模式，等待<strong>藍光閃爍 3 次</strong>即代表新模式生效；在藍牙頁面雙擊可關閉或開啟藍牙。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">連按三下 (3 Clicks)</span>
+          <div class="ctrl-name">手動旋轉螢幕 90°</div>
+          <div class="ctrl-desc">手動旋轉螢幕方向。手動旋轉後將暫時停用重力感應，直到重新插拔或從 Anker App 恢復自動旋轉。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">長按 2 秒 (2s)</span>
+          <div class="ctrl-name">手動熄滅螢幕</div>
+          <div class="ctrl-desc">夜間睡眠不想受光線干擾時，長按 2 秒可手動關閉顯示屏，充電仍正常進行。</div>
+        </div>
+
+        <div class="ctrl-card" style="grid-column: 1 / -1;">
+          <span class="ctrl-badge">長按 7 秒 (7s)</span>
+          <div class="ctrl-name">重設藍牙配對 (Reset Bluetooth)</div>
+          <div class="ctrl-desc">重設開始前螢幕會短暫黑屏，隨後清除已儲存的手機連線資訊，可綁定新手機或新帳號。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 瓦數分配矩陣 -->
+    <section class="doc-section" id="power-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Dynamic Power Matrix</div>
+        <h2 class="sec-title">多孔瓦數分配矩陣速查</h2>
+      </div>
+
+      <!-- 單孔模式 -->
+      <div class="power-mode-block">
+        <div class="power-mode-header">1️⃣ 單孔輸出 (Single Port)</div>
+        <div class="power-grid">
+          <div class="power-card">
+            <span class="power-card-title">任意單插 C1 / C2 / C3</span>
+            <div class="power-chips-row">
+              <span class="p-chip">最高 140W (PD 3.1)</span>
+            </div>
+            <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">
+              * 搭配 Anker 專用私有協議設備最高支援 150W。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 雙孔模式 -->
+      <div class="power-mode-block">
+        <div class="power-mode-header">2️⃣ 雙孔同時輸出 (Dual Ports)</div>
+        <div class="power-grid">
+          <div class="power-card">
+            <span class="power-card-title">C1 優先模式 (筆電 + 手機)</span>
+            <div class="power-chips-row">
+              <span class="p-chip">C1: 100W</span>
+              <span class="p-chip">C2: 60W</span>
+            </div>
+          </div>
+          <div class="power-card">
+            <span class="power-card-title">雙筆電模式 (兩台筆電均分)</span>
+            <div class="power-chips-row">
+              <span class="p-chip">C1: 70W</span>
+              <span class="p-chip">C2: 70W</span>
+            </div>
+          </div>
+          <div class="power-card">
+            <span class="power-card-title">AI 智慧自適應模式</span>
+            <div class="power-chips-row">
+              <span class="p-chip">每 2 分鐘自動最佳化</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 三孔模式 -->
+      <div class="power-mode-block">
+        <div class="power-mode-header">3️⃣ 三孔全滿輸出 (Triple Ports)</div>
+        <div class="power-grid">
+          <div class="power-card">
+            <span class="power-card-title">C1 優先模式 (筆電 + 雙設備)</span>
+            <div class="power-chips-row">
+              <span class="p-chip">C1: 100W</span>
+              <span class="p-chip">C2: 30W</span>
+              <span class="p-chip">C3: 30W</span>
+            </div>
+          </div>
+          <div class="power-card">
+            <span class="power-card-title">雙筆電模式 (兩台筆電 + 手機)</span>
+            <div class="power-chips-row">
+              <span class="p-chip">C1: 70W</span>
+              <span class="p-chip">C2: 70W</span>
+              <span class="p-chip">C3: 20W</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 線材辨識指南 -->
+    <section class="doc-section" id="cable-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Cable Intelligence</div>
+        <h2 class="sec-title">螢幕線材規格辨識說明</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>螢幕識別圖標</th>
+              <th>對應線材類型</th>
+              <th>最大支援功率</th>
+              <th>適用設備建議</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>3A 線材</strong></td>
+              <td>標準普通 Type-C 數據線</td>
+              <td><strong>60W</strong> (20V 3A)</td>
+              <td>iPhone 15/16、iPad、一般輕薄筆電、Switch</td>
+            </tr>
+            <tr>
+              <td><strong>5A 線材</strong></td>
+              <td>內建 E-Marker 晶片的高規格線</td>
+              <td><strong>100W</strong> (20V 5A)</td>
+              <td>MacBook Pro 13/14 吋、三星 45W 超級快充 2.0</td>
+            </tr>
+            <tr>
+              <td><strong>EPR 線材</strong></td>
+              <td>擴展功率範圍 (EPR / PD 3.1) 線材</td>
+              <td><strong>140W ~ 240W</strong> (28V 5A)</td>
+              <td>MacBook Pro 16 吋 (MagSafe 3 或 240W C 線)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ 與排錯 -->
+    <section class="doc-section" id="faq-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Troubleshooting & FAQ</div>
+        <h2 class="sec-title">常見問題與使用技巧</h2>
+      </div>
+
+      <details class="faq-item" open>
+        <summary>為什麼我的三星手機沒有觸發「45W 超級快充 2.0」？</summary>
+        <p>
+          1. 必須使用支援 <strong>5A 的充電線</strong>（3A 普通線最高僅能 60W/3A，三星 45W 需要 9V~10V 4.5A 的 PPS 電流）。<br>
+          2. 若在標準模式下，請確保插在當前分配功率超過 45W 的端口。
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>連接大疆 (DJI) 空拍機充電管家為什麼充不進去？</summary>
+        <p>
+          DJI 充電管家不支援自動輸入功率調整，因此在「AI 模式」下可能無法正常握手。請在 App 或按鈕將充電模式切換為 <strong>C1 優先模式</strong> 或 <strong>自訂模式</strong> 即可正常充電。
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>插上 MacBook 時螢幕顯示「電池未充電」？</summary>
+        <p>
+          MacBook 連接第三方大功率 PD 變壓器時會有短暫的晶片識別延遲（約 10~20 秒）。等電腦完成協議握手後，插頭符號即會轉為閃電充電標誌，此為 macOS 原生正常現象。
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>充耳機或手錶時，螢幕顯示 0.0W？</summary>
+        <p>
+          Apple Watch 或藍牙耳機充滿或微電流充電時，電流常低於 5W。充電器螢幕顯示精確到小數點一位，極小電流可能顯示為 0.0W，只要設備充電指示燈有亮起即在正常微電流充電。
+        </p>
+      </details>
+    </section>
+
+    <!-- 規格參數 -->
+    <section class="doc-section" id="specs-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Specifications</div>
+        <h2 class="sec-title">詳細規格參數</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <tbody>
+            <tr>
+              <td style="width:160px;"><strong>產品型號</strong></td>
+              <td>Anker A2687 (Anker Prime 160W Charger)</td>
+            </tr>
+            <tr>
+              <td><strong>輸入參數</strong></td>
+              <td>100-240V~, 50/60Hz, 2A</td>
+            </tr>
+            <tr>
+              <td><strong>單口最大輸出</strong></td>
+              <td>5V⎓3A / 9V⎓3A / 15V⎓3A / 20V⎓5A / 28V⎓5A (140W Max) / 28V⎓5.36A (150W Max)</td>
+            </tr>
+            <tr>
+              <td><strong>雙口總輸出</strong></td>
+              <td>最高 160W Max</td>
+            </tr>
+            <tr>
+              <td><strong>三口總輸出</strong></td>
+              <td>最高 160W Max</td>
+            </tr>
+            <tr>
+              <td><strong>通訊功能</strong></td>
+              <td>Bluetooth 5.0 (支援 Anker App 聯網配置)</td>
+            </tr>
+            <tr>
+              <td><strong>保護技術</strong></td>
+              <td>ActiveShield™ 2.0 智慧溫度監控保護系統</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <p>Prism Manuals · Anker Prime 160W Digital Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = (current === 'dark') ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

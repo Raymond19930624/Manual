@@ -7,7 +7,6 @@
   <meta name="description" content="收錄手邊各類電器、影音器材與數位周邊的數位互動說明書。提供按鍵操作、指示燈速查、連線教學與規格參數，支援手機與電腦最佳閱讀體驗。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
   <style>
-    /* Apple Human Interface Guidelines 靈感色彩變數 */
     :root {
       --bg-page: #f5f5f7;
       --bg-card: #ffffff;
@@ -27,7 +26,7 @@
       --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
       --radius-card: 18px;
       --radius-pill: 980px;
-      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
     }
 
     [data-theme="dark"] {
@@ -70,493 +69,295 @@
       }
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
-      font-family: var(--font-stack);
-      background-color: var(--bg-page);
-      color: var(--text-title);
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      -webkit-font-smoothing: antialiased;
+      font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
+      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      transition: background-color 0.3s ease, color 0.3s ease; -webkit-font-smoothing: antialiased;
     }
 
-    /* 頂部全域導航 */
     header.global-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(245, 245, 247, 0.8);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-subtle);
-      transition: background 0.3s ease, border-color 0.3s ease;
+      position: sticky; top: 0; z-index: 100; background: rgba(245, 245, 247, 0.8);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);
     }
-    [data-theme="dark"] header.global-header {
-      background: rgba(22, 22, 23, 0.8);
-    }
+    [data-theme="dark"] header.global-header { background: rgba(22, 22, 23, 0.8); }
     @media (prefers-color-scheme: dark) {
-      [data-theme="auto"] header.global-header {
-        background: rgba(22, 22, 23, 0.8);
-      }
+      [data-theme="auto"] header.global-header { background: rgba(22, 22, 23, 0.8); }
     }
 
     .header-inner {
-      max-width: 1024px;
-      margin: 0 auto;
-      height: 52px;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 1024px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
     }
-
     .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: var(--text-title);
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
+      display: flex; align-items: center; gap: 8px; text-decoration: none;
+      color: var(--text-title); font-size: 15px; font-weight: 600;
     }
-    .logo-icon {
-      font-size: 18px;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     .theme-toggle-btn {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      cursor: pointer;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
       font-size: 15px;
-      transition: color 0.2s, background-color 0.2s;
     }
-    .theme-toggle-btn:hover {
-      color: var(--text-title);
-      background-color: var(--bg-pill);
-    }
+    .theme-toggle-btn:hover { color: var(--text-title); background-color: var(--bg-pill); }
 
-    /* 主內容容器 */
     main.main-content {
-      flex: 1;
-      max-width: 1024px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
+      flex: 1; max-width: 1024px; width: 100%; margin: 0 auto; padding: 48px 20px 80px;
     }
 
-    /* Hero 區域（典型 Apple Support 排版） */
-    .hero-section {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 48px;
-    }
-
+    .hero-section { text-align: center; max-width: 720px; margin: 0 auto 48px; }
     .hero-eyebrow {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      color: var(--accent-blue);
-      margin-bottom: 10px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;
+      color: var(--accent-blue); margin-bottom: 10px;
     }
+    .hero-title { font-size: 38px; font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+    @media (max-width: 640px) { .hero-title { font-size: 28px; } }
+    .hero-subtitle { font-size: 17px; color: var(--text-body); line-height: 1.5; margin-bottom: 32px; }
 
-    .hero-title {
-      font-size: 38px;
-      font-weight: 700;
-      letter-spacing: -1px;
-      color: var(--text-title);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-    @media (max-width: 640px) {
-      .hero-title {
-        font-size: 28px;
-        letter-spacing: -0.5px;
-      }
-    }
-
-    .hero-subtitle {
-      font-size: 17px;
-      color: var(--text-body);
-      line-height: 1.5;
-      margin-bottom: 32px;
-    }
-
-    /* 搜尋列 */
-    .search-box-wrap {
-      position: relative;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
+    .search-box-wrap { position: relative; max-width: 520px; margin: 0 auto; }
     .search-input {
-      width: 100%;
-      height: 48px;
-      padding: 0 44px 0 44px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-pill);
-      font-size: 15px;
-      font-family: inherit;
-      color: var(--text-title);
-      outline: none;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%; height: 48px; padding: 0 44px; background: var(--bg-card);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-pill);
+      font-size: 15px; font-family: inherit; color: var(--text-title); outline: none;
+      box-shadow: var(--shadow-sm); transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .search-input:focus {
-      border-color: var(--border-focus);
-      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
-    }
-    .search-input::placeholder {
-      color: var(--text-muted);
-    }
+    .search-input:focus { border-color: var(--border-focus); box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15); }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-icon-left { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 16px; pointer-events: none; }
+    .search-clear-btn { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; display: none; padding: 4px; }
 
-    .search-icon-left {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      pointer-events: none;
-      font-size: 16px;
-    }
-    .search-clear-btn {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      cursor: pointer;
-      font-size: 14px;
-      display: none;
-      padding: 4px;
-    }
-    .search-clear-btn:hover { color: var(--text-title); }
-
-    /* 分類過濾膠囊（Pill Tabs） */
-    .category-filter {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 40px;
-    }
-
+    .category-filter { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
     .filter-btn {
-      background: var(--bg-pill);
-      border: none;
-      color: var(--text-body);
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 7px 16px;
-      border-radius: var(--radius-pill);
-      cursor: pointer;
-      transition: all 0.2s ease;
+      background: var(--bg-pill); border: none; color: var(--text-body); font-family: inherit;
+      font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: var(--radius-pill);
+      cursor: pointer; transition: all 0.2s ease;
     }
-    .filter-btn:hover {
-      background: rgba(0, 0, 0, 0.08);
-      color: var(--text-title);
-    }
-    [data-theme="dark"] .filter-btn:hover {
-      background: rgba(255, 255, 255, 0.14);
-    }
-    .filter-btn.active {
-      background: var(--bg-pill-active);
-      color: var(--text-pill-active);
-      font-weight: 600;
-    }
+    .filter-btn:hover { background: rgba(0, 0, 0, 0.08); color: var(--text-title); }
+    [data-theme="dark"] .filter-btn:hover { background: rgba(255, 255, 255, 0.14); }
+    .filter-btn.active { background: var(--bg-pill-active); color: var(--text-pill-active); font-weight: 600; }
 
-    /* 設備卡片網格 (Product Grid) */
     .devices-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 24px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 24px;
     }
 
     .device-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-card);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-      position: relative;
-      overflow: hidden;
+      background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-card);
+      padding: 24px; display: flex; flex-direction: column; text-decoration: none; color: inherit;
+      box-shadow: var(--shadow-sm); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+      position: relative; overflow: hidden;
     }
-    .device-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card-hover);
-      border-color: rgba(0, 113, 227, 0.3);
-    }
+    .device-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); border-color: rgba(0, 113, 227, 0.3); }
 
     .device-visual {
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      border-radius: 12px;
-      background: var(--bg-page);
-      overflow: hidden;
-      position: relative;
+      height: 140px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; border-radius: 12px; background: var(--bg-page); overflow: hidden;
     }
-    .device-visual svg, .device-visual img {
-      max-height: 110px;
-      max-width: 100%;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-    }
-    .device-card:hover .device-visual svg,
-    .device-card:hover .device-visual img {
-      transform: scale(1.05);
-    }
+    .device-visual svg { max-height: 100px; max-width: 100%; transition: transform 0.3s ease; }
+    .device-card:hover .device-visual svg { transform: scale(1.05); }
 
-    .device-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-    .device-brand {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: var(--accent-blue);
-    }
-    .device-badge {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: var(--radius-pill);
-      background: var(--bg-pill);
-      color: var(--text-muted);
-    }
-
-    .device-name {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      color: var(--text-title);
-      margin-bottom: 6px;
-    }
-
-    .device-desc {
-      font-size: 13px;
-      color: var(--text-body);
-      line-height: 1.5;
-      margin-bottom: 16px;
-      flex: 1;
-    }
-
-    .device-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-    .tag-chip {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 6px;
-      background: var(--bg-pill);
-      color: var(--text-muted);
-    }
+    .device-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .device-brand { font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent-blue); }
+    .device-badge { font-size: 11px; padding: 2px 8px; border-radius: var(--radius-pill); background: var(--bg-pill); color: var(--text-muted); }
+    .device-name { font-size: 18px; font-weight: 600; letter-spacing: -0.3px; color: var(--text-title); margin-bottom: 6px; }
+    .device-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; margin-bottom: 16px; flex: 1; }
+    .device-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tag-chip { font-size: 11px; padding: 3px 8px; border-radius: 6px; background: var(--bg-pill); color: var(--text-muted); }
 
     .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--accent-blue);
+      display: flex; align-items: center; justify-content: space-between; padding-top: 14px;
+      border-top: 1px solid var(--border-subtle); font-size: 13px; font-weight: 500; color: var(--accent-blue);
     }
-    .card-footer span.arrow {
-      transition: transform 0.2s ease;
-    }
-    .device-card:hover .card-footer span.arrow {
-      transform: translateX(4px);
-    }
+    .device-card:hover .card-footer span.arrow { transform: translateX(4px); }
 
-    /* 空狀態提示 */
-    .empty-state {
-      display: none;
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-muted);
-      grid-column: 1 / -1;
-    }
-    .empty-state p {
-      margin-top: 8px;
-      font-size: 14px;
-    }
+    .empty-state { display: none; text-align: center; padding: 60px 20px; color: var(--text-muted); grid-column: 1 / -1; }
 
-    /* 頁尾 */
     footer.global-footer {
-      border-top: 1px solid var(--border-subtle);
-      background: var(--bg-card);
-      padding: 32px 20px;
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: auto;
-    }
-    .footer-inner {
-      max-width: 1024px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 4px;
-    }
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-    .footer-links a:hover {
-      color: var(--accent-blue);
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 32px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
     }
   </style>
 </head>
 <body>
 
-  <!-- 頂部全域導航 -->
   <header class="global-header">
     <div class="header-inner">
       <a href="./" class="logo-link">
-        <span class="logo-icon">📖</span>
+        <span style="font-size:18px;">📖</span>
         <span>Prism Manuals</span>
       </a>
-
-      <div class="header-actions">
-        <button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" aria-label="切換外觀風格" title="切換深淺模式">
-          <span id="themeIcon">☀️</span>
-        </button>
-      </div>
+      <button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
     </div>
   </header>
 
-  <!-- 主內容區 -->
   <main class="main-content">
 
-    <!-- Hero 標題與簡介 -->
     <section class="hero-section">
       <div class="hero-eyebrow">Device Manual Library</div>
       <h1 class="hero-title">探索您的設備說明書</h1>
-      <p class="hero-subtitle">手邊電器、攝影影音與數位周邊的數位互動指南。快速查閱按鍵操作、指示燈含義與疑難排解。</p>
+      <p class="hero-subtitle">手邊電器、影音器材、快充電源與生活周邊的數位互動指南。無廣告、秒速查閱按鍵手勢與故障排除。</p>
 
-      <!-- 搜尋列 -->
       <div class="search-box-wrap">
         <span class="search-icon-left">🔍</span>
-        <input type="text" id="searchInput" class="search-input" placeholder="搜尋品牌、型號或功能（例如：Godox、麥克風、降噪）..." oninput="handleSearch(this.value)">
-        <button class="search-clear-btn" id="searchClear" onclick="clearSearch()" aria-label="清除搜尋">✕</button>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜尋品牌、型號或關鍵字（如：Anker、手把、電磁爐、連發、瓦數）..." oninput="handleSearch(this.value)">
+        <button class="search-clear-btn" id="searchClear" onclick="clearSearch()">✕</button>
       </div>
     </section>
 
-    <!-- 分類過濾選單 (Pill Tabs) -->
     <nav class="category-filter" aria-label="設備類別過濾">
       <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)">全部設備</button>
-      <button class="filter-btn" data-category="audio" onclick="filterCategory('audio', this)">影音器材</button>
+      <button class="filter-btn" data-category="digital" onclick="filterCategory('digital', this)">快充電腦</button>
+      <button class="filter-btn" data-category="audio" onclick="filterCategory('audio', this)">影音娛樂</button>
       <button class="filter-btn" data-category="living" onclick="filterCategory('living', this)">生活家電</button>
-      <button class="filter-btn" data-category="tech" onclick="filterCategory('tech', this)">電腦數位</button>
       <button class="filter-btn" data-category="tools" onclick="filterCategory('tools', this)">戶外工具</button>
     </nav>
 
-    <!-- 設備卡片清單 (Product Grid) -->
     <section class="devices-grid" id="devicesGrid">
 
-      <!-- 設備 1：Godox C01 無線麥克風 -->
-      <a href="devices/godox-c01/" class="device-card" data-category="audio" data-keywords="godox c01 無線 麥克風 降噪 領夾 發射器 接收器 充電盒 7g 200m">
+      <!-- 設備 1：Godox C01 微型麥克風 -->
+      <a href="devices/godox-c01/" class="device-card" data-category="audio" data-keywords="godox c01 無線 麥克風 降噪 領夾 發射器 接收器 充電盒 7g 200m 影音">
         <div class="device-visual">
-          <!-- 蘋果風格乾淨產品圖解 SVG -->
           <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="25" y="25" width="55" height="55" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
             <circle cx="38" cy="38" r="4" fill="#0071e3"/>
             <rect x="100" y="32" width="75" height="42" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
             <rect x="130" y="22" width="15" height="10" rx="3" fill="currentColor" fill-opacity="0.2"/>
-            <circle cx="112" cy="53" r="3" fill="#22c55e"/>
-            <circle cx="122" cy="53" r="3" fill="#f97316"/>
+            <circle cx="112" cy="53" r="3" fill="#34c759"/>
+            <circle cx="122" cy="53" r="3" fill="#ff9500"/>
             <text x="52" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">TX</text>
             <text x="142" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">RX</text>
           </svg>
         </div>
         <div class="device-meta">
           <span class="device-brand">Godox 神牛</span>
-          <span class="device-badge">已就緒</span>
+          <span class="device-badge">影音器材</span>
         </div>
         <h2 class="device-name">C01 無線麥克風</h2>
-        <p class="device-desc">7g 微型發射器、200米視距傳輸、智慧降噪、支援手機邊充邊用與 27H 續航充電盒。</p>
+        <p class="device-desc">7g 微型發射器、200米視距傳輸、智慧一鍵降噪、支援手機邊充邊用與 27H 充電盒。</p>
         <div class="device-tags">
           <span class="tag-chip">48kHz/24bit</span>
           <span class="tag-chip">一鍵降噪</span>
           <span class="tag-chip">磁吸佩戴</span>
-          <span class="tag-chip">Type-C 直插</span>
+          <span class="tag-chip">LED速查</span>
         </div>
         <div class="card-footer">
-          <span>開啟使用手冊</span>
+          <span>開啟使用指南</span>
           <span class="arrow">→</span>
         </div>
       </a>
 
-      <!-- 佔位卡片：即將收錄（可方便後續擴充） -->
-      <div class="device-card" data-category="living" data-keywords="咖啡機 氣炸鍋 除濕機 清淨機 家電" style="opacity: 0.65; cursor: default;">
-        <div class="device-visual" style="background: repeating-linear-gradient(45deg, var(--bg-page), var(--bg-page) 10px, var(--bg-card) 10px, var(--bg-card) 20px);">
-          <span style="font-size: 32px; opacity: 0.4;">⚡</span>
+      <!-- 設備 2：Anker Prime 160W 充電器 (A2687) -->
+      <a href="devices/anker-prime-160w/" class="device-card" data-category="digital" data-keywords="anker prime 160w a2687 充電器 氮化鎵 gan type-c 快充 pd3.1 功率分配 藍牙 筆電">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="50" y="20" width="100" height="80" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
+            <rect x="65" y="32" width="45" height="24" rx="4" fill="currentColor" fill-opacity="0.2"/>
+            <circle cx="128" cy="44" r="5" fill="#0071e3"/>
+            <rect x="65" y="68" width="16" height="6" rx="2" fill="currentColor" fill-opacity="0.4"/>
+            <rect x="92" y="68" width="16" height="6" rx="2" fill="currentColor" fill-opacity="0.4"/>
+            <rect x="119" y="68" width="16" height="6" rx="2" fill="currentColor" fill-opacity="0.4"/>
+            <text x="70" y="48" font-size="9" font-weight="700" fill="currentColor">160W</text>
+          </svg>
         </div>
         <div class="device-meta">
-          <span class="device-brand" style="color: var(--text-muted);">擴充預備</span>
-          <span class="device-badge">籌備中</span>
+          <span class="device-brand">Anker 安克</span>
+          <span class="device-badge">快充電源</span>
         </div>
-        <h2 class="device-name">陸續收錄手邊電器...</h2>
-        <p class="device-desc">未來可陸續將咖啡機、相機、耳機、居家小家電等說明書逐一加入此總匯。</p>
+        <h2 class="device-name">Prime 160W (A2687)</h2>
+        <p class="device-desc">3口 GaN 智慧彩顯充電器。支援單孔 140W、ActiveShield 溫度監控、多孔動態分配矩陣與手勢控制。</p>
         <div class="device-tags">
-          <span class="tag-chip">模組化結構</span>
-          <span class="tag-chip">隨開即用</span>
+          <span class="tag-chip">160W 總功率</span>
+          <span class="tag-chip">單孔 140W</span>
+          <span class="tag-chip">瓦數分配矩陣</span>
+          <span class="tag-chip">彩屏顯示</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 設備 3：GAME’NIR ProX-Legend7Ds 電玩手把 -->
+      <a href="devices/gamenir-7ds/" class="device-card" data-category="audio" data-keywords="gamenir 7ds prox legend 手把 控制器 switch pc steam turbo 連發 巨集 震動 遊戲">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 70C35 50 45 35 65 35H135C155 35 165 50 160 70C155 90 140 100 125 90L110 80H90L75 90C60 100 45 90 40 70Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
+            <circle cx="70" cy="55" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="130" cy="65" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="138" cy="48" r="3" fill="#ff3b30"/>
+            <circle cx="146" cy="56" r="3" fill="#34c759"/>
+            <circle cx="130" cy="56" r="3" fill="#0071e3"/>
+            <circle cx="138" cy="64" r="3" fill="#ff9500"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">GAME’NIR</span>
+          <span class="device-badge">遊戲娛樂</span>
+        </div>
+        <h2 class="device-name">7Ds 無線電玩手把</h2>
+        <p class="device-desc">Switch / PC / 手機全平台相容。支援遠端喚醒、Amiibo 感應、背鍵 20 步巨集記憶與三段 TURBO 自動連發。</p>
+        <div class="device-tags">
+          <span class="tag-chip">Switch 喚醒</span>
+          <span class="tag-chip">全自動連發</span>
+          <span class="tag-chip">背鍵巨集</span>
+          <span class="tag-chip">30h 續航</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 設備 4：Panasonic KZ-PH34-K IH 電磁爐 -->
+      <a href="devices/panasonic-kz-ph34-k/" class="device-card" data-category="living" data-keywords="panasonic 松下 kz-ph34-k ih 電磁爐 調理器 火力 炊飯 煮物 炸物 日本 廚房 1400w">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="35" y="20" width="130" height="80" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
+            <circle cx="100" cy="52" r="26" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <circle cx="100" cy="52" r="14" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="50" y="86" width="100" height="8" rx="2" fill="currentColor" fill-opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">Panasonic 松下</span>
+          <span class="device-badge">廚房生活</span>
+        </div>
+        <h2 class="device-name">KZ-PH34-K IH 電磁爐</h2>
+        <p class="device-desc">日本原裝 1400W 卓上電磁爐。收錄中日對照操作面板、7 檔精準火力瓦數表、定溫油炸與適用鍋具速查指南。</p>
+        <div class="device-tags">
+          <span class="tag-chip">中日按鍵對照</span>
+          <span class="tag-chip">7 段火力</span>
+          <span class="tag-chip">定溫油炸</span>
+          <span class="tag-chip">鍋具檢查</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 預備卡片：持續收錄 -->
+      <div class="device-card" data-category="tools" data-keywords="3d列印 烘乾箱 洗衣機 萬用鍋 行車記錄器 擴充" style="opacity: 0.7; cursor: default;">
+        <div class="device-visual" style="background: repeating-linear-gradient(45deg, var(--bg-page), var(--bg-page) 10px, var(--bg-card) 10px, var(--bg-card) 20px);">
+          <span style="font-size: 32px; opacity: 0.4;">📦</span>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand" style="color: var(--text-muted);">擴充檔案庫</span>
+          <span class="device-badge">持續增加</span>
+        </div>
+        <h2 class="device-name">更多手邊設備準備中</h2>
+        <p class="device-desc">雲米洗衣機、飛利浦萬用鍋、SUNLU S4 乾燥箱、CITIZEN 藍牙手錶等資料陸續整理擴充中。</p>
+        <div class="device-tags">
+          <span class="tag-chip">SUNLU S4</span>
+          <span class="tag-chip">CITIZEN W770</span>
+          <span class="tag-chip">雲米洗衣機</span>
         </div>
         <div class="card-footer" style="color: var(--text-muted);">
-          <span>敬請期待</span>
+          <span>模組化即時加入</span>
           <span>＋</span>
         </div>
       </div>
 
-      <!-- 空搜尋狀態提示 -->
       <div class="empty-state" id="emptyState">
         <div style="font-size: 36px; margin-bottom: 8px;">🔍</div>
         <div style="font-size: 16px; font-weight: 600; color: var(--text-title);">找不到相關說明書</div>
@@ -567,15 +368,12 @@
 
   </main>
 
-  <!-- 頁尾 -->
   <footer class="global-footer">
-    <div class="footer-inner">
-      <p>© 2026 Prismoment · Prism Manuals 個人設備說明書庫</p>
-      <div class="footer-links">
-        <a href="https://prismoment.com" target="_blank" rel="noopener">Prismoment 首頁</a>
-        <span>·</span>
-        <a href="https://github.com/Raymond19930624/Manual" target="_blank" rel="noopener">GitHub 原始碼</a>
-      </div>
+    <p>© 2026 Prismoment · Prism Manuals 個人設備說明書庫</p>
+    <div style="margin-top:6px; display:flex; justify-content:center; gap:14px;">
+      <a href="https://prismoment.com" target="_blank" rel="noopener" style="color:var(--text-muted); text-decoration:none;">Prismoment 首頁</a>
+      <span>·</span>
+      <a href="https://github.com/Raymond19930624/Manual" target="_blank" rel="noopener" style="color:var(--text-muted); text-decoration:none;">GitHub 儲存庫</a>
     </div>
   </footer>
 
@@ -585,20 +383,9 @@
     function toggleTheme() {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
-      let target = 'dark';
-      
-      if (current === 'dark') {
-        target = 'light';
-      } else if (current === 'light') {
-        target = 'dark';
-      } else {
-        // auto
-        const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        target = isSystemDark ? 'light' : 'dark';
-      }
-
+      let target = (current === 'dark') ? 'light' : 'dark';
       html.setAttribute('data-theme', target);
-      document.getElementById('themeIcon').innerText = target === 'dark' ? '☀️' : '🌙';
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
       localStorage.setItem('prism_manuals_theme', target);
     }
 
@@ -646,15 +433,11 @@
       empty.style.display = visibleCount === 0 ? 'block' : 'none';
     }
 
-    // 初始化主題
     window.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('prism_manuals_theme');
       if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
-        document.getElementById('themeIcon').innerText = saved === 'dark' ? '☀️' : '🌙';
-      } else {
-        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.getElementById('themeIcon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
       }
     });
   </script>
