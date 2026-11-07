@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Prism Manuals | 電器與數位設備說明書總匯</title>
+  <meta name="description" content="收錄手邊各類電器、影音器材與數位周邊的數位互動說明書。提供按鍵操作、指示燈速查、連線教學與規格參數，支援手機與電腦最佳閱讀體驗。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+  <style>
+    /* Apple Human Interface Guidelines 靈感色彩變數 */
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-hover: #ffffff;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-focus: #0071e3;
+      --text-title: #1d1d1f;
+      --text-body: #515154;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+      --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-hover: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-focus: #2997ff;
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-hover: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-focus: #2997ff;
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+        --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-page);
+      color: var(--text-title);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 頂部全域導航 */
+    header.global-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 245, 247, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    [data-theme="dark"] header.global-header {
+      background: rgba(22, 22, 23, 0.8);
+    }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.global-header {
+        background: rgba(22, 22, 23, 0.8);
+      }
+    }
+
+    .header-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      height: 52px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-title);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+    .logo-icon {
+      font-size: 18px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      transition: color 0.2s, background-color 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      color: var(--text-title);
+      background-color: var(--bg-pill);
+    }
+
+    /* 主內容容器 */
+    main.main-content {
+      flex: 1;
+      max-width: 1024px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* Hero 區域（典型 Apple Support 排版） */
+    .hero-section {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .hero-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--text-title);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 28px;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: var(--text-body);
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+
+    /* 搜尋列 */
+    .search-box-wrap {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 44px 0 44px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text-title);
+      outline: none;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .search-input:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    }
+    .search-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-icon-left {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 16px;
+    }
+    .search-clear-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 14px;
+      display: none;
+      padding: 4px;
+    }
+    .search-clear-btn:hover { color: var(--text-title); }
+
+    /* 分類過濾膠囊（Pill Tabs） */
+    .category-filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background: var(--bg-pill);
+      border: none;
+      color: var(--text-body);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--text-title);
+    }
+    [data-theme="dark"] .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+    .filter-btn.active {
+      background: var(--bg-pill-active);
+      color: var(--text-pill-active);
+      font-weight: 600;
+    }
+
+    /* 設備卡片網格 (Product Grid) */
+    .devices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 24px;
+    }
+
+    .device-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .device-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+      border-color: rgba(0, 113, 227, 0.3);
+    }
+
+    .device-visual {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: var(--bg-page);
+      overflow: hidden;
+      position: relative;
+    }
+    .device-visual svg, .device-visual img {
+      max-height: 110px;
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .device-card:hover .device-visual svg,
+    .device-card:hover .device-visual img {
+      transform: scale(1.05);
+    }
+
+    .device-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .device-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+    }
+    .device-badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-pill);
+      color: var(--text-muted);
+    }
+
+    .device-name {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: var(--text-title);
+      margin-bottom: 6px;
+    }
+
+    .device-desc {
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .device-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .tag-chip {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--bg-pill);
+      color: var(--text-muted);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent-blue);
+    }
+    .card-footer span.arrow {
+      transition: transform 0.2s ease;
+    }
+    .device-card:hover .card-footer span.arrow {
+      transform: translateX(4px);
+    }
+
+    /* 空狀態提示 */
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+      grid-column: 1 / -1;
+    }
+    .empty-state p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* 頁尾 */
+    footer.global-footer {
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      padding: 32px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+    .footer-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--accent-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部全域導航 -->
+  <header class="global-header">
+    <div class="header-inner">
+      <a href="./" class="logo-link">
+        <span class="logo-icon">📖</span>
+        <span>Prism Manuals</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" aria-label="切換外觀風格" title="切換深淺模式">
+          <span id="themeIcon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主內容區 -->
+  <main class="main-content">
+
+    <!-- Hero 標題與簡介 -->
+    <section class="hero-section">
+      <div class="hero-eyebrow">Device Manual Library</div>
+      <h1 class="hero-title">探索您的設備說明書</h1>
+      <p class="hero-subtitle">手邊電器、攝影影音與數位周邊的數位互動指南。快速查閱按鍵操作、指示燈含義與疑難排解。</p>
+
+      <!-- 搜尋列 -->
+      <div class="search-box-wrap">
+        <span class="search-icon-left">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜尋品牌、型號或功能（例如：Godox、麥克風、降噪）..." oninput="handleSearch(this.value)">
+        <button class="search-clear-btn" id="searchClear" onclick="clearSearch()" aria-label="清除搜尋">✕</button>
+      </div>
+    </section>
+
+    <!-- 分類過濾選單 (Pill Tabs) -->
+    <nav class="category-filter" aria-label="設備類別過濾">
+      <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)">全部設備</button>
+      <button class="filter-btn" data-category="audio" onclick="filterCategory('audio', this)">影音器材</button>
+      <button class="filter-btn" data-category="living" onclick="filterCategory('living', this)">生活家電</button>
+      <button class="filter-btn" data-category="tech" onclick="filterCategory('tech', this)">電腦數位</button>
+      <button class="filter-btn" data-category="tools" onclick="filterCategory('tools', this)">戶外工具</button>
+    </nav>
+
+    <!-- 設備卡片清單 (Product Grid) -->
+    <section class="devices-grid" id="devicesGrid">
+
+      <!-- 設備 1：Godox C01 無線麥克風 -->
+      <a href="devices/godox-c01/" class="device-card" data-category="audio" data-keywords="godox c01 無線 麥克風 降噪 領夾 發射器 接收器 充電盒 7g 200m">
+        <div class="device-visual">
+          <!-- 蘋果風格乾淨產品圖解 SVG -->
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="25" y="25" width="55" height="55" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
+            <circle cx="38" cy="38" r="4" fill="#0071e3"/>
+            <rect x="100" y="32" width="75" height="42" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
+            <rect x="130" y="22" width="15" height="10" rx="3" fill="currentColor" fill-opacity="0.2"/>
+            <circle cx="112" cy="53" r="3" fill="#22c55e"/>
+            <circle cx="122" cy="53" r="3" fill="#f97316"/>
+            <text x="52" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">TX</text>
+            <text x="142" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">RX</text>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">Godox 神牛</span>
+          <span class="device-badge">已就緒</span>
+        </div>
+        <h2 class="device-name">C01 無線麥克風</h2>
+        <p class="device-desc">7g 微型發射器、200米視距傳輸、智慧降噪、支援手機邊充邊用與 27H 續航充電盒。</p>
+        <div class="device-tags">
+          <span class="tag-chip">48kHz/24bit</span>
+          <span class="tag-chip">一鍵降噪</span>
+          <span class="tag-chip">磁吸佩戴</span>
+          <span class="tag-chip">Type-C 直插</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用手冊</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 佔位卡片：即將收錄（可方便後續擴充） -->
+      <div class="device-card" data-category="living" data-keywords="咖啡機 氣炸鍋 除濕機 清淨機 家電" style="opacity: 0.65; cursor: default;">
+        <div class="device-visual" style="background: repeating-linear-gradient(45deg, var(--bg-page), var(--bg-page) 10px, var(--bg-card) 10px, var(--bg-card) 20px);">
+          <span style="font-size: 32px; opacity: 0.4;">⚡</span>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand" style="color: var(--text-muted);">擴充預備</span>
+          <span class="device-badge">籌備中</span>
+        </div>
+        <h2 class="device-name">陸續收錄手邊電器...</h2>
+        <p class="device-desc">未來可陸續將咖啡機、相機、耳機、居家小家電等說明書逐一加入此總匯。</p>
+        <div class="device-tags">
+          <span class="tag-chip">模組化結構</span>
+          <span class="tag-chip">隨開即用</span>
+        </div>
+        <div class="card-footer" style="color: var(--text-muted);">
+          <span>敬請期待</span>
+          <span>＋</span>
+        </div>
+      </div>
+
+      <!-- 空搜尋狀態提示 -->
+      <div class="empty-state" id="emptyState">
+        <div style="font-size: 36px; margin-bottom: 8px;">🔍</div>
+        <div style="font-size: 16px; font-weight: 600; color: var(--text-title);">找不到相關說明書</div>
+        <p>請嘗試輸入不同的關鍵字或重設分類標籤。</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="global-footer">
+    <div class="footer-inner">
+      <p>© 2026 Prismoment · Prism Manuals 個人設備說明書庫</p>
+      <div class="footer-links">
+        <a href="https://prismoment.com" target="_blank" rel="noopener">Prismoment 首頁</a>
+        <span>·</span>
+        <a href="https://github.com/Raymond19930624/Manual" target="_blank" rel="noopener">GitHub 原始碼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentCategory = 'all';
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = 'dark';
+      
+      if (current === 'dark') {
+        target = 'light';
+      } else if (current === 'light') {
+        target = 'dark';
+      } else {
+        // auto
+        const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        target = isSystemDark ? 'light' : 'dark';
+      }
+
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = target === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    function filterCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    function handleSearch(val) {
+      const clearBtn = document.getElementById('searchClear');
+      clearBtn.style.display = val.trim() ? 'block' : 'none';
+      applyFilters();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      document.getElementById('searchClear').style.display = 'none';
+      applyFilters();
+      input.focus();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.devices-grid .device-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        const keywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText;
+        const matchesCategory = (currentCategory === 'all' || cat === currentCategory);
+        const matchesSearch = (!query || keywords.toLowerCase().includes(query));
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const empty = document.getElementById('emptyState');
+      empty.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // 初始化主題
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = saved === 'dark' ? '☀️' : '🌙';
+      } else {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.getElementById('themeIcon').innerText = isDark ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

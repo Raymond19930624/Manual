@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Godox C01 無線麥克風 使用指南 | Prism Manuals</title>
+  <meta name="description" content="Godox 神牛 C01 超輕量無線麥克風完整數位使用手冊。收錄按鍵操作、指示燈含義速查、手機直插邊充邊用與規格參數。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
+  <style>
+    /* Apple Support 設計規範 */
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      
+      --led-green: #34c759;
+      --led-orange: #ff9500;
+      --led-red: #ff3b30;
+      --led-blue: #0071e3;
+
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-sm: 8px;
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      
+      --led-green: #30d158;
+      --led-orange: #ff9f0a;
+      --led-red: #ff453a;
+      --led-blue: #0a84ff;
+
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-page);
+      color: var(--text-title);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* 頂部全域導航與面包屑 */
+    header.header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav {
+      background: rgba(22, 22, 23, 0.82);
+    }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav {
+        background: rgba(22, 22, 23, 0.82);
+      }
+    }
+
+    .header-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      height: 52px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .breadcrumb a:hover {
+      color: var(--accent-blue);
+    }
+    .breadcrumb-sep {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+    .breadcrumb-current {
+      color: var(--text-title);
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-toggle-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: color 0.2s, background-color 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      color: var(--text-title);
+      background-color: var(--bg-pill);
+    }
+
+    /* 章節快速錨點列 */
+    nav.subnav-pills {
+      position: sticky;
+      top: 52px;
+      z-index: 90;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-divider);
+      padding: 8px 16px;
+      overflow-x: auto;
+      white-space: nowrap;
+      display: flex;
+      gap: 6px;
+      scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .pill-link {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active {
+      color: var(--accent-blue);
+      background: var(--accent-tag);
+      font-weight: 600;
+    }
+
+    /* 主內容容器 */
+    main.doc-container {
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* 頂部 Hero 卡片 */
+    .product-hero {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card);
+      padding: 36px 30px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .badge-tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      background: var(--accent-tag);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .hero-headline {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      color: var(--text-title);
+      line-height: 1.2;
+    }
+    .hero-summary {
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.6;
+      max-width: 760px;
+    }
+
+    /* 快速特色網格 */
+    .spec-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-divider);
+    }
+    .hl-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hl-val {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-title);
+    }
+    .hl-lbl {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 區塊標準外觀 */
+    .doc-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card);
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+
+    .section-title-wrap {
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-divider);
+    }
+    .sec-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--accent-blue);
+      margin-bottom: 4px;
+    }
+    .sec-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: var(--text-title);
+    }
+
+    /* 按鍵操作卡片 */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .ctrl-card {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ctrl-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--bg-pill-active);
+      color: var(--text-pill-active);
+      align-self: flex-start;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+    }
+    .ctrl-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-title);
+    }
+    .ctrl-desc {
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+
+    /* LED 指示燈列表 */
+    .led-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .led-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+    }
+
+    .led-lamp {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .led-lamp::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: inherit;
+      opacity: 0.35;
+      filter: blur(1.5px);
+    }
+
+    .led-green-solid { background: var(--led-green); }
+    .led-orange-solid { background: var(--led-orange); }
+    .led-red-solid { background: var(--led-red); }
+    .led-blue-solid { background: var(--led-blue); }
+
+    .led-green-slow {
+      background: var(--led-green);
+      animation: ledPulse 1.8s infinite ease-in-out;
+    }
+    .led-green-fast {
+      background: var(--led-green);
+      animation: ledFastBlink 0.5s infinite;
+    }
+    .led-blue-breathe {
+      background: var(--led-blue);
+      animation: ledBreathe 2.4s infinite ease-in-out;
+    }
+
+    @keyframes ledPulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+    @keyframes ledFastBlink {
+      0%, 49% { opacity: 0.2; }
+      50%, 100% { opacity: 1; }
+    }
+    @keyframes ledBreathe {
+      0%, 100% { opacity: 0.25; transform: scale(0.92); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+
+    .led-info-col {
+      flex: 1;
+      font-size: 13px;
+      color: var(--text-title);
+    }
+    .led-info-col strong {
+      color: var(--text-title);
+    }
+    .led-note-col {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 充電盒 4 燈排版 */
+    .case-power-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .case-power-card {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dots-indicator {
+      display: flex;
+      gap: 5px;
+    }
+    .dot-item {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1.5px solid var(--text-muted);
+    }
+    .dot-item.active {
+      background: var(--text-title);
+      border-color: var(--text-title);
+    }
+
+    /* 連接步驟圖解 */
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .step-box {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .step-num {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .step-head {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-title);
+    }
+    .step-content {
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* 規格參數表格 */
+    .table-frame {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+    }
+    table.spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+    table.spec-table th {
+      background: var(--bg-card-subtle);
+      color: var(--text-title);
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    table.spec-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-divider);
+      color: var(--text-body);
+    }
+    table.spec-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* 原廠說明書檢視 */
+    .orig-viewer {
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      background: var(--bg-card-subtle);
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .orig-viewer:hover {
+      border-color: var(--accent-blue);
+    }
+    .orig-viewer img {
+      max-width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 8px;
+    }
+    .orig-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent-blue);
+      margin-top: 10px;
+    }
+
+    /* 燈箱視窗 */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-panel {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      max-width: 95vw;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-bar {
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-divider);
+    }
+
+    /* 頁尾 */
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部全域導航 -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb" aria-label="導航位置">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Godox C01</span>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換深淺模式" title="外觀主題">
+          <span id="themeIcon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 快速章節滑動膠囊選單 -->
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#tx-section" class="pill-link">發射器 TX</a>
+      <a href="#rx-section" class="pill-link">接收器 RX</a>
+      <a href="#case-section" class="pill-link">充電盒</a>
+      <a href="#setup-section" class="pill-link">手機與配戴</a>
+      <a href="#specs-section" class="pill-link">規格參數</a>
+      <a href="#package-section" class="pill-link">物品清單</a>
+      <a href="#orig-section" class="pill-link">原廠圖紙</a>
+    </div>
+  </nav>
+
+  <!-- 主要內容區 -->
+  <main class="doc-container">
+
+    <!-- 產品 Hero 總覽 -->
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">GODOX 神牛</span>
+        <span class="badge-tag">微型無線麥克風</span>
+        <span class="badge-tag">Type-C 直插</span>
+      </div>
+
+      <h1 class="hero-headline">Godox C01 無線麥克風 使用指南</h1>
+      <p class="hero-summary">
+        專為手機拍攝與影音創作打造的超輕量雙通道無線麥克風系統。具備隨插即用、智慧一鍵降噪、磁吸隨心配戴與手機邊充邊用支援。
+      </p>
+
+      <div class="spec-highlights">
+        <div class="hl-item">
+          <span class="hl-val">7g</span>
+          <span class="hl-lbl">發射器淨重</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">200m</span>
+          <span class="hl-lbl">視距無線傳輸</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">9h / 27h</span>
+          <span class="hl-lbl">單次 / 含盒續航</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-val">48kHz</span>
+          <span class="hl-lbl">24-bit 廣播音質</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 發射器 TX 操作與燈號 -->
+    <section class="doc-section" id="tx-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Transmitter Controls</div>
+        <h2 class="sec-title">發射器 (TX) 按鍵與指示燈</h2>
+      </div>
+
+      <!-- 按鍵操作 -->
+      <div class="controls-grid">
+        <div class="ctrl-card">
+          <span class="ctrl-badge">按 1 下 (×1)</span>
+          <div class="ctrl-name">開啟 / 關閉 降噪</div>
+          <div class="ctrl-desc">切換人聲降噪演算法。開啟時濾除風噪與環境雜音，指示燈轉為<strong>橙色長亮</strong>；關閉時為<strong>綠色長亮</strong>。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">按 2 下 (×2)</span>
+          <div class="ctrl-name">配對模式 & 遙控拍攝</div>
+          <div class="ctrl-desc">未連接時雙擊進入快閃配對；連線狀態下連按兩下，支援部分手機/相機作為<strong>遠端快門拍照錄影</strong>。</div>
+        </div>
+
+        <div class="ctrl-card" style="grid-column: 1 / -1;">
+          <span class="ctrl-badge">長按 2 秒 (2s)</span>
+          <div class="ctrl-name">開機 / 關機</div>
+          <div class="ctrl-desc">手動控制電源開關。從充電盒取出通常會自動開機，放入充電盒會自動關機並充電。</div>
+        </div>
+      </div>
+
+      <!-- TX 指示燈 -->
+      <div class="led-list">
+        <div class="led-row">
+          <span class="led-lamp led-green-slow"></span>
+          <div class="led-info-col"><strong>綠燈慢閃</strong> — 未連接 (Unpaired)</div>
+          <div class="led-note-col">等待接收器訊號中</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-green-fast"></span>
+          <div class="led-info-col"><strong>綠燈快閃</strong> — 配對中 (Pairing)</div>
+          <div class="led-note-col">正在搜尋頻道</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-green-solid"></span>
+          <div class="led-info-col"><strong>綠燈長亮</strong> — 已連接（降噪關閉）</div>
+          <div class="led-note-col">高保真原音模式</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-orange-solid"></span>
+          <div class="led-info-col"><strong>橙燈長亮</strong> — 降噪開啟 (Noise Reduction ON)</div>
+          <div class="led-note-col">過濾環境噪音</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-red-solid"></span>
+          <div class="led-info-col"><strong>紅燈長亮</strong> — 低電量提示 (Low Battery)</div>
+          <div class="led-note-col">請盡快放入充電盒</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-blue-breathe"></span>
+          <div class="led-info-col"><strong>藍燈呼吸</strong> — 充電中 (Charging)</div>
+          <div class="led-note-col">約需 1 小時充飽</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-blue-solid"></span>
+          <div class="led-info-col"><strong>藍燈長亮</strong> — 已充飽電 (Fully Charged)</div>
+          <div class="led-note-col">單次續航達 9 小時</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 接收器 RX 操作與燈號 -->
+    <section class="doc-section" id="rx-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Receiver Controls</div>
+        <h2 class="sec-title">接收器 (RX) 按鍵與指示燈</h2>
+      </div>
+
+      <div class="controls-grid">
+        <div class="ctrl-card">
+          <span class="ctrl-badge">按 1 下 (×1)</span>
+          <div class="ctrl-name">開啟 / 關閉 降噪</div>
+          <div class="ctrl-desc">從手機端直接遙控切換麥克風的降噪開關。</div>
+        </div>
+
+        <div class="ctrl-card">
+          <span class="ctrl-badge">按 2 下 (×2)</span>
+          <div class="ctrl-name">配對模式</div>
+          <div class="ctrl-desc">進入配對頻道，重新綁定發射器。</div>
+        </div>
+
+        <div class="ctrl-card" style="grid-column: 1 / -1;">
+          <span class="ctrl-badge">長按 3 秒 (3s)</span>
+          <div class="ctrl-name">音量調節（低 / 中 / 高 循環）</div>
+          <div class="ctrl-desc">僅在<strong>配對連線狀態</strong>下有效。長按可在三檔音量循環切換，由<strong>藍燈閃爍次數</strong>反饋。</div>
+        </div>
+      </div>
+
+      <div class="led-list">
+        <div class="led-row">
+          <span class="led-lamp led-green-slow"></span>
+          <div class="led-info-col"><strong>綠燈慢閃</strong> — 未連接 (Unpaired)</div>
+          <div class="led-note-col">請確認發射器開機</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-green-fast"></span>
+          <div class="led-info-col"><strong>綠燈快閃</strong> — 配對中 (Pairing)</div>
+          <div class="led-note-col">配對進行中</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-green-solid"></span>
+          <div class="led-info-col"><strong>綠燈長亮</strong> — 已連接（降噪關閉）</div>
+          <div class="led-note-col">就緒可錄音</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-orange-solid"></span>
+          <div class="led-info-col"><strong>橙燈長亮</strong> — 降噪開啟 (Noise Reduction ON)</div>
+          <div class="led-note-col">降噪生效中</div>
+        </div>
+        <div class="led-row">
+          <span class="led-lamp led-red-solid"></span>
+          <div class="led-info-col"><strong>紅燈長亮</strong> — 發射器低電量警告</div>
+          <div class="led-note-col">提醒對應麥克風充電</div>
+        </div>
+        <div class="led-row" style="background: var(--accent-tag);">
+          <span class="led-lamp led-blue-solid"></span>
+          <div class="led-info-col">
+            <strong>藍燈閃爍 1~3 次</strong> — 音量檔位反饋
+            <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">
+              • 閃 1 次：1 檔 (低音量) ｜ • 閃 2 次：2 檔 (中音量) ｜ • 閃 3 次：3 檔 (高音量)
+            </div>
+          </div>
+          <div class="led-note-col">長按 3s 切換</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 充電盒電量指示 -->
+    <section class="doc-section" id="case-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Battery & Case</div>
+        <h2 class="sec-title">充電盒 4 顆 LED 電量對照</h2>
+      </div>
+
+      <div class="case-power-grid">
+        <div class="case-power-card">
+          <div class="dots-indicator">
+            <span class="dot-item active"></span>
+            <span class="dot-item"></span>
+            <span class="dot-item"></span>
+            <span class="dot-item"></span>
+          </div>
+          <div style="font-weight:600; font-size:13px;">0% ~ 25%</div>
+        </div>
+
+        <div class="case-power-card">
+          <div class="dots-indicator">
+            <span class="dot-item active"></span>
+            <span class="dot-item active"></span>
+            <span class="dot-item"></span>
+            <span class="dot-item"></span>
+          </div>
+          <div style="font-weight:600; font-size:13px;">25% ~ 50%</div>
+        </div>
+
+        <div class="case-power-card">
+          <div class="dots-indicator">
+            <span class="dot-item active"></span>
+            <span class="dot-item active"></span>
+            <span class="dot-item active"></span>
+            <span class="dot-item"></span>
+          </div>
+          <div style="font-weight:600; font-size:13px;">50% ~ 75%</div>
+        </div>
+
+        <div class="case-power-card">
+          <div class="dots-indicator">
+            <span class="dot-item active"></span>
+            <span class="dot-item active"></span>
+            <span class="dot-item active"></span>
+            <span class="dot-item active"></span>
+          </div>
+          <div style="font-weight:600; font-size:13px; color:var(--accent-blue);">75% ~ 100%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 手機連接與磁吸佩戴 -->
+    <section class="doc-section" id="setup-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Setup & Wearing</div>
+        <h2 class="sec-title">手機連接與磁吸佩戴</h2>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-box">
+          <span class="step-num">Step 1</span>
+          <div class="step-head">接收器直插手機</div>
+          <p class="step-content">將接收器 (RX) 直接插入手機底部 Type-C 或 Lightning 連接埠，免裝 App、免開藍牙，即插即用。</p>
+        </div>
+
+        <div class="step-box">
+          <span class="step-num">Step 2</span>
+          <div class="step-head">邊充邊用支援</div>
+          <p class="step-content">若手機長時間錄影電量告急，可將原廠手機充電線直接插上接收器側面的 Type-C 孔，實現邊錄音邊為手機快充。</p>
+        </div>
+
+        <div class="step-box">
+          <span class="step-num">Step 3</span>
+          <div class="step-head">磁吸無感佩戴</div>
+          <p class="step-content">發射器背後自帶磁吸，搭配附贈的小磁鐵片隔著衣物吸附，僅 7g 輕盈無拉扯感，隱形出鏡。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 規格參數表 -->
+    <section class="doc-section" id="specs-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Technical Specifications</div>
+        <h2 class="sec-title">規格參數</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>發射器 (C01 TX)</th>
+              <th>接收器 (C01 RX)</th>
+              <th>充電盒 (Case)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>型號</strong></td>
+              <td>C01 TX</td>
+              <td>C01 RX</td>
+              <td>C01 Case</td>
+            </tr>
+            <tr>
+              <td><strong>傳輸系統</strong></td>
+              <td colspan="2">2.4GHz 數位跳頻系統 (FHSS)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>指向特性</strong></td>
+              <td>全指向 (Omnidirectional)</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>頻率響應</strong></td>
+              <td>20Hz ~ 20kHz</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>最大聲壓級</strong></td>
+              <td>115dB SPL</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>信噪比</strong></td>
+              <td>> 65dB</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>傳輸距離</strong></td>
+              <td colspan="2">200 米 (無障礙視距)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>電池容量</strong></td>
+              <td>3.7V 97mAh (0.36Wh)</td>
+              <td>手機供電 (無電池)</td>
+              <td>3.7V 600mAh (2.22Wh)</td>
+            </tr>
+            <tr>
+              <td><strong>電池續航</strong></td>
+              <td>約 9 小時</td>
+              <td>隨插即用</td>
+              <td>可充兩隻發射器 2 次</td>
+            </tr>
+            <tr>
+              <td><strong>充電時間</strong></td>
+              <td>約 1 小時</td>
+              <td>-</td>
+              <td>約 1.5 小時</td>
+            </tr>
+            <tr>
+              <td><strong>外觀尺寸</strong></td>
+              <td>24.5 × 26.5 × 12.5 mm</td>
+              <td>40.0 × 26.3 × 9.5 mm</td>
+              <td>68.0 × 31.0 × 35.5 mm</td>
+            </tr>
+            <tr>
+              <td><strong>淨重</strong></td>
+              <td><strong>約 7g</strong></td>
+              <td>約 5g</td>
+              <td>約 49g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 物品清單 -->
+    <section class="doc-section" id="package-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Package Contents</div>
+        <h2 class="sec-title">包裝物品清單</h2>
+      </div>
+
+      <div class="table-frame">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th style="width:130px;">套裝版本</th>
+              <th>內附配件</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>C01 Kit1</strong> (一拖一)</td>
+              <td>發射器 ×1、接收器 ×1、加長雙頭充電線 ×1、磁鐵 ×1、說明書 ×1、卡通貼紙 ×1</td>
+            </tr>
+            <tr>
+              <td><strong>C01 Kit2</strong> (一拖二)</td>
+              <td>發射器 ×2、接收器 ×1、充電盒 ×1、USB-C 充電線 ×1、磁鐵 ×2、說明書 ×1、卡通貼紙 ×1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 原廠圖紙檢視 -->
+    <section class="doc-section" id="orig-section">
+      <div class="section-title-wrap">
+        <div class="sec-eyebrow">Original Documentation</div>
+        <h2 class="sec-title">原廠摺頁手冊掃描圖</h2>
+      </div>
+
+      <div class="orig-viewer" onclick="openModal()">
+        <img src="godox-c01-manual-original.jpg" alt="Godox C01 原廠說明書完整摺頁圖">
+        <div class="orig-label">🔍 點擊查看原廠高解析度手冊掃描圖</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 燈箱 Modal -->
+  <div class="modal-backdrop" id="imgModal" onclick="closeModal()">
+    <div class="modal-panel" onclick="event.stopPropagation()">
+      <div class="modal-bar">
+        <span style="font-size:14px; font-weight:600;">原廠手冊掃描</span>
+        <button style="border:none; background:#ff3b30; color:#fff; padding:4px 12px; border-radius:6px; cursor:pointer;" onclick="closeModal()">關閉 ✕</button>
+      </div>
+      <div style="overflow:auto; max-height:80vh; background:#000; text-align:center;">
+        <img src="godox-c01-manual-original.jpg" alt="原廠圖" style="max-width:100%;">
+      </div>
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="doc-footer">
+    <p>Prism Manuals · Godox C01 Digital User Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = 'dark';
+      if (current === 'dark') {
+        target = 'light';
+      } else if (current === 'light') {
+        target = 'dark';
+      } else {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        target = isDark ? 'light' : 'dark';
+      }
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = target === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    function openModal() {
+      document.getElementById('imgModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('imgModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // 監聽滾動更新膠囊 active 狀態
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) {
+          cur = s.id;
+        }
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) {
+            p.classList.add('active');
+          } else {
+            p.classList.remove('active');
+          }
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = saved === 'dark' ? '☀️' : '🌙';
+      } else {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.getElementById('themeIcon').innerText = isDark ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>
