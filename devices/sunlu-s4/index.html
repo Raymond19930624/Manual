@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SUNLU S4 3D列印耗材乾燥箱 使用指南 | Prism Manuals</title>
+  <meta name="description" content="全球首款 4 盤位 3D 列印線材恆溫乾燥箱。搭載 350W PTC 加熱器與三風扇循環對流系統，具備智慧觸控面板、即時濕度監控與一鍵材質烘烤設定。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
+      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header.header-nav {
+      position: sticky; top: 0; z-index: 100; background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    }
+
+    .header-inner {
+      max-width: 980px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { color: var(--text-muted); font-size: 11px; }
+    .breadcrumb-current { color: var(--text-title); font-weight: 600; }
+
+    .theme-toggle-btn {
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .theme-toggle-btn:hover { background-color: var(--bg-pill); color: var(--text-title); }
+
+    nav.subnav-pills {
+      position: sticky; top: 52px; z-index: 90; background: var(--bg-card);
+      border-bottom: 1px solid var(--border-divider); padding: 8px 16px; overflow-x: auto;
+      white-space: nowrap; display: flex; gap: 6px; scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner { max-width: 980px; margin: 0 auto; display: flex; gap: 6px; width: 100%; }
+    .pill-link {
+      font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none;
+      padding: 5px 12px; border-radius: var(--radius-pill); background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active { color: var(--accent-blue); background: var(--accent-tag); font-weight: 600; }
+
+    main.doc-container {
+      max-width: 980px; width: 100%; margin: 0 auto; padding: 40px 20px 80px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .product-hero {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 36px 30px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge-tag {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+      background: var(--accent-tag); padding: 4px 10px; border-radius: 6px;
+    }
+    .hero-headline { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; }
+    .hero-summary { font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 760px; }
+
+    .spec-highlights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border-divider);
+    }
+    .hl-item { display: flex; flex-direction: column; gap: 2px; }
+    .hl-val { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .hl-lbl { font-size: 12px; color: var(--text-muted); }
+
+    .doc-section {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 30px; box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+    .section-title-wrap { margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border-divider); }
+    .sec-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent-blue); margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+
+    .controls-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .ctrl-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .ctrl-badge {
+      font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: var(--bg-pill-active); color: var(--text-pill-active); align-self: flex-start;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+    }
+    .ctrl-name { font-size: 15px; font-weight: 600; }
+    .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
+
+    .table-frame {
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+    }
+    table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
+    table.spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-divider); color: var(--text-body); }
+    table.spec-table tr:last-child td { border-bottom: none; }
+
+    .tip-box {
+      background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
+      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+    }
+
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 30px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">SUNLU S4 3D列印耗材乾燥箱</span>
+      </nav>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#material-guide" class="pill-link">各材質最佳乾燥溫度與時間</a><a href="#panel" class="pill-link">觸控螢幕按鍵操作與設定</a>
+    </div>
+  </nav>
+
+  <main class="doc-container">
+
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">SUNLU 三綠</span>
+        <span class="badge-tag">3D 列印工具</span>
+      </div>
+      <h1 class="hero-headline">SUNLU S4 3D列印耗材乾燥箱使用指南</h1>
+      <p class="hero-summary">全球首款 4 盤位 3D 列印線材恆溫乾燥箱。搭載 350W PTC 加熱器與三風扇循環對流系統，具備智慧觸控面板、即時濕度監控與一鍵材質烘烤設定。</p>
+      <div class="spec-highlights">
+        <div class="hl-item"><span class="hl-val">4 盤位</span><span class="hl-lbl">同時烘乾四卷耗材</span></div><div class="hl-item"><span class="hl-val">350W</span><span class="hl-lbl">PTC 快速升溫</span></div><div class="hl-item"><span class="hl-val">70℃</span><span class="hl-lbl">最高恆溫烘烤</span></div><div class="hl-item"><span class="hl-val">觸控螢幕</span><span class="hl-lbl">實時溫濕度顯示</span></div>
+      </div>
+    </section>
+
+    
+        <section class="doc-section" id="material-guide">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Temperature Matrix</div>
+            <h2 class="sec-title">各材質最佳乾燥溫度與時間對照表</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead>
+                      <tr><th>耗材材質</th><th>建議烘乾溫度</th><th>建議烘乾時間</th><th>含水受潮特徵</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td><strong>PLA / PLA+</strong></td><td>45℃ ~ 50℃</td><td>3 ~ 6 小時</td><td>列印拉絲、表面氣泡、脆斷</td></tr>
+                      <tr><td><strong>PETG</strong></td><td>50℃ ~ 55℃</td><td>4 ~ 8 小時</td><td>嚴重拉絲、爆米花劈啪聲</td></tr>
+                      <tr><td><strong>TPU / TPE</strong></td><td>50℃ ~ 55℃</td><td>6 ~ 10 小時</td><td>出絲不均、層間結合力驟降</td></tr>
+                      <tr><td><strong>ABS / ASA</strong></td><td>60℃ ~ 65℃</td><td>4 ~ 8 小時</td><td>翹邊開裂、冒煙有異味</td></tr>
+                      <tr><td><strong>PA 尼龍 / PC</strong></td><td>65℃ ~ 70℃</td><td>8 ~ 12 小時</td><td>極易吸水，出料起泡粗糙</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="panel">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Touch Panel Guide</div>
+            <h2 class="sec-title">觸控螢幕按鍵操作與設定</h2>
+          </div>
+          
+                <div class="controls-grid">
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">溫度設定 (Temp)</span>
+                    <div class="ctrl-name">自訂烘乾溫度 (35℃~70℃)</div>
+                    <div class="ctrl-desc">點擊溫度圖示，透過 + / - 按鍵以 1℃ 為單位調整內部目標恆溫值。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">時間設定 (Timer)</span>
+                    <div class="ctrl-name">預約烘乾時長 (0~99小時)</div>
+                    <div class="ctrl-desc">設定倒數計時關機，倒數結束後自動轉入休眠恆濕密封狀態。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">LED 燈帶開關</span>
+                    <div class="ctrl-name">內部照明切換</div>
+                    <div class="ctrl-desc">觸摸燈光鍵可點亮或關閉內部觀察 LED 燈，方便夜間檢視耗材餘量。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">出線孔安裝</span>
+                    <div class="ctrl-name">邊烘邊印 (Direct Feed)</div>
+                    <div class="ctrl-desc">機身前後共預留 8 個鐵氟龍管出線孔，可將線材直接牽引至 3D 列印機擠出機。</div>
+                  </div>
+                </div>
+                
+        </section>
+        
+
+  </main>
+
+  <footer class="doc-footer">
+    <p>Prism Manuals · SUNLU S4 3D列印耗材乾燥箱 Digital Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = (current === 'dark') ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

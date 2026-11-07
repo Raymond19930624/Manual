@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CITIZEN W770 藍牙光動能腕錶 使用指南 | Prism Manuals</title>
+  <meta name="description" content="光動能藍牙旗艦手錶。具備自動時間同步、來電/訊息震動提示、兩地時區切換、指針基準位置校準與太陽能電量指示。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>">
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
+      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header.header-nav {
+      position: sticky; top: 0; z-index: 100; background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    }
+
+    .header-inner {
+      max-width: 980px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { color: var(--text-muted); font-size: 11px; }
+    .breadcrumb-current { color: var(--text-title); font-weight: 600; }
+
+    .theme-toggle-btn {
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .theme-toggle-btn:hover { background-color: var(--bg-pill); color: var(--text-title); }
+
+    nav.subnav-pills {
+      position: sticky; top: 52px; z-index: 90; background: var(--bg-card);
+      border-bottom: 1px solid var(--border-divider); padding: 8px 16px; overflow-x: auto;
+      white-space: nowrap; display: flex; gap: 6px; scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner { max-width: 980px; margin: 0 auto; display: flex; gap: 6px; width: 100%; }
+    .pill-link {
+      font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none;
+      padding: 5px 12px; border-radius: var(--radius-pill); background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active { color: var(--accent-blue); background: var(--accent-tag); font-weight: 600; }
+
+    main.doc-container {
+      max-width: 980px; width: 100%; margin: 0 auto; padding: 40px 20px 80px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .product-hero {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 36px 30px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge-tag {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+      background: var(--accent-tag); padding: 4px 10px; border-radius: 6px;
+    }
+    .hero-headline { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; }
+    .hero-summary { font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 760px; }
+
+    .spec-highlights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border-divider);
+    }
+    .hl-item { display: flex; flex-direction: column; gap: 2px; }
+    .hl-val { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .hl-lbl { font-size: 12px; color: var(--text-muted); }
+
+    .doc-section {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 30px; box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+    .section-title-wrap { margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border-divider); }
+    .sec-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent-blue); margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+
+    .controls-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .ctrl-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .ctrl-badge {
+      font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: var(--bg-pill-active); color: var(--text-pill-active); align-self: flex-start;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+    }
+    .ctrl-name { font-size: 15px; font-weight: 600; }
+    .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
+
+    .table-frame {
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+    }
+    table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
+    table.spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-divider); color: var(--text-body); }
+    table.spec-table tr:last-child td { border-bottom: none; }
+
+    .tip-box {
+      background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
+      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+    }
+
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 30px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">CITIZEN W770 藍牙光動能腕錶</span>
+      </nav>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#pairing-buttons" class="pill-link">手機配對與藍牙連線步驟</a><a href="#hand-align" class="pill-link">指針基準位置校正（指針偏差修復）</a>
+    </div>
+  </nav>
+
+  <main class="doc-container">
+
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">CITIZEN 星辰錶</span>
+        <span class="badge-tag">個人穿戴</span>
+      </div>
+      <h1 class="hero-headline">CITIZEN Eco-Drive Bluetooth W770 使用指南</h1>
+      <p class="hero-summary">光動能藍牙旗艦手錶。具備自動時間同步、來電/訊息震動提示、兩地時區切換、指針基準位置校準與太陽能電量指示。</p>
+      <div class="spec-highlights">
+        <div class="hl-item"><span class="hl-val">Eco-Drive</span><span class="hl-lbl">光動能終身免換電池</span></div><div class="hl-item"><span class="hl-val">Bluetooth 4.0</span><span class="hl-lbl">手機 App 智慧校時</span></div><div class="hl-item"><span class="hl-val">指針基準校準</span><span class="hl-lbl">強磁衝擊後復位修復</span></div><div class="hl-item"><span class="hl-val">來電震動</span><span class="hl-lbl">重要通知指針指向提示</span></div>
+      </div>
+    </section>
+
+    
+        <section class="doc-section" id="pairing-buttons">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Phone Connection</div>
+            <h2 class="sec-title">手機配對與藍牙連線步驟</h2>
+          </div>
+          
+                <div class="controls-grid">
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">首次配對 (Pairing)</span>
+                    <div class="ctrl-name">龍頭推入 + 長按右下按鈕 B</div>
+                    <div class="ctrl-desc">
+                      1. 打開手機「CITIZEN Bluetooth Watch」App。<br>
+                      2. 手錶龍頭保持推入（第 0 段），按住右下角 <strong>按鈕 B 2~3 秒</strong>。<br>
+                      3. 二手會指向「ACT」並移動至「CONNECT」，手機 App 點選確認配對。
+                    </div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">手動連線 (Reconnect)</span>
+                    <div class="ctrl-name">按住按鈕 B 2 秒</div>
+                    <div class="ctrl-desc">日常手動同步時間時，短按或長按按鈕 B 2 秒，秒針旋轉至 CONNECT 成功同步後自動歸位。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">通知指針位置解讀</span>
+                    <div class="ctrl-name">CALL / INFO / LL / ACT</div>
+                    <div class="ctrl-desc">
+                      • <strong>CALL</strong>：電話來電 ｜ • <strong>INFO</strong>：簡訊或 LINE 訊息 ｜ • <strong>LL</strong>：藍牙連線中斷提示 ｜ • <strong>ACT</strong>：正在搜尋通訊中。
+                    </div>
+                  </div>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="hand-align">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Zero Position Calibration</div>
+            <h2 class="sec-title">指針基準位置校正（指針偏差修復）</h2>
+          </div>
+          
+                <div class="tip-box">
+                  🎯 <strong>指針位置對不準時的校準步驟：</strong><br>
+                  1. 將龍頭向外拉出 <strong>兩段 (第 2 段)</strong>。<br>
+                  2. 同時長按右上角按鈕 A 與右下角按鈕 B 約 3 秒以上，指針微動發出嗶聲進入基準校準模式。<br>
+                  3. 按按鈕 A 切換要校正的指針（時針/分針/功能盤/小指針），旋轉龍頭調整指針精確對齊正 12 點鐘或正中央。<br>
+                  4. 全數對齊後，將龍頭推回第 0 段，完成校準。
+                </div>
+                
+        </section>
+        
+
+  </main>
+
+  <footer class="doc-footer">
+    <p>Prism Manuals · CITIZEN W770 藍牙光動能腕錶 Digital Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = (current === 'dark') ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

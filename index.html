@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Prism Manuals | 電器與數位設備說明書總匯</title>
-  <meta name="description" content="收錄手邊各類電器、影音器材與數位周邊的數位互動說明書。提供按鍵操作、指示燈速查、連線教學與規格參數，支援手機與電腦最佳閱讀體驗。">
+  <meta name="description" content="收錄手邊 18 款各類電器、快充電源、廚房小家電、影音周邊與工具的數位互動說明書。提供按鍵操作、指示燈速查、連線教學與規格參數。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
   <style>
     :root {
@@ -195,37 +195,29 @@
     <section class="hero-section">
       <div class="hero-eyebrow">Device Manual Library</div>
       <h1 class="hero-title">探索您的設備說明書</h1>
-      <p class="hero-subtitle">手邊電器、影音器材、快充電源與生活周邊的數位互動指南。無廣告、秒速查閱按鍵手勢與故障排除。</p>
+      <p class="hero-subtitle">已收錄 18 款電器、快充電源、廚房小家電、影音周邊與工具的數位互動指南。無廣告、秒速查閱按鍵手勢與故障排除。</p>
 
       <div class="search-box-wrap">
         <span class="search-icon-left">🔍</span>
-        <input type="text" id="searchInput" class="search-input" placeholder="搜尋品牌、型號或關鍵字（如：Anker、手把、電磁爐、連發、瓦數）..." oninput="handleSearch(this.value)">
+        <input type="text" id="searchInput" class="search-input" placeholder="搜尋 18 款設備（如：洗衣機、手錶、除濕機、萬用鍋、快充、手把）..." oninput="handleSearch(this.value)">
         <button class="search-clear-btn" id="searchClear" onclick="clearSearch()">✕</button>
       </div>
     </section>
 
     <nav class="category-filter" aria-label="設備類別過濾">
-      <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)">全部設備</button>
-      <button class="filter-btn" data-category="digital" onclick="filterCategory('digital', this)">快充電腦</button>
-      <button class="filter-btn" data-category="audio" onclick="filterCategory('audio', this)">影音娛樂</button>
-      <button class="filter-btn" data-category="living" onclick="filterCategory('living', this)">生活家電</button>
-      <button class="filter-btn" data-category="tools" onclick="filterCategory('tools', this)">戶外工具</button>
+      <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)">全部設備 (18)</button>
+      <button class="filter-btn" data-category="digital" onclick="filterCategory('digital', this)">快充電腦 (4)</button>
+      <button class="filter-btn" data-category="audio" onclick="filterCategory('audio', this)">影音娛樂 (3)</button>
+      <button class="filter-btn" data-category="living" onclick="filterCategory('living', this)">生活家電 (6)</button>
+      <button class="filter-btn" data-category="tools" onclick="filterCategory('tools', this)">戶外工具與手錶 (5)</button>
     </nav>
 
     <section class="devices-grid" id="devicesGrid">
-
-      <!-- 設備 1：Godox C01 微型麥克風 -->
+      
       <a href="devices/godox-c01/" class="device-card" data-category="audio" data-keywords="godox c01 無線 麥克風 降噪 領夾 發射器 接收器 充電盒 7g 200m 影音">
         <div class="device-visual">
           <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="25" y="25" width="55" height="55" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
-            <circle cx="38" cy="38" r="4" fill="#0071e3"/>
-            <rect x="100" y="32" width="75" height="42" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
-            <rect x="130" y="22" width="15" height="10" rx="3" fill="currentColor" fill-opacity="0.2"/>
-            <circle cx="112" cy="53" r="3" fill="#34c759"/>
-            <circle cx="122" cy="53" r="3" fill="#ff9500"/>
-            <text x="52" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">TX</text>
-            <text x="142" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">RX</text>
+            <rect x="25" y="25" width="55" height="55" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="38" cy="38" r="4" fill="#0071e3"/><rect x="100" y="32" width="75" height="42" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><text x="52" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">TX</text><text x="142" y="58" font-size="11" font-weight="700" fill="currentColor" opacity="0.6">RX</text>
           </svg>
         </div>
         <div class="device-meta">
@@ -235,59 +227,18 @@
         <h2 class="device-name">C01 無線麥克風</h2>
         <p class="device-desc">7g 微型發射器、200米視距傳輸、智慧一鍵降噪、支援手機邊充邊用與 27H 充電盒。</p>
         <div class="device-tags">
-          <span class="tag-chip">48kHz/24bit</span>
-          <span class="tag-chip">一鍵降噪</span>
-          <span class="tag-chip">磁吸佩戴</span>
-          <span class="tag-chip">LED速查</span>
+          <span class="tag-chip">48kHz/24bit</span><span class="tag-chip">一鍵降噪</span><span class="tag-chip">磁吸佩戴</span><span class="tag-chip">LED速查</span>
         </div>
         <div class="card-footer">
           <span>開啟使用指南</span>
           <span class="arrow">→</span>
         </div>
       </a>
-
-      <!-- 設備 2：Anker Prime 160W 充電器 (A2687) -->
-      <a href="devices/anker-prime-160w/" class="device-card" data-category="digital" data-keywords="anker prime 160w a2687 充電器 氮化鎵 gan type-c 快充 pd3.1 功率分配 藍牙 筆電">
-        <div class="device-visual">
-          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="50" y="20" width="100" height="80" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
-            <rect x="65" y="32" width="45" height="24" rx="4" fill="currentColor" fill-opacity="0.2"/>
-            <circle cx="128" cy="44" r="5" fill="#0071e3"/>
-            <rect x="65" y="68" width="16" height="6" rx="2" fill="currentColor" fill-opacity="0.4"/>
-            <rect x="92" y="68" width="16" height="6" rx="2" fill="currentColor" fill-opacity="0.4"/>
-            <rect x="119" y="68" width="16" height="6" rx="2" fill="currentColor" fill-opacity="0.4"/>
-            <text x="70" y="48" font-size="9" font-weight="700" fill="currentColor">160W</text>
-          </svg>
-        </div>
-        <div class="device-meta">
-          <span class="device-brand">Anker 安克</span>
-          <span class="device-badge">快充電源</span>
-        </div>
-        <h2 class="device-name">Prime 160W (A2687)</h2>
-        <p class="device-desc">3口 GaN 智慧彩顯充電器。支援單孔 140W、ActiveShield 溫度監控、多孔動態分配矩陣與手勢控制。</p>
-        <div class="device-tags">
-          <span class="tag-chip">160W 總功率</span>
-          <span class="tag-chip">單孔 140W</span>
-          <span class="tag-chip">瓦數分配矩陣</span>
-          <span class="tag-chip">彩屏顯示</span>
-        </div>
-        <div class="card-footer">
-          <span>開啟使用指南</span>
-          <span class="arrow">→</span>
-        </div>
-      </a>
-
-      <!-- 設備 3：GAME’NIR ProX-Legend7Ds 電玩手把 -->
+    
       <a href="devices/gamenir-7ds/" class="device-card" data-category="audio" data-keywords="gamenir 7ds prox legend 手把 控制器 switch pc steam turbo 連發 巨集 震動 遊戲">
         <div class="device-visual">
           <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M40 70C35 50 45 35 65 35H135C155 35 165 50 160 70C155 90 140 100 125 90L110 80H90L75 90C60 100 45 90 40 70Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
-            <circle cx="70" cy="55" r="10" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="130" cy="65" r="10" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="138" cy="48" r="3" fill="#ff3b30"/>
-            <circle cx="146" cy="56" r="3" fill="#34c759"/>
-            <circle cx="130" cy="56" r="3" fill="#0071e3"/>
-            <circle cx="138" cy="64" r="3" fill="#ff9500"/>
+            <path d="M40 70C35 50 45 35 65 35H135C155 35 165 50 160 70C155 90 140 100 125 90L110 80H90L75 90C60 100 45 90 40 70Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="70" cy="55" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="130" cy="65" r="10" stroke="currentColor" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="device-meta">
@@ -297,25 +248,123 @@
         <h2 class="device-name">7Ds 無線電玩手把</h2>
         <p class="device-desc">Switch / PC / 手機全平台相容。支援遠端喚醒、Amiibo 感應、背鍵 20 步巨集記憶與三段 TURBO 自動連發。</p>
         <div class="device-tags">
-          <span class="tag-chip">Switch 喚醒</span>
-          <span class="tag-chip">全自動連發</span>
-          <span class="tag-chip">背鍵巨集</span>
-          <span class="tag-chip">30h 續航</span>
+          <span class="tag-chip">Switch 喚醒</span><span class="tag-chip">全自動連發</span><span class="tag-chip">背鍵巨集</span><span class="tag-chip">30h 續航</span>
         </div>
         <div class="card-footer">
           <span>開啟使用指南</span>
           <span class="arrow">→</span>
         </div>
       </a>
-
-      <!-- 設備 4：Panasonic KZ-PH34-K IH 電磁爐 -->
+    
+      <a href="devices/aoc-tv/" class="device-card" data-category="audio" data-keywords="aoc 70u6418 96t 電視 顯示器 遙控器配對 藍牙 4k android tv earc">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="22" width="140" height="75" rx="6" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><line x1="85" y1="97" x2="115" y2="97" stroke="currentColor" stroke-width="3"/><line x1="100" y1="97" x2="100" y2="106" stroke="currentColor" stroke-width="3"/><line x1="75" y1="106" x2="125" y2="106" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">AOC 冠捷</span>
+          <span class="device-badge">大型顯示器</span>
+        </div>
+        <h2 class="device-name">70U6418/96T 70吋電視</h2>
+        <p class="device-desc">70吋 Android TV 4K HDR 智慧液晶。收錄藍牙語音遙控器配對、HDMI eARC 聲霸音訊回傳與影像調校。</p>
+        <div class="device-tags">
+          <span class="tag-chip">70吋 4K</span><span class="tag-chip">Android TV</span><span class="tag-chip">語音遙控</span><span class="tag-chip">HDMI eARC</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/anker-prime-160w/" class="device-card" data-category="digital" data-keywords="anker prime 160w a2687 充電器 氮化鎵 gan type-c 快充 pd3.1 功率分配 藍牙 筆電">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="50" y="20" width="100" height="80" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="65" y="32" width="45" height="24" rx="4" fill="currentColor" fill-opacity="0.2"/><circle cx="128" cy="44" r="5" fill="#0071e3"/><text x="70" y="48" font-size="9" font-weight="700" fill="currentColor">160W</text>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">Anker 安克</span>
+          <span class="device-badge">快充電源</span>
+        </div>
+        <h2 class="device-name">Prime 160W (A2687)</h2>
+        <p class="device-desc">3口 GaN 智慧彩顯充電器。支援單孔 140W、ActiveShield 溫度監控、多孔動態分配矩陣與手勢控制。</p>
+        <div class="device-tags">
+          <span class="tag-chip">160W 總功率</span><span class="tag-chip">單孔 140W</span><span class="tag-chip">瓦數分配矩陣</span><span class="tag-chip">彩屏顯示</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/ugreen-160w/" class="device-card" data-category="digital" data-keywords="ugreen 綠聯 160w x774 快充 氮化鎵 gan 筆電 macbook pd3.1 五口 充電器">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="45" y="20" width="110" height="80" rx="12" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="60" y="35" width="15" height="8" rx="2" fill="currentColor" fill-opacity="0.4"/><rect x="85" y="35" width="15" height="8" rx="2" fill="currentColor" fill-opacity="0.4"/><rect x="110" y="35" width="15" height="8" rx="2" fill="currentColor" fill-opacity="0.4"/><rect x="135" y="35" width="15" height="8" rx="2" fill="currentColor" fill-opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">UGREEN 綠聯</span>
+          <span class="device-badge">快充電源</span>
+        </div>
+        <h2 class="device-name">160W 五口氮化鎵 (X774)</h2>
+        <p class="device-desc">4C1A 極速桌充。支援單孔 PD 3.1 140W 筆電滿血快充、雙筆電同時供電與智慧過溫保護。</p>
+        <div class="device-tags">
+          <span class="tag-chip">160W 總功率</span><span class="tag-chip">4C1A 五孔</span><span class="tag-chip">單孔 140W</span><span class="tag-chip">雙筆電快充</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/d4-charger/" class="device-card" data-category="digital" data-keywords="18650 充電器 d4 nitecore xtar 21700 鎳氫 鋰電池 電壓 電流">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="20" width="120" height="80" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="52" y="30" width="96" height="24" rx="4" fill="currentColor" fill-opacity="0.15"/><line x1="68" y1="60" x2="68" y2="92" stroke="currentColor" stroke-width="2"/><line x1="92" y1="60" x2="92" y2="92" stroke="currentColor" stroke-width="2"/><line x1="116" y1="60" x2="116" y2="92" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">Nitecore 奈特科爾</span>
+          <span class="device-badge">電池充電</span>
+        </div>
+        <h2 class="device-name">D4 四槽液晶充電器</h2>
+        <p class="device-desc">18650 / 21700 / 鎳氫全自動相容充電器。4 槽獨立微電腦控制、即時電壓電流液晶螢幕顯示。</p>
+        <div class="device-tags">
+          <span class="tag-chip">4 槽獨立</span><span class="tag-chip">18650/21700</span><span class="tag-chip">液晶電量</span><span class="tag-chip">微電流模式</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/tplink-deco-x55/" class="device-card" data-category="digital" data-keywords="tplink tp-link deco x55 mesh 路由器 燈號 黃燈 紅燈 藍燈 綠燈 重設">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="65" y="20" width="70" height="80" rx="20" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="85" r="4" fill="#34c759"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">TP-Link 普聯</span>
+          <span class="device-badge">網通設備</span>
+        </div>
+        <h2 class="device-name">Deco X55 Mesh Wi-Fi 6</h2>
+        <p class="device-desc">AX3000 全覆蓋無縫漫遊網狀路由器。收錄機身底部 LED 顏色含義、新增子節點與一鍵 Reset 復位指引。</p>
+        <div class="device-tags">
+          <span class="tag-chip">AX3000</span><span class="tag-chip">Mesh 燈號</span><span class="tag-chip">無縫漫遊</span><span class="tag-chip">Wi-Fi 6</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
       <a href="devices/panasonic-kz-ph34-k/" class="device-card" data-category="living" data-keywords="panasonic 松下 kz-ph34-k ih 電磁爐 調理器 火力 炊飯 煮物 炸物 日本 廚房 1400w">
         <div class="device-visual">
           <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="35" y="20" width="130" height="80" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
-            <circle cx="100" cy="52" r="26" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <circle cx="100" cy="52" r="14" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="50" y="86" width="100" height="8" rx="2" fill="currentColor" fill-opacity="0.2"/>
+            <rect x="35" y="20" width="130" height="80" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="52" r="26" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/><circle cx="100" cy="52" r="14" stroke="currentColor" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="device-meta">
@@ -325,51 +374,236 @@
         <h2 class="device-name">KZ-PH34-K IH 電磁爐</h2>
         <p class="device-desc">日本原裝 1400W 卓上電磁爐。收錄中日對照操作面板、7 檔精準火力瓦數表、定溫油炸與適用鍋具速查指南。</p>
         <div class="device-tags">
-          <span class="tag-chip">中日按鍵對照</span>
-          <span class="tag-chip">7 段火力</span>
-          <span class="tag-chip">定溫油炸</span>
-          <span class="tag-chip">鍋具檢查</span>
+          <span class="tag-chip">中日按鍵對照</span><span class="tag-chip">7 段火力</span><span class="tag-chip">定溫油炸</span><span class="tag-chip">鍋具檢查</span>
         </div>
         <div class="card-footer">
           <span>開啟使用指南</span>
           <span class="arrow">→</span>
         </div>
       </a>
-
-      <!-- 預備卡片：持續收錄 -->
-      <div class="device-card" data-category="tools" data-keywords="3d列印 烘乾箱 洗衣機 萬用鍋 行車記錄器 擴充" style="opacity: 0.7; cursor: default;">
-        <div class="device-visual" style="background: repeating-linear-gradient(45deg, var(--bg-page), var(--bg-page) 10px, var(--bg-card) 10px, var(--bg-card) 20px);">
-          <span style="font-size: 32px; opacity: 0.4;">📦</span>
+    
+      <a href="devices/philips-cooker/" class="device-card" data-category="living" data-keywords="飛利浦 萬用鍋 鮮呼吸 洩壓 排氣 慢燉 壓力鍋 料理 燉肉 煮湯">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 40H150V85C150 95 140 102 125 102H75C60 102 50 95 50 85V40Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="65" y="28" width="70" height="12" rx="4" fill="currentColor" fill-opacity="0.2"/>
+          </svg>
         </div>
         <div class="device-meta">
-          <span class="device-brand" style="color: var(--text-muted);">擴充檔案庫</span>
-          <span class="device-badge">持續增加</span>
+          <span class="device-brand">PHILIPS / TEFAL</span>
+          <span class="device-badge">廚房生活</span>
         </div>
-        <h2 class="device-name">更多手邊設備準備中</h2>
-        <p class="device-desc">雲米洗衣機、飛利浦萬用鍋、SUNLU S4 乾燥箱、CITIZEN 藍牙手錶等資料陸續整理擴充中。</p>
+        <h2 class="device-name">鮮呼吸智能萬用鍋</h2>
+        <p class="device-desc">雙重脈衝壓力技術。收錄安全旋轉自動洩壓排氣、中途加料保脆與慢燉無水料理選單代碼。</p>
         <div class="device-tags">
-          <span class="tag-chip">SUNLU S4</span>
-          <span class="tag-chip">CITIZEN W770</span>
-          <span class="tag-chip">雲米洗衣機</span>
+          <span class="tag-chip">鮮呼吸</span><span class="tag-chip">自動排氣</span><span class="tag-chip">中途加料</span><span class="tag-chip">壓力慢燉</span>
         </div>
-        <div class="card-footer" style="color: var(--text-muted);">
-          <span>模組化即時加入</span>
-          <span>＋</span>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
         </div>
-      </div>
+      </a>
+    
+      <a href="devices/panasonic-nn-st34h/" class="device-card" data-category="living" data-keywords="panasonic 松下 nn-st34h 微波爐 解凍 火力 自動菜單 安全鎖">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="25" width="140" height="75" rx="8" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="42" y="37" width="80" height="51" rx="4" fill="currentColor" fill-opacity="0.15"/><circle cx="145" cy="50" r="10" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">Panasonic 松下</span>
+          <span class="device-badge">廚房生活</span>
+        </div>
+        <h2 class="device-name">NN-ST34H 微電腦微波爐</h2>
+        <p class="device-desc">25公升大容量。具備 5 段微波火力（100W~800W）、重量快速解凍、8 道自動烹調菜單與兒童安全鎖。</p>
+        <div class="device-tags">
+          <span class="tag-chip">25L 大容量</span><span class="tag-chip">800W 火力</span><span class="tag-chip">5段微波</span><span class="tag-chip">快速解凍</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/electrolux-dryer/" class="device-card" data-category="living" data-keywords="伊萊克斯 electrolux edh10trbw1 除濕機 乾衣 濾網 水箱 清洗 濕度">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="55" y="20" width="90" height="85" rx="14" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="70" y="35" width="60" height="15" rx="4" fill="currentColor" fill-opacity="0.2"/><path d="M100 65C95 72 90 77 90 82C90 88 95 92 100 92C105 92 110 88 110 82C110 77 105 72 100 65Z" fill="#0071e3"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">Electrolux 伊萊克斯</span>
+          <span class="device-badge">居家生活</span>
+        </div>
+        <h2 class="device-name">EDH10TRBW1 10L 除濕機</h2>
+        <p class="device-desc">一級節能清淨除濕機。智慧/乾衣/連續/睡眠 4 種除濕模式、滿水警報與抗菌前置濾網定期拆洗教學。</p>
+        <div class="device-tags">
+          <span class="tag-chip">10L 一級能效</span><span class="tag-chip">乾衣模式</span><span class="tag-chip">濾網拆洗</span><span class="tag-chip">連續排水</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/viomi-washer/" class="device-card" data-category="living" data-keywords="雲米 viomi 洗衣機 wd10ft-b6t 洗脫烘 故障代碼 筒自潔 排水">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="45" y="20" width="110" height="85" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="65" r="24" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="65" r="16" fill="currentColor" fill-opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">VIOMI 雲米</span>
+          <span class="device-badge">居家生活</span>
+        </div>
+        <h2 class="device-name">WD10FT 洗脫烘滾筒洗衣機</h2>
+        <p class="device-desc">10KG 洗滌 / 7KG 烘乾智慧變頻滾筒。90℃ 高溫高壓自潔、排污閥硬幣清理與常見 E 系列排錯代碼表。</p>
+        <div class="device-tags">
+          <span class="tag-chip">洗脫烘</span><span class="tag-chip">筒自潔</span><span class="tag-chip">排污閥清理</span><span class="tag-chip">故障代碼表</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/kolin-pot/" class="device-card" data-category="living" data-keywords="kolin 歌林 knj-ln102p 美食鍋 快煮鍋 電火鍋 水餃 泡麵 防乾燒">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M45 45H155V80C155 92 145 98 130 98H70C55 98 45 92 45 80V45Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><line x1="30" y1="52" x2="45" y2="52" stroke="currentColor" stroke-width="3"/><line x1="155" y1="52" x2="170" y2="52" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">kolin 歌林</span>
+          <span class="device-badge">廚房生活</span>
+        </div>
+        <h2 class="device-name">KNJ-LN102P 隨行美食鍋</h2>
+        <p class="device-desc">雙檔火力旋鈕切換、304 食品級不鏽鋼內膽、防乾燒高溫自動斷電安全保護與水垢檸檬酸清潔指南。</p>
+        <div class="device-tags">
+          <span class="tag-chip">美食鍋</span><span class="tag-chip">304 不鏽鋼</span><span class="tag-chip">雙檔火力</span><span class="tag-chip">防乾燒斷電</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/citizen-w770/" class="device-card" data-category="tools" data-keywords="citizen 星辰錶 w770 藍牙 光動能 手錶 校時 配對 指針校準">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="60" r="32" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/><line x1="100" y1="18" x2="100" y2="28" stroke="currentColor" stroke-width="4"/><line x1="100" y1="92" x2="100" y2="102" stroke="currentColor" stroke-width="4"/><line x1="100" y1="60" x2="100" y2="40" stroke="currentColor" stroke-width="2"/><line x1="100" y1="60" x2="115" y2="60" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">CITIZEN 星辰錶</span>
+          <span class="device-badge">個人穿戴</span>
+        </div>
+        <h2 class="device-name">W770 藍牙光動能腕錶</h2>
+        <p class="device-desc">光動能藍牙旗艦腕錶。自動時間同步、來電震動提示、指針基準位置校準與第二時區切換操作指南。</p>
+        <div class="device-tags">
+          <span class="tag-chip">光動能</span><span class="tag-chip">藍牙校時</span><span class="tag-chip">通知震動</span><span class="tag-chip">指針基準校準</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/seiko-v172/" class="device-card" data-category="tools" data-keywords="seiko 精工 v172 v174 v175 太陽能 手錶 碼錶 鬧鈴 指針歸零">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="60" r="32" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.08"/><circle cx="100" cy="72" r="8" stroke="currentColor" stroke-width="1.5"/><circle cx="88" cy="55" r="6" stroke="currentColor" stroke-width="1.5"/><circle cx="112" cy="55" r="6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">SEIKO 精工</span>
+          <span class="device-badge">個人穿戴</span>
+        </div>
+        <h2 class="device-name">V172 太陽能計時碼錶</h2>
+        <p class="device-desc">經典三眼計時機芯。收錄 1/5 秒計時操作、單次鬧鈴設定、碼錶大秒針手動基準歸零校正與照光充電表。</p>
+        <div class="device-tags">
+          <span class="tag-chip">太陽能機芯</span><span class="tag-chip">1/5秒碼錶</span><span class="tag-chip">鬧鈴設定</span><span class="tag-chip">指針手動歸零</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/sunlu-s4/" class="device-card" data-category="tools" data-keywords="sunlu s4 乾燥箱 3d列印 耗材 線材 pla petg abs tpu 烘烤 濕度">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="35" y="25" width="130" height="75" rx="8" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="65" cy="62" r="16" stroke="currentColor" stroke-width="1.5"/><circle cx="135" cy="62" r="16" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">SUNLU 三綠</span>
+          <span class="device-badge">3D 列印工具</span>
+        </div>
+        <h2 class="device-name">S4 耗材乾燥箱</h2>
+        <p class="device-desc">四盤位 3D 列印線材恆溫乾燥箱。PLA / PETG / ABS / TPU 各材質烘烤溫度時間表與 PTC 350W 加熱設定。</p>
+        <div class="device-tags">
+          <span class="tag-chip">4 盤位</span><span class="tag-chip">PTC 350W</span><span class="tag-chip">各材質溫度表</span><span class="tag-chip">實時溫濕度</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/transcend-s86/" class="device-card" data-category="tools" data-keywords="快譯通 abee s86 行車記錄器 wifi 連線 記憶卡格式化 鎖檔 測速">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="30" width="120" height="65" rx="10" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="62" r="18" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="62" r="8" fill="#ff3b30"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">快譯通 Abee</span>
+          <span class="device-badge">車用工具</span>
+        </div>
+        <h2 class="device-name">S86 星光夜視行車記錄器</h2>
+        <p class="device-desc">Sony Starvis 星光夜視雙鏡頭。收錄手機 Wi-Fi 直連免拔卡下載、實體緊急鎖檔按鍵與記憶卡定期格式化教學。</p>
+        <div class="device-tags">
+          <span class="tag-chip">Sony 星光夜視</span><span class="tag-chip">Wi-Fi 連線</span><span class="tag-chip">格式化記憶卡</span><span class="tag-chip">緊急鎖檔鍵</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
+      <a href="devices/greenwood-iron/" class="device-card" data-category="tools" data-keywords="綠林 電烙鐵 數顯 烙鐵頭 調溫 銲錫 溫度校正 休眠">
+        <div class="device-visual">
+          <svg viewBox="0 0 200 120" width="160" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 75L120 45L135 50L145 42L165 48L135 60L125 55L45 85Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.5"/><line x1="165" y1="48" x2="180" y2="44" stroke="#ff9500" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="device-meta">
+          <span class="device-brand">綠林工具</span>
+          <span class="device-badge">維修工具</span>
+        </div>
+        <h2 class="device-name">數顯可調溫電烙鐵</h2>
+        <p class="device-desc">精密數位溫控電烙鐵。180℃~480℃ 精準調溫、CAL 數位溫度誤差校準模式、智慧自動休眠與烙鐵頭保養指引。</p>
+        <div class="device-tags">
+          <span class="tag-chip">數顯溫控</span><span class="tag-chip">180-480℃</span><span class="tag-chip">溫度校準</span><span class="tag-chip">自動休眠</span>
+        </div>
+        <div class="card-footer">
+          <span>開啟使用指南</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+    
 
       <div class="empty-state" id="emptyState">
         <div style="font-size: 36px; margin-bottom: 8px;">🔍</div>
         <div style="font-size: 16px; font-weight: 600; color: var(--text-title);">找不到相關說明書</div>
         <p>請嘗試輸入不同的關鍵字或重設分類標籤。</p>
       </div>
-
     </section>
 
   </main>
 
   <footer class="global-footer">
-    <p>© 2026 Prismoment · Prism Manuals 個人設備說明書庫</p>
+    <p>© 2026 Prismoment · Prism Manuals 個人設備說明書庫 (共收錄 18 款手冊)</p>
     <div style="margin-top:6px; display:flex; justify-content:center; gap:14px;">
       <a href="https://prismoment.com" target="_blank" rel="noopener" style="color:var(--text-muted); text-decoration:none;">Prismoment 首頁</a>
       <span>·</span>

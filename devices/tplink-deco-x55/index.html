@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6 使用指南 | Prism Manuals</title>
+  <meta name="description" content="AX3000 雙頻無縫漫遊全屋覆蓋 Wi-Fi 6 路由器。收錄機身底部 LED 狀態指示燈顏色含義、新增子節點與一鍵 Reset 復位指引。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #fafafc;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-active: #1d1d1f;
+      --text-pill-active: #ffffff;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-divider: rgba(0, 0, 0, 0.06);
+      --text-title: #1d1d1f;
+      --text-body: #424245;
+      --text-muted: #86868b;
+      --accent-blue: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-tag: #e8f2fd;
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --radius-card: 18px;
+      --radius-pill: 980px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #000000;
+      --bg-card: #161617;
+      --bg-card-subtle: #1c1c1e;
+      --bg-pill: rgba(255, 255, 255, 0.08);
+      --bg-pill-active: #f5f5f7;
+      --text-pill-active: #000000;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-divider: rgba(255, 255, 255, 0.08);
+      --text-title: #f5f5f7;
+      --text-body: #a1a1a6;
+      --text-muted: #86868b;
+      --accent-blue: #2997ff;
+      --accent-hover: #47a6ff;
+      --accent-tag: rgba(41, 151, 255, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg-page: #000000;
+        --bg-card: #161617;
+        --bg-card-subtle: #1c1c1e;
+        --bg-pill: rgba(255, 255, 255, 0.08);
+        --bg-pill-active: #f5f5f7;
+        --text-pill-active: #000000;
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-divider: rgba(255, 255, 255, 0.08);
+        --text-title: #f5f5f7;
+        --text-body: #a1a1a6;
+        --text-muted: #86868b;
+        --accent-blue: #2997ff;
+        --accent-hover: #47a6ff;
+        --accent-tag: rgba(41, 151, 255, 0.15);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: var(--font-stack); background-color: var(--bg-page); color: var(--text-title);
+      line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column;
+      -webkit-font-smoothing: antialiased; transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header.header-nav {
+      position: sticky; top: 0; z-index: 100; background: rgba(245, 245, 247, 0.82);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);
+    }
+    [data-theme="dark"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] header.header-nav { background: rgba(22, 22, 23, 0.82); }
+    }
+
+    .header-inner {
+      max-width: 980px; margin: 0 auto; height: 52px; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { color: var(--text-muted); font-size: 11px; }
+    .breadcrumb-current { color: var(--text-title); font-weight: 600; }
+
+    .theme-toggle-btn {
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .theme-toggle-btn:hover { background-color: var(--bg-pill); color: var(--text-title); }
+
+    nav.subnav-pills {
+      position: sticky; top: 52px; z-index: 90; background: var(--bg-card);
+      border-bottom: 1px solid var(--border-divider); padding: 8px 16px; overflow-x: auto;
+      white-space: nowrap; display: flex; gap: 6px; scrollbar-width: none;
+    }
+    nav.subnav-pills::-webkit-scrollbar { display: none; }
+    .subnav-inner { max-width: 980px; margin: 0 auto; display: flex; gap: 6px; width: 100%; }
+    .pill-link {
+      font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none;
+      padding: 5px 12px; border-radius: var(--radius-pill); background: var(--bg-pill);
+      transition: all 0.2s;
+    }
+    .pill-link:hover, .pill-link.active { color: var(--accent-blue); background: var(--accent-tag); font-weight: 600; }
+
+    main.doc-container {
+      max-width: 980px; width: 100%; margin: 0 auto; padding: 40px 20px 80px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .product-hero {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 36px 30px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge-tag {
+      font-size: 12px; font-weight: 600; color: var(--accent-blue);
+      background: var(--accent-tag); padding: 4px 10px; border-radius: 6px;
+    }
+    .hero-headline { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; }
+    .hero-summary { font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 760px; }
+
+    .spec-highlights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border-divider);
+    }
+    .hl-item { display: flex; flex-direction: column; gap: 2px; }
+    .hl-val { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .hl-lbl { font-size: 12px; color: var(--text-muted); }
+
+    .doc-section {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card); padding: 30px; box-shadow: var(--shadow-card);
+      scroll-margin-top: 105px;
+    }
+    .section-title-wrap { margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border-divider); }
+    .sec-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent-blue); margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+
+    .controls-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 24px;
+    }
+    .ctrl-card {
+      background: var(--bg-card-subtle); border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .ctrl-badge {
+      font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: var(--bg-pill-active); color: var(--text-pill-active); align-self: flex-start;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+    }
+    .ctrl-name { font-size: 15px; font-weight: 600; }
+    .ctrl-desc { font-size: 13px; color: var(--text-body); line-height: 1.5; }
+
+    .table-frame {
+      width: 100%; overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: 12px;
+    }
+    table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    table.spec-table th { background: var(--bg-card-subtle); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); }
+    table.spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-divider); color: var(--text-body); }
+    table.spec-table tr:last-child td { border-bottom: none; }
+
+    .tip-box {
+      background: var(--accent-tag); border-left: 3px solid var(--accent-blue);
+      border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-title); line-height: 1.6;
+    }
+
+    footer.doc-footer {
+      border-top: 1px solid var(--border-subtle); background: var(--bg-card);
+      padding: 30px 20px; text-align: center; font-size: 12px; color: var(--text-muted); margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-nav">
+    <div class="header-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Prism Manuals</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6</span>
+      </nav>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="切換主題">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="subnav-pills">
+    <div class="subnav-inner">
+      <a href="#overview" class="pill-link active">總覽</a>
+      <a href="#led-guide" class="pill-link">機身底部 LED 狀態指示燈顏色</a><a href="#reset" class="pill-link">硬體復位 (Reset) 與新增節點</a>
+    </div>
+  </nav>
+
+  <main class="doc-container">
+
+    <section class="product-hero" id="overview">
+      <div class="hero-tags">
+        <span class="badge-tag">TP-Link 普聯</span>
+        <span class="badge-tag">快充電腦</span>
+      </div>
+      <h1 class="hero-headline">TP-Link Deco X55 Mesh Wi-Fi 6 系統使用指南</h1>
+      <p class="hero-summary">AX3000 雙頻無縫漫遊全屋覆蓋 Wi-Fi 6 路由器。收錄機身底部 LED 狀態指示燈顏色含義、新增子節點與一鍵 Reset 復位指引。</p>
+      <div class="spec-highlights">
+        <div class="hl-item"><span class="hl-val">AX3000</span><span class="hl-lbl">極速 Wi-Fi 6 雙頻</span></div><div class="hl-item"><span class="hl-val">無縫漫遊</span><span class="hl-lbl">單一 SSID 走到哪連到哪</span></div><div class="hl-item"><span class="hl-val">3 × 1G 孔</span><span class="hl-lbl">每個節點自帶 3 個有線網孔</span></div><div class="hl-item"><span class="hl-val">AI Mesh</span><span class="hl-lbl">自動演算法優化最佳路徑</span></div>
+      </div>
+    </section>
+
+    
+        <section class="doc-section" id="led-guide">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">LED Indicator Matrix</div>
+            <h2 class="sec-title">機身底部 LED 狀態指示燈顏色速查</h2>
+          </div>
+          
+                <div class="table-frame">
+                  <table class="spec-table">
+                    <thead><tr><th>LED 燈號狀態</th><th>代表系統意義</th><th>排錯與操作建議</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong style="color:#ffcc00;">黃燈長亮</strong></td><td>Deco 正在開機啟動中</td><td>請靜待約 1~2 分鐘，等待啟動完成。</td></tr>
+                      <tr><td><strong style="color:#0071e3;">藍燈閃爍</strong></td><td>就緒設定狀態 (Ready for Setup)</td><td>開啟手機「TP-Link Deco」App，即可搜尋並開始設定。</td></tr>
+                      <tr><td><strong style="color:#0071e3;">藍燈長亮</strong></td><td>正在設定或同步中</td><td>正在建立連線，請勿切斷電源。</td></tr>
+                      <tr><td><strong style="color:#34c759;">綠燈長亮</strong></td><td>運作正常且網路連線暢通</td><td>一切正常，可享受高速無縫 Wi-Fi。</td></tr>
+                      <tr><td><strong style="color:#ff3b30;">紅燈長亮</strong></td><td>網路連線中斷 (無法上網)</td><td>檢查中華電信數據機 (Modem) 訊號或實體網路線是否脫落。</td></tr>
+                      <tr><td><strong style="color:#ff3b30;">紅燈閃爍</strong></td><td>與主要 Deco 節點斷線</td><td>將該子節點移近主要節點，減少厚牆或金屬阻隔。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+        </section>
+        
+        <section class="doc-section" id="reset">
+          <div class="section-title-wrap">
+            <div class="sec-eyebrow">Reset & Expand</div>
+            <h2 class="sec-title">硬體復位 (Reset) 與新增節點</h2>
+          </div>
+          
+                <div class="controls-grid">
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">底部 Reset 復位孔</span>
+                    <div class="ctrl-name">按住 1 秒恢復出廠設定</div>
+                    <div class="ctrl-desc">拿迴形針或退卡針按壓底部 Reset 鍵 1 秒，LED 轉為黃色即開始重設，隨後轉為藍燈閃爍即可重新配對。</div>
+                  </div>
+                  <div class="ctrl-card">
+                    <span class="ctrl-badge">新增子節點 (Add Deco)</span>
+                    <div class="ctrl-name">App 點擊右上角「+」</div>
+                    <div class="ctrl-desc">將新節點插上電源，待藍燈閃爍後在 Deco App 點選新增設備，1 分鐘即可自動無縫加入 Mesh 網路。</div>
+                  </div>
+                </div>
+                
+        </section>
+        
+
+  </main>
+
+  <footer class="doc-footer">
+    <p>Prism Manuals · TP-Link Deco X55 AX3000 全覆蓋 Mesh Wi-Fi 6 Digital Guide</p>
+    <p style="margin-top:4px;">Designed with Apple Support Minimalist Principles</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      let target = (current === 'dark') ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      document.getElementById('themeIcon').innerText = (target === 'dark') ? '☀️' : '🌙';
+      localStorage.setItem('prism_manuals_theme', target);
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      let cur = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+      });
+      if (cur) {
+        document.querySelectorAll('.pill-link').forEach(p => {
+          if (p.getAttribute('href') === '#' + cur) p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('prism_manuals_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').innerText = (saved === 'dark') ? '☀️' : '🌙';
+      }
+    });
+  </script>
+</body>
+</html>
