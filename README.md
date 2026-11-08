@@ -1,10 +1,33 @@
 # Prism Manuals (設備說明書總匯)
 
-> 專為個人手邊各類電器、攝影影音與數位設備打造的數位說明書總匯。  
-> 採用 **Apple Support 極簡空氣感** 設計語言，無廣告、無多餘浮誇元素，電腦與手機皆具備極致閱讀體驗。
+> 個人電器與 3C 數位設備說明書總匯｜採用 **Apple Support 極簡空氣感** 設計語言，無廣告、無多餘浮誇元素，電腦與手機皆具備極致閱讀體驗。
 
-- **線上網址**：https://manual.prismoment.com
-- **主機託管**：Cloudflare Pages / GitHub Pages
+- **線上網址**：[https://manual.prismoment.com](https://manual.prismoment.com)
+- **主機託管**：Cloudflare Pages / Workers
+- **收錄設備數**：18 款手冊深度還原（包含硬體圖解、操作步驟、完整故障代碼表、原廠 PDF 內嵌與下載）
+
+---
+
+## 收錄設備一覽
+
+1. **Godox C01** 微型無線麥克風
+2. **Anker Prime 160W (A2687)** 多口氮化鎵快充
+3. **綠聯 160W (X774)** 五口氮化鎵快充
+4. **GAME’NIR ProX-Legend7Ds** 雙震動電玩手把
+5. **Panasonic KZ-PH34-K** 智慧 IH 電磁爐
+6. **SUNLU S4** 四槽 3D 列印耗材乾燥箱
+7. **飛利浦 / 特福** 鮮呼吸智能萬用壓力鍋
+8. **Panasonic NN-ST34H** 25L 微電腦微波爐
+9. **伊萊克斯 EDH10TRBW1** 10L 清淨除濕機
+10. **VIOMI 雲米 WD10FT-B6T** 10KG 變頻洗脫烘洗衣機
+11. **CITIZEN BZ1040 / W770** 藍牙光動能腕錶
+12. **SEIKO SSC 系列 (V172)** 太陽能計時碼錶
+13. **快譯通 S86** 星光夜視電子後視鏡行車記錄器
+14. **Nitecore D4** 四槽液晶多功能智能充電器
+15. **綠林** 數顯可調溫便攜電烙鐵
+16. **Kolin 歌林 KNJ-LN102P** 多功能隨行美食鍋
+17. **AOC 70U6418/96T** 70吋 4K 智慧顯示器
+18. **TP-Link Deco X55** AX3000 Mesh Wi-Fi 6 系統
 
 ---
 
@@ -12,14 +35,14 @@
 
 ```text
 Manual/
-├── index.html                   # 總匯首頁（全域搜尋、類別篩選）
+├── index.html                   # 總匯首頁（全域搜尋、類別篩選、深淺色切換）
 ├── CNAME                        # manual.prismoment.com
-├── .gitignore
-├── README.md
-└── devices/                     # 各設備獨立手冊
-    └── godox-c01/               # Godox C01 無線麥克風
-        ├── index.html           # 互動說明書
-        └── godox-c01-manual-original.jpg
+├── wrangler.jsonc               # Cloudflare Workers/Pages 靜態資源配置
+├── assets/                      # 共用樣式與字體
+└── devices/                     # 18 款設備獨立手冊
+    ├── godox-c01/               # 互動手冊 + 原圖
+    ├── anker-prime-160w/        # 互動手冊 + original.pdf
+    └── ... (其餘設備目錄)
 ```
 
 ---
